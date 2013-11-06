@@ -1,0 +1,61 @@
+\begin{thebibliography}{10}
+
+\bibitem{adaptive_optics_bio_microscope}
+Martin~J. Booth, Delphine D\'{e}barre, and Alexander Jesacher.
+\newblock Adaptive optics for biomedical microscopy.
+\newblock {\em Opt. Photon. News}, 23(1):22--29, Jan 2012.
+
+\bibitem{confocal_microscope}
+Martin~J. Booth, Mark A.~A. Neil, Rimas Ju\v{s}kaitis, and Tony Wilson.
+\newblock {Adaptive aberration correction in a confocal microscope}.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  99(9):5788--5792, April 2002.
+
+\bibitem{TPFM_image_based}
+Delphine D\'{e}barre, Edward~J. Botcherby, Tomoko Watanabe, Shankar Srinivas,
+  Martin~J. Booth, and Tony Wilson.
+\newblock Image-based adaptive optics for two-photon microscopy.
+\newblock {\em Opt. Lett.}, 34(16):2495--2497, Aug 2009.
+
+\bibitem{HG_embryos}
+Alexander Jesacher, Anisha Thayil, Kate Grieve, Delphine D\'{e}barre, Tomoko
+  Watanabe, Tony Wilson, Shankar Srinivas, and Martin Booth.
+\newblock Adaptive harmonic generation microscopy of mammalian embryos.
+\newblock {\em Opt. Lett.}, 34(20):3154--3156, Oct 2009.
+
+\bibitem{Aberrations_book}
+Virendra~N. Mahajan.
+\newblock {\em Optical Imaging and Aberrations, Part II. Wave Diffraction
+  Optics (SPIE Press Monograph Vol. PM209)}.
+\newblock SPIE Press, 2 edition, 8 2011.
+
+\bibitem{TPFM_pratical}
+P.~Marsh, D.~Burns, and J.~Girkin.
+\newblock Practical implementation of adaptive optics in multiphoton
+  microscopy.
+\newblock {\em Opt. Express}, 11(10):1123--1130, May 2003.
+
+\bibitem{HG_dynamic}
+Nicolas Olivier, Delphine D\'{e}barre, and Emmanuel Beaurepaire.
+\newblock Dynamic aberration correction for multiharmonic microscopy.
+\newblock {\em Opt. Lett.}, 34(20):3145--3147, Oct 2009.
+
+\bibitem{book_confocal}
+James Pawley, editor.
+\newblock {\em Handbook of Biological Confocal Microscopy}.
+\newblock Springer, 3rd edition, 8 2006.
+
+\bibitem{TPFM_gated_wavefront}
+Markus Rueckel, Julia~A. Mack-Bucher, and Winfried Denk.
+\newblock Adaptive wavefront correction in two-photon microscopy using
+  coherence-gated wavefront sensing.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  103(46):17137--17142, 2006.
+
+\bibitem{CARS}
+A.~J. Wright, S.~P. Poland, J.~M. Girkin, C.~W. Freudiger, C.~L. Evans, and
+  X.~S. Xie.
+\newblock Adaptive optics for enhanced signal in cars microscopy.
+\newblock {\em Opt. Express}, 15(26):18209--18219, Dec 2007.
+
+\end{thebibliography}

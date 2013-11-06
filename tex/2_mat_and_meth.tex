@@ -1,0 +1,115 @@
+%The Materials and Methods section provides sufficient detail for other 
+%scientists to reproduce the experiments presented in the paper. In some 
+%journals, this information is placed in an appendix, because it is not what 
+%most readers want to know first.
+
+% explicit preview would be phrased much like the object of the document: 
+%"This section first . . . , then . . . , and finally . . . "
+% Do not make readers guess: Make sure the paragraph's first sentence gives 
+%them a clear idea of what the entire paragraph is about.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Adaptive Optics Methods applied in Microscopy}
+\label{sec:ExperimentDiscussion}
+
+
+\cite{adaptive_optics_bio_microscope}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Widefield Microscopy}
+\label{sec:WidefieldMicroscopy}
+
+In conventional microscopes, widefield illumination is provided using either 
+transmission optics or, in the case of re ection or uorescence modes, via the 
+objective lens in an epi configuration. In either case, the image quality 
+depends only on the optics of the detection path and is independent of the 
+fidelity of the illumination path.
+Aberration correction is therefore only necessary in the detection path and a 
+single pass adaptive optics system will suffice.
+
+%-------------------------------------------------------------------------------
+\subsection{Point Scanning Microscopes}
+\label{sec:PointScanningMicroscopes}
+
+Scanning optical microscopes are widely used for high resolution imaging, 
+mainly because certain implementations provide three-dimensional resolution 
+with optical sectioning and are thus particularly useful for imaging the 
+volume structures of biological specimensz. In these microscopes, 
+illumination is provided by a laser that is focused by an objective lens into 
+the specimen. The light emitted from the specimen is collected, usually 
+through the same objective lens, and its intensity is measured by a single 
+photodetector. The focal spot is scanned through the specimen in a raster 
+pattern and the image is acquired in a point-by-point fashion. The resulting 
+data are stored and rendered as images in a computer.
+
+Several other point scanning microscope modalities have been introduced, 
+including two-photon excitation uorescence (TPEF) microscopy, second harmonic 
+generation (SHG) and third harmonic generation (THG) microscopy, and coherent 
+anti-Stokes Raman (CARS) microscopy.
+
+%-------------------------------------------------------------------------------
+\subsubsection{Confocal Microscopes}
+\label{sec:ConfocalMicroscopes}
+
+The most common example of this type is the confocal microscope, which can be 
+operated in reflection or fluorescence mode. Three-dimensional resolution is 
+achieved by the placement of a pinhole in front of the photodetector. In a 
+reflection mode confocal microscope, the illumination is scattered by objects 
+not only in the focal region, but throughout the focusing cone. In 
+fluorescence mode, emission is generated in the focus but also in out-of-
+focus regions. The pinhole ensures that mainly light from the focal region 
+falls upon the detector and light from out-of-focus planes is obscured. It is 
+critical in the confocal microscope that both the illumination and detection 
+paths are diffraction limited. This ensures that i) the illuminating focal 
+spot is as small as possible, and ii) that the focus is perfectly imaged on 
+to the detector pinhole. Therefore, in an adaptive confocal microscope, 
+aberration correction must be included in both paths. This dual pass adaptive 
+system can usually be implemented using a single deformable mirror, if the 
+path length aberrations are the same for both the illumination and the 
+emission light. This is the case if there is no significant dispersion in the 
+specimen or chromatic aberration in the optics.
+
+A pinhole is not required to obtain three-dimensional resolution, so most 
+TPEF microscopes use large area detectors to maximise signal collection. 
+Although they rely upon other physical processes, non-linear imaging 
+modalities such as SHG, THG and CARS exhibit similar resolution properties. 
+When using large area detectors, the fidelity of imaging in the detection 
+path is unimportant so the effects of any aberrations in this path are 
+negated. It follows that single pass adaptive optics is appropriate for these 
+microscopes as aberration correction need only be implemented in the 
+illumination path.
+
+Adaptive optics systems have been successfully combined with several point-
+scanning microscope systems including confocal,13 TPEF,6, 14, 15 harmonic 
+generation,16, 17 CARS.18 Example images of aberration correction in an 
+adaptive THG microscope are shown in Fig. 10.
+
+\cite{book_confocal}
+
+\cite{confocal_microscope}
+
+
+%-------------------------------------------------------------------------------
+\subsubsection{two-photon excitation}
+\label{sec:twoPhotonExcitation}
+
+\cite{TPFM_gated_wavefront}
+\cite{TPFM_image_based}
+\cite{TPFM_pratical}
+
+%-------------------------------------------------------------------------------
+\subsubsection{Harmonic Generation}
+\label{sec:HarmonicGeneration}
+
+\cite{HG_embryos}
+\cite{HG_dynamic}
+
+
+%-------------------------------------------------------------------------------
+\subsubsection{CARS}
+\label{sec:CARS}
+
+\cite{CARS}
+
+
+
