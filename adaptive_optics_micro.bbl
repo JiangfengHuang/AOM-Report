@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{wide_MPFM}
+J\"{o}rg Bewersdorf, Rainer Pick, and Stefan~W. Hell.
+\newblock Multifocal multiphoton microscopy.
+\newblock {\em Opt. Lett.}, 23(9):655--657, May 1998.
+
 \bibitem{adaptive_optics_bio_microscope}
 Martin~J. Booth, Delphine D\'{e}barre, and Alexander Jesacher.
 \newblock Adaptive optics for biomedical microscopy.
@@ -10,6 +15,11 @@ Martin~J. Booth, Mark A.~A. Neil, Rimas Ju\v{s}kaitis, and Tony Wilson.
 \newblock {Adaptive aberration correction in a confocal microscope}.
 \newblock {\em Proceedings of the National Academy of Sciences},
   99(9):5788--5792, April 2002.
+
+\bibitem{wide_structured_illu}
+Delphine D\'{e}barre, Edward~J. Botcherby, Martin~J. Booth, and Tony Wilson.
+\newblock Adaptive optics for structured illumination microscopy.
+\newblock {\em Opt. Express}, 16(13):9290--9305, Jun 2008.
 
 \bibitem{TPFM_image_based}
 Delphine D\'{e}barre, Edward~J. Botcherby, Tomoko Watanabe, Shankar Srinivas,

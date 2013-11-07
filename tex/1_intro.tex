@@ -1,12 +1,30 @@
-%The Introduction section clarifies the motivation for the work presented and prepares readers for the structure of the paper.
-% context:  orient those readers who are less familiar with your topic and to establish the importance of your work
-% need: state the need for your work, as an opposition between what the scientific community currently has and what it wants.
-% task: indicate what you have done in an effort to address the need (this is the task)
-% object: preview the remainder of the paper to mentally prepare readers for its structure, in the object of the document
+%The Introduction section clarifies the motivation for the work presented and 
+%prepares readers for the structure of the paper.
+% context:  orient those readers who are less familiar with your topic and to 
+%establish the importance of your work
+% need: state the need for your work, as an opposition between what the 
+%scientific community currently has and what it wants.
+% task: indicate what you have done in an effort to address the need (this is 
+%the task)
+% object: preview the remainder of the paper to mentally prepare readers for 
+%its structure, in the object of the document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 \label{sec:Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% explain why this is interesting, why it gives us advantages
+% also see general comments above, this intro can be quite short, put the 
+actual techniques in the second part, methods
+
+%everything that I posted into your part has been just copied from papers, so 
+%you should use it as an inspiration, but you have to write your own text. And 
+%please remember to cite every work you base your writing on (i put the 
+%references in for the stuff that I copied already) 
+
+% I think this paper that we found gives some good ideas for a good introduction!
+\cite{adaptive_optics_bio_microscope}
+
 
 The performance of these microscopes is often compromised by aberrations that lead to a reduction image resolution and contrast. 
 
@@ -17,38 +35,15 @@ The problems caused by aberrations can be overcome using adaptive optics, whereb
 This technology was originally conceived for the compensation of the aberrating effects of the atmosphere and was first developed for military and astronomical telescopes. 
 
 Adaptive optics systems have also been introduced for other applications such as laser beam shaping, optical communications, data storage, ophthalmology and microscopy.\\
-Hellooooooooo
 
 \cite{Aberrations_book} 
 
+Optical microscopes have long been essential tools in many scientific disciplines, particularly the biological and medical sciences. Conventional widefield microscopes—encompassing transmission, phase contrast and fluorescence imaging modes—are the workhorses of many laboratories. Over the last 25 years, researchers have also made significant developments in 3-D imaging using scanning laser microscopes. This progress started with the confocal microscope, which provides 3-D resolution by using a pinhole to exclude out-of-focus light. Rather than produce a whole image simultaneously, these microscopes scan a laser spot through the specimen, building the image point-by-point. This achievement was followed by several other laser-scanning methods, including the commonly used twophoton fluorescence microscope. Rather than using a pinhole to generate 3-D discrimination, this microscope relies on the nonlinear process of two-photon excitation to ensure that fluorescence is only generated in the focus, where the laser intensity is highest. Various advances in this field have led to improvements in resolution and contrast. Standard laboratory microscopes now regularly produce images revealing 3-D structure on the submicrometer scale. Several new methods of nanoscopy that combine optical and photophysical phenomena can even beat the diffraction limit to resolve details on the tens-of-nanometers scale.
+ 
+These methods all rely on careful engineering to ensure that the optics operate at the diffraction limit, so that optimum resolution and efficiency are achieved. However, one part of the optical system—the specimen—lies outside the design specification. It is optically inhomogeneous and exhibits spatially varying refractive indices. Hence, the light focused into the specimen suffers from wavefront distortions— or phase aberrations—that degrade the resolution and imaging efficiency of the microscope. The aberrations vary from one specimen to another, so they cannot be corrected by a fixed optical design. Dynamic correction is necessary. This is where adaptive optics (AO) comes into play. 
 
+Adaptive optics was originally conceived for use in astronomical telescopes. These AO systems detect aberrations introduced by the atmosphere and use a deformable mirror to remove the aberrations before the light reaches the imaging detector. For imaging systems with small apertures, such as our eyes, the turbulence causes twinkling; for wider telescope apertures, it leads to severe image blurring that limits the resolution of the telescope. 
 
-For the purpose of understanding the operation of an adaptive optical system, it is best to think of aberrations in terms of distortions of an optical wavefront.
+The AO approach has been widely applied in astronomy, and it has also found application in ophthalmic imaging, laser-based fabrication, optical communications and, of course, microscopy. The adoption of AO for microscopes has brought new challenges that have required innovative solutions.
 
-\begin{figure}[tbh]
-        \centering
-        \begin{subfigure}[b]{0.4\textwidth}
-                \includegraphics[width=\textwidth]{images/wavefront_distortions_reflection}
-                \caption{Reflection.}
-                \label{fig:abberation_reflection}
-        \end{subfigure}
-				\hspace{1em}
-        \begin{subfigure}[b]{0.3\textwidth}
-                \includegraphics[width=\textwidth]{images/wavefront_distortions_transmission}
-                \caption{Transmission.}
-                \label{fig:abberation_trans}
-        \end{subfigure}
-        \caption{Wavefront aberrations due to (a) reflection from a non planar surface and (b)  caused by propagation through a non-uniform refractive index distribution. Image after~\cite{Aberrations_book}.}
-\label{fig:abberations}
-\end{figure} 
-
-Representing aberrations in this way can simplify the design, control and characterisation of adaptive optics. The choice of modes for a particular application is often influenced by some aspect of the system, such as the deformation modes of a deformable mirror or the statistics of the induced aberrations. Otherwise, the modal representation may be chosen through mathematical convenience. For example, Zernike polynomials are often used for systems with circular apertures as they form a complete, orthogonal set of functions defined over a unit circle
-
-\begin{figure}[htbp]
-	\centering
-		\includegraphics[width=0.30\textwidth]{images/wavefront_distortions_reflection.pdf}
-	\caption{This is my first image.}
-	\label{fig:wavefront_distortions_reflection}
-\end{figure}
-
-As with all optical systems, microscopes can also suffer from aberrations due to imperfections in the optical components. In practice, no system can be totally free from aberrations and so systems are designed to maintain aberrations below a particular tolerance for a given set of imaging conditions, such as wavelength, magnification and field of view. Significant aberrations can be introduced if a microscope is used outside its design specifications, for example at the incorrect wavelength or at a difierent temperature (see Chapter 11 of Ref. 9).
+\cite{adaptive_optics_bio_microscope}
