@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=729
-NormalPos.bottom=740
+NormalPos.right=1209
+NormalPos.bottom=458
 Class=BibTeXView
 Document=tex\bibo.bib
 
 [Frame0_View0,0]
-TopLine=58
-Cursor=6168
+TopLine=191
+Cursor=6633
 
 [Frame1]
 Flags=0
@@ -29,8 +29,8 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=729
-NormalPos.bottom=740
+NormalPos.right=1209
+NormalPos.bottom=458
 Class=LaTeXView
 Document=tex\3_methods.tex
 
@@ -47,8 +47,8 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=729
-NormalPos.bottom=740
+NormalPos.right=1209
+NormalPos.bottom=458
 Class=LaTeXView
 Document=tex\1_intro.tex
 
@@ -65,8 +65,8 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=729
-NormalPos.bottom=740
+NormalPos.right=1209
+NormalPos.bottom=458
 Class=LaTeXView
 Document=adaptive_optics_micro.tex
 
@@ -83,8 +83,8 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=729
-NormalPos.bottom=740
+NormalPos.right=1209
+NormalPos.bottom=458
 Class=LaTeXView
 Document=tex\2_measurements.tex
 
