@@ -7,7 +7,7 @@
 %"This section first . . . , then . . . , and finally . . . "
 % Do not make readers guess: Make sure the paragraph's first sentence gives 
 %them a clear idea of what the entire paragraph is about.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Adaptive Optics Methods applied in Microscopy}
 \label{sec:ExperimentDiscussion}
 
@@ -42,8 +42,22 @@ configurations where the optical fidelity has been compromised, the AO can be
 used to correct the residual system aberration, restoring diffractionlimited 
 operation.
 
+% explain that we need AO, ref this:
+We can conclude: specimen induced aberrations lead to reduced signal levels 
+and a deterioration in image quality in optical microscopy, especially in CFM 
+and TPM. For the first time, specimen induced aberrations that occur with 
+various biological specimens have been classified and quantified for the most 
+relevant condition of high NA. The above approach can provide detailed 
+information about the variation of each Zernike coefficient across the scan.
+As expected from theory, lower NA systems are less susceptible to aberrations 
+than high NA system under otherwise similar conditions. Low order correction 
+would still provide benefits, even though the initial aberrations are 
+smaller. The results presented here quantify the benefit of adaptive optics 
+for biological microscopy and provide the bounds within which these systems 
+must operate.
+\cite{characterizing_abberations}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Widefield Microscopy}
 \label{sec:WidefieldMicroscopy}
 
@@ -54,19 +68,156 @@ depends only on the optics of the detection path and is independent of the
 fidelity of the illumination path.
 Aberration correction is therefore only necessary in the detection path and a 
 single pass adaptive optics system will suffice.
+\cite{Aberrations_book} 
+
+\subsubsection{Structured Illumination Microscopy}
+\label{sec:StructuredIlluminationMicroscopy}
+
+%next part all from
+\cite{wide_AOM_structured_illu}
+
+Optical sectioning microscopy is widely used to provide three-dimensional 
+fluorescence images of biological specimens. A common way of obtaining this 
+sectioning ability is through point scanning methods such as confocal or 
+multiphoton microscopy [1, 2]. An alternative is to use a wide-field 
+technique such as structured illumination (SI) microscopy, which retains the 
+sectioning ability of confocal microscopy, but can be implemented in a 
+conventional microscope using an incoherent light source, and without the 
+need for scanning. 
+
+In this technique, the image of a grid is projected on the specimen so as to 
+produce a one-dimensional sinusoidal excitation pattern in the focal plane of 
+the objective lens. The resulting fluorescence image, consisting of both in-
+focus and out-of-focus fluorescence emission, is acquired by a camera. 
+Several images are taken, each corresponding to a different grid position. As 
+the grid pattern appears only in the focal plane, it is possible to extract 
+an optical section from the spatially modulated component of the images via a 
+simple calculation.~\cite{wide_structured_illu_principle}.
+
+In this paper we describe wavefront sensorless adaptive optics implemented in 
+a SI microscope. It is shown that the final image quality depends 
+predominantly on the imaging efficiency of the illumination pattern’s spatial 
+frequency. This imaging efficiency is affected much more by some aberration 
+modes than by others. Consequently, different aberration modes can have 
+significantly different effects on the final sectioned image.
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.75\textwidth]{images/wide_structured_illumination.pdf}
+	\caption{Experimental setup for structured illumination microscopy with aberration correction. WLS~-~white light source, DM~-~deformable mirror, DBS~-~dichroic beamsplitter. The blue rays mark the illumination path; the detection path is shown in yellow. Image after~\cite{wide_AOM_structured_illu}.}
+	\label{fig:wide_structured_illumination}
+\end{figure}
+
+\begin{figure}[tbh]
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{images/structured_illumination_uncorrected}
+                \caption{Reflection.}
+                \label{fig:SI_uncorrected}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{images/structured_illumination_corrected}
+                \caption{Transmission.}
+                \label{fig:SI_corrected}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{images/structured_illumination_scan}
+                \caption{Transmission.}
+                \label{fig:SI_scan}
+        \end{subfigure}
+								
+        \caption{Aberration correction in structured illumination microscopy. A fluorescent mouse intestine sample was imaged (a) without (b) with aberration correction with inserts showing the phase induced by the deformable mirror. (c) Profile along the lines drawn on the images, both profiles normalized so that their mean value is identical. As a result of the resolution improvement, the contrast of small sample features (blue arrows) are better defined after (red solid line) rather than before (black dotted line) correction. The imaging depth was approximately $\unit[10]{\upmu}$, sacle bar size $\unit[10]{\upmu}$. Image after~\cite{wide_AOM_structured_illu}.}
+\label{fig:structured_light_correction}
+\end{figure} 
+
+\subsubsection{Fluorescence Microscopy}
+\label{sec:FlourescnecMicroscopy}
+
+next section, all from \cite{wide_AOM_FM_spehrical_correction} uses a 
+standard widefield flourescene microscope but use AOM to correct for 
+spherical aberration due to depth -> no specimen induce correction
+uses deconvolution to get out of foucs photons corrected
+
+In this paper, we concentrate on the depth dependent aberration which can 
+quickly become serious. Imaging 20 mum a live sample (index of refraction 1.36
+) with an oil immersion lens causes the peak intensity of the point spread 
+function (PSF) to drop 3-fold and the width of the PSF in the axial direction 
+to increase by 2-folds. \cite{wide_AOM_FM_spehrical_correction} 
+
+Because wide-field microscopy captures as efficiently as possible every 
+emitted photon ultimately minimizing the sample excitation dose, it is well 
+suited to in vivo imaging in sampleswhere scattering is not too large. 
+Although the out-of-focus photons are in thewrong place, they can be 
+effectively re-assigned to the location of emission by constrained 
+deconvolution algorithms \cite{wide_deconvolution}
+
+The problem of depth aberrations can be solved by matching the sample index 
+and the index of the immersion medium, but this is frequently not feasible or 
+desirable. For example, the index of fixed cells can be matched to that of 
+the immersion oil, but this option is not available for live imaging.
+
+An important drawback to most schemes that have been proposed so far is that 
+they require several images to be taken to optimize the aberration 
+correction. This presents a serious problem for live imaging in biology 
+because the fluorescence intensities can be weak and susceptible to rapid 
+bleaching.
+
+The approach we follow is to correct the depth aberrations withanopen-loop 
+predictive algorithm similar totheapproach taken by Potsaid et al. in 
+correcting off-axis aberrations. This is possible because the depth 
+aberration can be calculated for a given depth into the sample. The depth 
+aberration is the result of depth-dependent path length differences.
+
+Correcting depth aberrations with a DM improves both the peak intensities and 
+the deconvolution of images taken below the cover slip by removing the depth 
+aberration. This allows the use of fast space-invariant deconvolution 
+algorithms instead of depth-dependent algorithms. This is significant because 
+it improves both the signal-to-noise ratio and the resolution in biological 
+imaging where photons are in short supply. Unfortunately, the performance 
+does not yet achieve what is theoretically possible.
+
+\begin{figure}[htb]
+	\centering
+		\includegraphics[width=0.80\textwidth]{images/wide_flour_spher_All.jpg}
+	\caption{Images of a $\unit[200]{nm}$ bead $\unit[67]{\upmu m}$ below the 
+cover slip in a water/glycerol mixture with n = 1.42.  (a) Uncorrected image 
+of in-focus plane. (b) Corrected image of in-focus plane. Images (c) and (d) 
+are the same as (a) and (b), respectively, but on a logarithmic scale for 
+better visualization. (e) and (f) are line profiles of the intensity through 
+the center of the bead along the lateral and the longitudinal axis, 
+respectively. The dashed line is from the uncorrected image and the solid 
+line is from the corrected image. (g) and (h) are simulations of the PSF. 
+Images based on \cite{wide_AOM_FM_spehrical_correction}.}
+	\label{fig:wide_flour_spher_All} 
+\end{figure}
 
 
+The first is the effect of uncorrected aberrations from the sample and the 
+optical path, which decrease the maximum intensity at the cover slip, but in 
+a way that does not add linearly to the depth aberration. Thus only a 
+fraction of the dispersed photons can be restored to the central peak. In 
+closed loop AO systems, system aberrations are automatically compensated at 
+each position (Wright et al., 2007), but in an open-loop system this is not 
+possible. The second factor is the inability of the mirror to precisely 
+conform to the shape given by Eq. (1). The residual error of the mirror shape 
+increases with depth (see Fig. 3c) so that as the imaging plane goes deeper 
+and the possibility for improvement becomes greater, the improvement in peak 
+intensities decreases
+
+Lastly, the ultimate goal of applying adaptive optics in microscopy is to 
+correct all aberrations including those introduced by the refractive index 
+variations of the sample itself.
+
+
+\cite{wide_AOM_FM_spehrical_correction}
 
 \cite{wide_MPFM}
-\cite{wide_structured_illu}
+\cite{wide_AOM_structured_illu}
+\cite{wide_AOM_loew_freq}
 
-get:
-\url{http://www.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&retmode=ref&cmd=prlinks&id=20096044} 
 
-bib info (already got PDF)
-
-23 24 20
-%-------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+-
 \subsection{Point Scanning Microscopes}
 \label{sec:PointScanningMicroscopes}
 
@@ -86,7 +237,8 @@ including two-photon excitation uorescence (TPEF) microscopy, second harmonic
 generation (SHG) and third harmonic generation (THG) microscopy, and coherent 
 anti-Stokes Raman (CARS) microscopy.
 
-%-------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+-
 \subsubsection{Confocal Microscopes}
 \label{sec:ConfocalMicroscopes}
 
@@ -124,19 +276,20 @@ generation,16, 17 CARS.18 Example images of aberration correction in an
 adaptive THG microscope are shown in Fig. 10.
 
 \cite{book_confocal}
+\cite{AOM_scan_CFM}
 
-\cite{confocal_microscope}
 
-
-%-------------------------------------------------------------------------------
-\subsubsection{two-photon excitation}
+%------------------------------------------------------------------------------
+-
+\subsubsection{Two-Photon Fluorescence Microscopy}
 \label{sec:twoPhotonExcitation}
 
 \cite{TPFM_gated_wavefront}
 \cite{TPFM_image_based}
 \cite{TPFM_pratical}
 
-%-------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+-
 \subsubsection{Harmonic Generation}
 \label{sec:HarmonicGeneration}
 
@@ -144,7 +297,8 @@ adaptive THG microscope are shown in Fig. 10.
 \cite{HG_dynamic}
 
 
-%-------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+-
 \subsubsection{CARS}
 \label{sec:CARS}
 
