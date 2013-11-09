@@ -12,12 +12,12 @@
 \contentsline {section}{\numberline {3}Adaptive Optics Methods applied in Microscopy}{3}{section.3}
 \contentsline {subsection}{\numberline {3.1}Widefield Microscopy}{3}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}Structured Illumination Microscopy}{3}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}Fluorescence Microscopy}{4}{subsubsection.3.1.2}
-\contentsline {subsection}{\numberline {3.2}Point Scanning Microscopes}{6}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Confocal Microscopes}{6}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Two-Photon Fluorescence Microscopy}{6}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Harmonic Generation}{6}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}CARS}{6}{subsubsection.3.2.4}
-\contentsline {section}{\numberline {4}Future Prospects}{7}{section.4}
-\contentsline {section}{\numberline {5}Conclusion}{7}{section.5}
-\contentsline {section}{References}{8}{section*.7}
+\contentsline {subsubsection}{\numberline {3.1.2}Fluorescence Microscopy}{6}{subsubsection.3.1.2}
+\contentsline {subsection}{\numberline {3.2}Point Scanning Microscopes}{7}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Confocal Microscopes}{7}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Two-Photon Fluorescence Microscopy}{7}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Harmonic Generation}{8}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}CARS}{8}{subsubsection.3.2.4}
+\contentsline {section}{\numberline {4}Future Prospects}{8}{section.4}
+\contentsline {section}{\numberline {5}Conclusion}{8}{section.5}
+\contentsline {section}{References}{9}{section*.7}
