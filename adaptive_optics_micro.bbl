@@ -5,6 +5,12 @@ J\"{o}rg Bewersdorf, Rainer Pick, and Stefan~W. Hell.
 \newblock Multifocal multiphoton microscopy.
 \newblock {\em Opt. Lett.}, 23(9):655--657, 5 1998.
 
+\bibitem{wide_sphere_packing}
+Martin Booth.
+\newblock Wave front sensor-less adaptive optics: a model-based approach using
+  sphere packings.
+\newblock {\em Opt. Express}, 14(4):1339--1352, Feb 2006.
+
 \bibitem{AOM_basic_ref}
 Martin~J Booth.
 \newblock Adaptive optics in microscopy.
@@ -51,6 +57,13 @@ P.~KNER, J.W. SEDAT, D.A. AGARD, and Z.~KAM.
   spherical aberration correction and motionless focusing.
 \newblock {\em Journal of Microscopy}, 237(2):136--147, 2010.
 
+\bibitem{wide_Lukosz_Modes}
+W.~Lukosz.
+\newblock Der einfluß der aberrationen auf die optische Übertragungsfunktion
+  bei kleinen orts-frequenzen.
+\newblock {\em Optica Acta: International Journal of Optics}, 10(1):1--19,
+  1963.
+
 \bibitem{Aberrations_book}
 Virendra~N. Mahajan.
 \newblock {\em Optical Imaging and Aberrations, Part II. Wave Diffraction
@@ -78,6 +91,12 @@ Nicolas Olivier, Delphine D\'{e}barre, and Emmanuel Beaurepaire.
 James Pawley, editor.
 \newblock {\em Handbook of Biological Confocal Microscopy}.
 \newblock Springer, 3rd edition, 8 2006.
+
+\bibitem{wide_parabolic_optimization}
+William~H. Press, Saul~A. Teukolsky, William~T. Vetterling, and Brian~P.
+  Flannery.
+\newblock {\em Numerical Recipes 3rd Edition: The Art of Scientific Computing}.
+\newblock Cambridge University Press, 3 edition, 9 2007.
 
 \bibitem{TPFM_gated_wavefront}
 Markus Rueckel, Julia~A. Mack-Bucher, and Winfried Denk.
