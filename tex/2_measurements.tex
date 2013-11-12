@@ -1,5 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Aberration Measurement and Correction}
+\label{Measurement}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %explain what are abberations, how they arrise, why it is good to correct them
@@ -53,11 +54,11 @@ temperature (see Chapter 11 of Ref. 9).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Wavefront Sensing}
+\subsection{Direct Wavefront Sensing}
 \label{sec:WavefrontSensing}
 
 %------------------------------------------------------------------------------
-\subsubsection{Interferometry}
+\subsubsection{Lateral Shearing Interferometer}
 \label{sec:DirectWavefrontSensing_interferometry}
 %not sure if this is used for microscopy, we should at least mention it
 
@@ -66,17 +67,74 @@ temperature (see Chapter 11 of Ref. 9).
 \label{sec:DirectWavefrontSensing_SHWS}
 
 %------------------------------------------------------------------------------
-\subsubsection{Indirect Wavefront Sensing}
+\subsubsection{Curvature Sensor}
+\label{sec:CurvatureSensor}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Indirect Wavefront Sensing}
 \label{sec:IndirectWavefrontSensing}
+
+While direct wavefront sensing techniques are widely applied in Astronomy, 
+they are less common in microscopy techniques. This for several reasons. It 
+is not as easy to create a guiding start like point source in a biological 
+specimen. If there are not features in the specimen that occur there 
+naturally and which resemble a point source, one has to be implemented 
+manually which might alter the function of the specimen or might even be 
+toxic to the sample. Modern microscopes are also highly complex and 
+optimized, which makes it difficult to insert a relatively large wavefront 
+sensor. For samples with weak signal strength, it is also desirable to 
+collect as many photons as possible for the imaging process. Splitting the 
+beam and using a part of the light emitted from the sample for direct 
+wavefront sensing might hence decrease the signal strength too much.
+
+Indirect techniques do not measure the wavefront directly but instead 
+optimize the image quality. This leads to the retrieval of the aberration and 
+the necessary corrections. Hence these techniques don't sense the wavefront 
+but rather improve the image quality and through this correct for wavefront 
+aberrations. Indirect methods are used more often in industrial and medical 
+applications. They usually require very little additional hardware. Once the 
+technique is optimized for a specific problem, indirect schemes are easier to 
+implement in practice and are more prone to errors due to the lack of 
+additional hardware~(a single deformable mirror might be sufficient to 
+implement adaptive optics in an existing microscope). 
+
+Indirect techniques include phase diversity as well as optimization of an 
+image quality metric. Phase diversity techniques use two or more images of an 
+extended object to make an estimation of the distorting 
+wavefront~\cite{indirect_phase_retrieval_algorithm}. However, this technique 
+still requires 
+a beam splitter, a second detector and a deformable mirror which is a 
+significant disadvantage over image quality metric optimization where only 
+the normally recorded image and a deformable mirror is required. It is also 
+necessary to record images with different focus positions and hence the each 
+phase retrieval step takes many seconds. Therefore the entire process of 
+optimizing the wavefront takes minutes, which is to slow for most biological 
+imaging~\cite{indirect_AOM_phase_retrieval}. It is for these reasons that 
+phase diversity techniques are less common in microscopy and will not be 
+described further. The focus of this section is therefor a general 
+description of image quality metric techniques. Their specific properties and 
+how they are implemented in the different microscopy techniques is then 
+described in Section~\ref{sec:ExperimentDiscussion}.
+
+%------------------------------------------------------------------------------
+%Optimization of an Image Quality Metric
+
+The optimization of an image quality metric is mainly a mathematical rahter then a techniquel problem. We will describe the basic principle but the derivation of the specifc metrics is beyond the scope of this paper. The interested reader will find more information on the mathematical background in reference~\cite{wide_parabolic_optimization,wide_sphere_packing,wide_Lukosz_Modes,wide_AOM_loew_freq}. 
+
+For these techniques, the aberration correction is performed through an iterative optimization of an image quality metric based. The metric is usually based on spatial frequencies~\cite{wide_AOM_loew_freq} or image intensity~\cite{indirect_metric_intensity}. Such optimization is either implemented empirically or by using an appropriate mathematical model. In many practical systems aberrations can be accurately represented by a small number of modes of an orthogonal basis, such as Zernikepolynomials. A sequence of images is acquired, each with a different aberration applied and the correction aberration is estimated from the information in this images. This process is repeated until the image quality is considered acceptable. The number of measurements needed to obtain an acceptable image depends strongly upon the optimization algorithm and parameters used, the mathematical representation of the aberration, and the object structure. For the earliest and most generic algorithms the number of measurements per aberration mode increases quadratically or exponentially with $N$, the number of corrected aberration modes~\cite{wide_sphere_packing}. The so called direct maximization method~(as described in Section~\ref{sec:TransmissionMicroscope}) is significantly more efficient, requiring only $N+1$ measurements for $N$ mode. With this technique, Lukosz polynomials~\cite{wide_Lukosz_Modes} are used to clasify the aberrations. The effects of different modes can then be separated and the optimization of each mode becomes independent and hence more efficient.
+
+An effective model-based adaptive optics scheme should also be independent of the imaged object and should permit the separation of aberration and object influences on the measurements. This separation is also possible through the appropriate choice of optimization metric and aberration representation~\cite{wide_AOM_loew_freq}.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Aberration Correction}
 \label{sec:AberrationCorrection}
 % just mention the basic principles, i.e. liquid crystal, deformable mirror, 
-computational
+%computational
 
 %------------------------------------------------------------------------------
-\subsection{Deformable Mirror }
+\subsection{Deformable Mirrors}
 \label{sec:DeformableMirror}
 
 %------------------------------------------------------------------------------

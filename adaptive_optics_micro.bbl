@@ -45,6 +45,28 @@ Delphine D\'{e}barre, Edward~J. Botcherby, Tomoko Watanabe, Shankar Srinivas,
 \newblock Image-based adaptive optics for two-photon microscopy.
 \newblock {\em Opt. Lett.}, 34(16):2495--2497, 8 2009.
 
+\bibitem{indirect_phase_retrieval_algorithm}
+Ross~W. Deming.
+\newblock Phase retrieval from intensity-only data by relative entropy
+  minimization.
+\newblock {\em J. Opt. Soc. Am. A}, 24(11):3666--3679, Nov 2007.
+
+\bibitem{indirect_metric_intensity}
+J.~R. Fienup and J.~J. Miller.
+\newblock Aberration correction by maximizing generalized sharpness metrics.
+\newblock {\em J. Opt. Soc. Am. A}, 20(4):609--620, Apr 2003.
+
+\bibitem{AOM_scan_STED}
+Travis~J. Gould, Daniel Burke, Joerg Bewersdorf, and Martin~J. Booth.
+\newblock Adaptive optics enables 3d sted microscopy in aberrating specimens.
+\newblock {\em Opt. Express}, 20(19):20998--21009, 9 2012.
+
+\bibitem{future_AOM_PALM_1}
+Audrius Jasaitis, Grégory Clouvel, and Xavier Levecq.
+\newblock Extreme precision in 3d: Adaptive optics boosts super-resolution
+  microscopy.
+\newblock Visited on 12/11/13.
+
 \bibitem{HG_embryos}
 Alexander Jesacher, Anisha Thayil, Kate Grieve, Delphine D\'{e}barre, Tomoko
   Watanabe, Tony Wilson, Shankar Srinivas, and Martin Booth.
@@ -56,6 +78,12 @@ P.~KNER, J.W. SEDAT, D.A. AGARD, and Z.~KAM.
 \newblock High-resolution wide-field microscopy with adaptive optics for
   spherical aberration correction and motionless focusing.
 \newblock {\em Journal of Microscopy}, 237(2):136--147, 2010.
+
+\bibitem{indirect_AOM_phase_retrieval}
+Peter Kner, Lukman Winoto, David~A. Agard, and John~W. Sedat.
+\newblock Closed loop adaptive optics for microscopy without a wavefront
+  sensor.
+\newblock {\em Proc. SPIE}, 7570:757006--757006--9, 2010.
 
 \bibitem{wide_Lukosz_Modes}
 W.~Lukosz.

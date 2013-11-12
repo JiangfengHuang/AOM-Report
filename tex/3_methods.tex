@@ -11,239 +11,67 @@
 \section{Adaptive Optics Methods applied in Microscopy}
 \label{sec:ExperimentDiscussion}
 
-AO has been demonstrated in a range of microscope modalities, including 
-conventional widefield microscopes as well as laser scanning systems. The 
-most common implementations have involved confocal and two-photon 
-fluorescence microscopy, both of which are widely used methods in biomedical 
-investigations. Due to aberrations, these microscopes suffer from a 
-significant drop in signal and resolution as the focus is moved deeper into 
-the specimen. 
+Adaptive optics techniques have found their way into almost all kinds of modern, high resolution microscopy techniques. These microscopes have been combined with direct wavefront sensing and sensorless AO, using deformable mirrors or spatial light modulators for aberration compensation~(all of which has been described in Section~\ref{Measurement}. This includes standard widefield microscopes as well as highly sophisticated and specialized point scanning methods such as Coherent Antistokes Raman Spectroscopy~(CARS) and STimulated Emission Depletion~(STED) techniques. It has to be noted however, that some of these methods are themselves only a few years old. Therefor, they are still being optimized and so are the AOM techniques. It is therefore an interesting field of research with new ideas being implemented every year.\newline
+AO was first used in confocal and two-photon fluorescence microscopy, both of which are commonly used in biomedical applications. These microscopes suffer from a significant drop in signal and resolution as the focus is moved deeper into the specimen, which is caused by aberrations.\cite{characterizing_abberations}
 
-Various research groups have combined these microscopes with direct wavefront 
-sensing and sensorless AO, normally using deformable mirrors for aberration 
-compensation. Ji et al. developed another approach that uses an SLM to 
-implement a pupil segmentation phasing method in a two-photon microscope. AO 
-has also been applied to microscopes using more exotic contrast mechanisms 
-based upon nonlinear optical processes, such as second- and third-harmonic 
-generation or coherent anti-Stokes Raman scattering. Using these various 
-methods, researchers have demonstrated image improvement at depths of up to 
-100 ìm in mouse embryos and over 200 ìm in brain tissue.
+AOM is also used for imaging of live specimens. Due to an increased excitation signal and improved light collection from the specimen, acquisition times can be reduced and contrast can be enhanced. Techniques that without AO are to slow for live imaging might now be usable, opening up completely new fields of research. Another advantage of AO lies in the microscopy design. Using AO methods, can help the designer to relax the aberration tolerance. This permits a significant reduction in the complexity of the optical system while maintaining diffraction limited operation.
 
-Adaptive microscopy is also finding a role in the imaging of live specimens. 
-It can help to reduce the time required for image acquisition by increasing 
-signal generation and collection efficiency. This is particularly useful in 
-microscopes that rely on nonlinear contrast mechanisms, where any drop in 
-focal intensity has a compounded effect on signal level.
+This section will describe, using state of the art examples, how AO is implemented in both widefield and point scanning systems.  
 
-AO can help by allowing the designer to relax the aberration tolerance from 
-the usual fraction of a wavelength up to several wavelengths. This permits a 
-significant reduction in the complexity of the optical system. In 
-configurations where the optical fidelity has been compromised, the AO can be 
-used to correct the residual system aberration, restoring diffractionlimited 
-operation.
-
-% explain that we need AO, ref this:
-We can conclude: specimen induced aberrations lead to reduced signal levels 
-and a deterioration in image quality in optical microscopy, especially in CFM 
-and TPM. For the first time, specimen induced aberrations that occur with 
-various biological specimens have been classified and quantified for the most 
-relevant condition of high NA. The above approach can provide detailed 
-information about the variation of each Zernike coefficient across the scan.
-As expected from theory, lower NA systems are less susceptible to aberrations 
-than high NA system under otherwise similar conditions. Low order correction 
-would still provide benefits, even though the initial aberrations are 
-smaller. The results presented here quantify the benefit of adaptive optics 
-for biological microscopy and provide the bounds within which these systems 
-must operate.
-\cite{characterizing_abberations}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Widefield Microscopy}
 \label{sec:WidefieldMicroscopy}
 
-In conventional microscopes, widefield illumination is provided using either 
-transmission optics or, in the case of re ection or uorescence modes, via the 
-objective lens in an epi configuration. In either case, the image quality 
-depends only on the optics of the detection path and is independent of the 
-fidelity of the illumination path.
-Aberration correction is therefore only necessary in the detection path and a 
-single pass adaptive optics system will suffice.
-\cite{Aberrations_book} 
-
-The objective of all adaptive optics systems is to reduce the wave front 
-aberrations to an acceptable level. Normally this would involve a wave front 
-sensor to measure the aberrations, which are in turn corrected using an 
-adaptive element, such as a deformable mirror. In imaging systems, however, 
-direct wave front sensing is not straightforward and wave front sensorless 
-schemes are often employed. In certain situations, some aberration 
-information can be extracted from a single image using phase retrieval 
-methods; further information is obtained from two or more defocused images 
-using the methods of phase diversity.
-
+As mentioned above, AO techniques are being applied in widefield microscopy. In conventional microscopes, widefield illumination is provided using back light illumination or in the case of reflection or fluorescence modes, via the objective lens. The image quality depends only on the aberrations induced in the detection path and is independent of the aberrations of the illumination path. Aberration correction is therefore only necessary in the detection path and a single pass adaptive optics system will suffice~\cite{Aberrations_book}. Hence, the goal of AO for widefield microscopy is to restore the best possible imaging and to correct for aberrations induced both by an imperfect imaging system as well as by the imaged specimen. The latter becomes more important for thick biological samples where the light has to travel a larger distance through 
+a medium with an inhomogeneous refractive index. 
+This section describes how AO can be implemented in a standard transmission microscope~(Section~\ref{sec:TransmissionMicroscope}). Based on these early experiments, the same technique was then applied to structured light illumination~(Section~\ref{sec:StructuredIlluminationMicroscopy}), a specialized wide field technique. Further examples include AO used in both florescence~(Section~\ref{sec:FlourescnecMicroscopy}) and multifocal multiphoton microscopy~(Section~\ref{sec:MultifocalMultiphotonMicroscopy}). 
 
 %------------------------------------------------------------------------------
 \subsubsection{Transmission Microscope}
 \label{sec:TransmissionMicroscope}
-all from \cite{wide_AOM_loew_freq} which \cite{wide_AOM_structured_illu} is based on, i.e. where it is the more advandced topic
+To implement adaptive optics with standard (incoherent) transmission microscopes, \emph{Debarre et al.}~\cite{wide_AOM_loew_freq} implement an indirect, sensorless and image-based adaptive optics scheme, as shown in Fig.~\ref{fig:widefield_simple_microscope}. As described earlier in Section~\ref{sec:IndirectWavefrontSensing}, image-based techniques do not require an additional wavefront sensor but retrieve the correction data directly form the recorded images. As with all indirect sensing schemes, the difficulty is to find a good metric for image quality, which allows to determine the appropriate correction parameters.
 
-%basic principle:
-- arbitrary induced aberrations
-- find a metric whit which one can measure the aberrations of the single 
-modes and that can be easily optimized
-- metric based on modes which need to be independent -> Zernike or Luzkov can 
-be used
-- certain spatial frequency range is picked (low spatial frequency required) 
-- metric provides max. at the value of the coefficient for the mode chosen, 
-see figure???
-- by introducing 3 artificial aberrations (0, +- bias) the max of the 
-lorentzian function can be found readily!
+\begin{figure}[htb]
+	\centering
+		\includegraphics[width=0.50\textwidth]{images/widefield_simple_microscope.pdf}
+	\caption{Schematic diagram of the experimental setup, showing a simple microscope complemented with a deformable mirror for aberration correction. Image after~\cite{wide_AOM_loew_freq}.}
+	\label{fig:widefield_simple_microscope}
+\end{figure}
 
+The presented method uses low spatial frequency content of the image as the optimization metric. The aberration is represented in terms of so called Lukosz modes. Like Zernike polynomials, the Lukosz functions are each expressed as the product of a radial polynomial and an azimuthal function. The presented technique is based on modeling the effects of aberrations on the imaging of low spatial frequencies, which Lukosz modes are are found to be ideal for.
 
-Aberration correction is performed through the optimisation of an image 
-quality metric based upon the low spatial frequency content of the image. A 
-sequence of images is acquired, each with a different aberration bias applied 
-and the correction aberration is estimated from the information in this image 
-sequence. It is shown, by representing aberrations as an expansion in Lukosz 
-modes, that the effects of different modes can be separated. The optimisation 
-of each mode becomes independent and can be performed as the maximisation of 
-a quadratic function, requiring only three image measurements per mode. This 
-efficient correction scheme is demonstrated experimentally in an incoherent 
-transmission microscope. We show that the sensitivity to different aberration 
-magnitudes can be tuned by changing the range of spatial frequencies used in 
-the metric.We also explain how the optimisation scheme is related to other 
-methods that use image sharpness metrics.
-
-By using knowledge of the maximised function’s topology, we were able to 
-optimise algorithms to provide higher efficiency. The results indicated that 
-deterministic, non-adaptive algorithms could be effective in controlling 
-these systems, if suitably formulated. We demonstrated the relative 
-effectiveness of the different algorithms as the number of aberration modes, $
-N$, was increased. The number of measurements required in other methods 
-increased quadratically or  exponentially with $N$~\cite{wide_sphere_packing}
-The direct maximisation method was significantly more efficient, requiring 
-only $N+1$ measurements for $N$ modes, over the range of input aberrations 
-used here. This improvement over the other methods was possible since the 
-calculation effectively took into account a priori knowledge about the form 
-of the function being maximized. This is applicable to any system where the 
-aberration can be accurately represented by the N orthonormal modes.
-
-Certain adaptive optics systems do not employ a wave front sensor but rather 
-maximize a photodetector signal by appropriate control of an adaptive 
-element. The maximization procedure must be optimized if the system is to 
-work efficiently. Such optimisation is often implemented empirically, but 
-further insight can be obtained by using an appropriate mathematical model. 
-In many practical systems aberrations can be accurately represented by a 
-small number of modes of an orthogonal basis, such as the Zernike 
-polynomials. By heuristic reasoning we develop a model for the operation of 
-such systems and demonstrate a link with the geometrical problems of sphere 
-packings and coverings. This approach aids the optimization of control 
-algorithms and is illustrated by application to direct search and hill 
-climbing algorithms. We develop an efficient scheme using a direct 
-maximization calculation that permits the measurement of N Zernike modes with 
-only N+1 intensity measurements.
-
-These methods use iterative calculations based upon a model of the imaging 
-process to retrieve the aberrations and the object structure. However, these 
-calculations are not guaranteed to converge to a unique solution for 
-arbitrary objects. In other wave front sensorless systems, the adaptive 
-element is reconfigured in order to optimize a metric related to image 
-quality. The optimization procedure involves measurement of the metric for a 
-number of trial correction aberrations, followed by the estimation of an 
-improved correction aberration. This process is repeated until the image 
-quality is considered acceptable. The number of measurements required during 
-this process depends upon the optimization algorithm and parameters used, the 
-mathematical representation of the aberration, and the object structure. An 
-effective model-based adaptive optics scheme should be object independent, so 
-the model should permit the separation of aberration and object influences on 
-the measurements.We show that this separation is possible through the 
-appropriate choice of optimization metric and aberration representation
-
-In this paper we describe and demonstrate an image-based adaptive optics 
-scheme that is predominantly independent of object structure. This scheme 
-uses the low spatial frequency content of the image as the optimisation 
-metric but leads to correction for all spatial frequencies. The aberration is 
-represented in terms of Lukosz modes~\cite{wide_Lukosz_Modes}; these modes 
-are ideal for modelling the effects of aberrations on the imaging of low 
-spatial frequencies . We describe the imaging process in terms of spectral 
-densities and the optical transfer function. The optimisation metric g is 
-introduced as the sum of a range of low frequencies and is related to the 
-coefficients of the aberration expansion, {ai}. Because of this choice of 
-aberration expansion and optimisation metric, the function g({ai}) is found 
-to have a paraboloidal maximum that permits the use of simple maximisation 
-algorithms. Moreover, we show that this optimisation can be performed as a 
-sequence of independent maximisations in each aberration coefficient. The 
-correction scheme is demonstrated for imaging in an incoherent transmission 
-microscope.
-
-In order to understand the effects of the aberration on I 1, it is useful to 
-represent the aberration as a combination of Lukosz functions. These 
-functions, based upon the Zernike polynomials, were first derived by Lukosz [
-14] and later, independently by Braat [15]. Like Zernike circle functions, 
-the Lukosz functions are each expressed as the product of a radial polynomial 
-and an azimuthal function and use the same dual index and numbering scheme. 
-They can be defined as
-
-we optimize the energy within a certain frequency range ? 
-
-the value of ak that minimises G(ak) can be calculated from a minimum of 
-three measurements of G. In practice, we took these three measurements by 
-intentionally introducing different aberrations using the adaptive element. 
-We refer to these aberrations as biases.
-
-An image was acquired and its FT and spectral density were calculated. The 
-appropriate range of frequency components was summed, giving the metric 
-measurements g-, g0 and g+ respectively, and the reciprocal of each result 
-was calculated, giving G-, G0 and G+. The optimum correction aberration was 
-then estimated by parabolic minimisation as~\cite{wide_parabolic_optimization}
-...
-
+\noindent By modeling the aberration $\Phi(r)$ as a series of $N$ Lukosz modes $L_i(r,\phi)$ with coefficients $a_i$~\cite{wide_Lukosz_Modes}:
 \begin{align}
-	a_\text{corr} = \frac{b(G_+ - G_-)}{2G_+ - 4G_0 + 2G_-}
+	\Phi(r) = \sum_{i=4}^{N+3}{a_i L_i(r,\phi)},
+	\label{eq:aberration_expansion_Lukosz}
 \end{align}
-
-which is exactly equivalent to the Lorentzian maximisation of the metric g. 
-To correct this single mode, the correction aberration $\Phi = a_\text{corr}L_
-k$ would be added to the deformable mirror. For multiple mode correction, 
-each modal coefficient would be measured in this manner before applying the 
-full correction aberration containing all modes.
-
-The correction process is illustrated in Fig. 4 for the correction of one 
-Lukosz mode using the scatterer specimen. A suitable range of spatial 
-frequencies and the bias amplitude were chosen based upon the curves in Fig. 3
-. An initial aberration was added using the DM, an image was acquired and the 
-value of g was calculated. Positive and negative bias aberrations were added 
-in turn and the corresponding values of g were calculated. The correction 
-aberration was obtained using Eq. 33 and the correction was applied to the DM.
-
-However, in all cases shown here, this corresponds to a Strehl ratio of 
-greater than 0.8, close to the diffraction limit. These results indicate 
-that, when aberration statistics are unknown, a sensible strategy would 
-involve choosing small spatial frequencies for an initial correction. This 
-would be accompanied by a bias that is no larger than the half width of the 
-response curve, as shown in Fig. 3(b). If further correction is required, 
-this could be performed using a larger range of frequencies and a 
-corresponding smaller bias. If the maximum expected aberration magnitude is 
-known, then the bias could be chosen to be similar to this maximum. 
-
-The effect of additional aberration modes on the correction process was investigated by including random combinations of an extra eight modes (i = 12 to 19) in the initial aberration. The original eight modes (i = 4 to 11) were corrected in the same manner as before and å was calculated taking into account only the modes that were corrected. The results obtained when different amounts of the additional modes were present are shown in Fig. 7. The error å shows only a small variation as the amplitude ofk the additional modes is increased. This illustrates that different aberration modes can be corrected independently using this procedure.
-
-We have introduced a model-based adaptive optics scheme for correcting aberrations in an incoherent imaging system. Using an optimisation metric based upon the low spatial frequency content of the image and an aberration expansion in terms of Lukosz modes, we have been able to separate the effects of the different aberration modes. This allowed the optimisation to be performed as a sequence of independent corrections of each mode. Although only low spatial frequencies are used in the optimisation process, correction of all aberrations (aside from piston, tip and tilt) results. Consequently, imaging quality is improved for all spatial frequencies and not solely the frequencies used in the optimisation metric. The correction scheme is predominantly independent of object structure – the model is valid when the low spatial frequency components are not significantly concentrated in one orientation. This would occur, for example, if the image were dominated by a one dimensional grid-like pattern. Even if the object has this form, we expect the scheme to be robust – this has been indicated by preliminary results. Although the discussion in this paper was framed in the context of an incoherent imaging system, we expect this approach also to be valid for coherent or partially coherent systems.
- 
+they develop the optimization metric $g$ as the sum of a range of low frequencies. It is related to the coefficients of the aberration expansion, $a_i$ by the Lorentzian function~\cite{wide_AOM_loew_freq}
+\begin{align}
+	g(a_i) \approx \frac{1}{q_0 + q_1 \sum_{i=4}^{N+3}{a_i^2}}
+	\label{eq:aberration_metric}
+\end{align}
+where the piston, tip and tilt modes ($i = 1,2,3$ respectively) have been omitted and $q_0$ and $q_1$ are both positive quantities in the frequency range of interest. The aberration correction process is then performed as the maximization of $g(a_i)$. Because of this particular aberration expansion and  optimization metric, the function $g(a_i)$ shows a paraboloidal maximum that permits the use of simple maximization algorithms. Furthermore, it is shown that the optimization can be performed as a sequence of independent maximizations for each aberration coefficient. 
 
 \begin{figure}[tbh]
-        \centering
-        \begin{subfigure}[b]{0.8\textwidth}
-                \includegraphics[width=\textwidth]{images/wide_parabolic_opti_images}
-                \label{fig:para_opt_images}
-        \end{subfigure}
-        \begin{subfigure}[b]{0.8\textwidth}
-                \includegraphics[width=\textwidth]{images/wide_parabolic_opti_graphs}
-                \label{fig:para_opt_graphs}
-        \end{subfigure}								
-        \caption{Correction of a single Lukosz aberration mode (astigmatism, i = 5) for a scatterer specimen and using low spatial frequencies. The first row shows the raw images of the specimen and the second row contains the corresponding spectral densities. The third row illustrates schematically the sampling of the Lorentzian curve used in the optimization calculation. (a1-a3) correspond to an arbitrary initial aberration of magnitude, (b1-b3) have an additional negative bias while (c1-c3) have an additional positive bias of equal magnitude. (d1- d3) show the corrected image calculated with the parabolic minimizationn. Image after~\cite{wide_AOM_loew_freq}.
-.}
-\label{fig:para_opt}
+			\centering
+			\begin{subfigure}[b]{0.8\textwidth}
+							\includegraphics[width=\textwidth]{images/wide_parabolic_opti_images}
+							\label{fig:para_opt_images}
+			\end{subfigure}
+			\begin{subfigure}[b]{0.8\textwidth}
+							\includegraphics[width=\textwidth]{images/wide_parabolic_opti_graphs}
+							\label{fig:para_opt_graphs}
+			\end{subfigure}								
+			\caption{Correction of a single Lukosz aberration mode (astigmatism, i = 5) for a scatterer specimen and using low spatial frequencies. The first row shows the raw images of the specimen and the second row contains the corresponding spectral densities. The third row illustrates schematically the sampling of the Lorentzian curve used in the optimization calculation. (a1-a3) correspond to an arbitrary initial aberration of magnitude, (b1-b3) have an additional negative bias while (c1-c3) have an additional positive bias of equal magnitude. (d1- d3) show the corrected image calculated with the parabolic minimizationn. Image after~\cite{wide_AOM_loew_freq}.}
+	\label{fig:para_opt}
 \end{figure} 
+
+The correction process is shown in Figure~\ref{fig:para_opt} for the correction of a single Lukosz mode using a scatterer specimen. Using the deformable mirror (DM), an initial aberration $a_i$ is applied and an image is recorded. The Fourier transform and spectral density of the image are then calculated and the appropriate range of frequency components are summed, giving the metric measurements $g_0$. The same procedure is repeated with both negative and positive aberrations~(i.e. stronger and weaker aberrations), resulting in the metric measurements $g_-$ and  $g_+$. Due to the paraboilc maximum of \eqref{eq:aberration_metric}, the value of $a_i$ that minimizes $g$ can be calculated from as little as three measurements of $g(a_i)$. The optimum correction aberration can then estimated by parabolic minimization as~\cite{wide_parabolic_optimization}:
+\begin{align}
+	a_\text{corr} = \frac{b(g_+ - g_-)}{2g_+ - 4g_0 + 2g_-}
+\end{align}
+and is then applied to the DM. To correct multiple modes, each modal coefficient is measured in the same manner before the full correction aberration containing all modes is applied. While this technique is based only on low spatial frequencies, it is shown that both low and high frequency components can be effectively corrected. In all the cases investigated, a Strehl ratio greater than 0.8, close to the diffraction limit, was obtained. This indicates that, when aberration statistics are unknown, choosing small spatial frequencies for an initial correction is a reasonable strategy. If further correction is required,they can be performed using a larger range of frequencies. \emph{Debarre et al.} conclude that this correction scheme is largely independent of the object structure and propose that this approach also to be valid for coherent or partially coherent systems.
 
 
 %------------------------------------------------------------------------------
@@ -252,6 +80,8 @@ We have introduced a model-based adaptive optics scheme for correcting aberratio
 
 %next part all from
 \cite{wide_AOM_structured_illu}
+
+all from \cite{wide_AOM_loew_freq} which \cite{wide_AOM_structured_illu} is based on, i.e. where it is the more advandced topic
 
 Optical sectioning microscopy is widely used to provide three-dimensional 
 fluorescence images of biological specimens. A common way of obtaining this 
@@ -495,11 +325,15 @@ correct all aberrations including those introduced by the refractive index
 variations of the sample itself.
 \cite{wide_AOM_FM_spehrical_correction}
 
+
+%------------------------------------------------------------------------------
+\subsubsection{Multifocal Multiphoton Microscopy}
+\label{sec:MultifocalMultiphotonMicroscopy}
+
 \cite{wide_MPFM}
 
 
 %------------------------------------------------------------------------------
--
 \subsection{Point Scanning Microscopes}
 \label{sec:PointScanningMicroscopes}
 
@@ -562,7 +396,6 @@ adaptive THG microscope are shown in Fig. 10.
 
 
 %------------------------------------------------------------------------------
--
 \subsubsection{Two-Photon Fluorescence Microscopy}
 \label{sec:twoPhotonExcitation}
 
@@ -571,7 +404,6 @@ adaptive THG microscope are shown in Fig. 10.
 \cite{TPFM_pratical}
 
 %------------------------------------------------------------------------------
--
 \subsubsection{Harmonic Generation}
 \label{sec:HarmonicGeneration}
 
@@ -580,11 +412,16 @@ adaptive THG microscope are shown in Fig. 10.
 
 
 %------------------------------------------------------------------------------
--
 \subsubsection{CARS}
 \label{sec:CARS}
 
 \cite{CARS}
+
+%------------------------------------------------------------------------------
+\subsubsection{STED}
+\label{sec:STED}
+
+\cite{AOM_scan_STED}
 
 
 
