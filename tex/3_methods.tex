@@ -78,131 +78,13 @@ and is then applied to the DM. To correct multiple modes, each modal coefficient
 \subsubsection{Structured Illumination Microscopy}
 \label{sec:StructuredIlluminationMicroscopy}
 
-%next part all from
-\cite{wide_AOM_structured_illu}
+It is often desired for biological samples to produce clear images of focal planes deep within a thick sample (i.e. optical sectioning) and common techniques include point-scanning techniques such as confocal or multiphoton techniques which are described in Section~\ref{sec:PointScanningMicroscopes}. 
 
-all from \cite{wide_AOM_loew_freq} which \cite{wide_AOM_structured_illu} is based on, i.e. where it is the more advandced topic
+%TODO
+Widefield techniques such as Structured Illumination (SI) microscopy can also provide optical sectioning. However, there the sectioning is realized using a standard microscopes, an incoherent light source and without the need for a scanning mechanism. For SI microscopy, a grid is imaged into the specimen to produce a one-dimensional sinusoidal excitation pattern in the focal plane. The resulting sinusoidal fluorescence image, consisting of both in- focus and out-of-focus fluorescence emission, is then normally recorded. Several images are taken, each corresponding to a different grid position \textbf{(vertical or horizontal grid shift???)}. The grid pattern only appears in the focal plane while it is blurred in the out of focus regions. Hence, it is possible to extract an optical section from the spatially modulated component of the images via a simple calculation.
 
-Optical sectioning microscopy is widely used to provide three-dimensional 
-fluorescence images of biological specimens. A common way of obtaining this 
-sectioning ability is through point scanning methods such as confocal or 
-multiphoton microscopy [1, 2]. An alternative is to use a wide-field 
-technique such as structured illumination (SI) microscopy, which retains the 
-sectioning ability of confocal microscopy, but can be implemented in a 
-conventional microscope using an incoherent light source, and without the 
-need for scanning. 
+Based on the SI microscopy technique presented by \emph{Neil et al.} in 2005~\cite{wide_structured_illu_principle} as well as their earlier work on indirect wavefront sensing using a conventional microscope~\cite{wide_AOM_loew_freq} in 2007~(described in the previous section) \emph{Debarre et al.} combined both techniques in 2008 and proposed an AO scheme for use in SI microscopy~\cite{wide_AOM_structured_illu}.  
 
-In this technique, the image of a grid is projected on the specimen so as to 
-produce a one-dimensional sinusoidal excitation pattern in the focal plane of 
-the objective lens. The resulting fluorescence image, consisting of both in-
-focus and out-of-focus fluorescence emission, is acquired by a camera. 
-Several images are taken, each corresponding to a different grid position. As 
-the grid pattern appears only in the focal plane, it is possible to extract 
-an optical section from the spatially modulated component of the images via a 
-simple calculation.~\cite{wide_structured_illu_principle}.
-
-In this paper we describe wavefront sensorless adaptive optics implemented in 
-a SI microscope. It is shown that the final image quality depends 
-predominantly on the imaging efficiency of the illumination pattern’s spatial 
-frequency. This imaging efficiency is affected much more by some aberration 
-modes than by others. Consequently, different aberration modes can have 
-significantly different effects on the final sectioned image.
-
-The SI microscope relies upon the projection of a physical grid pattern into 
-the focal plane of the specimen. We assume that the grid object is a 
-sinusoidal transmission mask
-
-those aberrations that affect the grid frequency have the most significant 
-effect on the SI microscope. It is therefore useful to separate aberration 
-modes into two groups: those that affect the grid frequency (referred to 
-hereon as “grid modes”) and those that have no influence on this frequency (
-“non-grid modes”). It is clear that grid modes have a significant influence 
-on the intensity of the sectioned image, whereas non-grid modes have 
-comparatively little effect. The non-grid modes do however affect the 
-resolution.
-
-%3. Derivation of a general optimisation scheme 
-The specification of a modal aberration correction scheme requires the choice 
-of three components: the aberration representation (the mathematical 
-functions used to describe the aberrations), the optimisation metric (a 
-quantity representing the image quality) and the estimator (the algorithm for 
-estimating the correction aberration).
-
-We would like to choose a metric function M whose maximum corresponds to the 
-highest quality image.
-find an aberration expansion for which the modes act independently on the 
-metric.
-This would allow the independent optimisation of each mode.
-When M is expressed in this form, it is clear that independent maximisation 
-with respect to each xi is possible. Furthermore, as the function is 
-quadratic, the maximum can be found directly from three measurements of M 
-corresponding to three different values of xi - here they reference to \cite{
-wide_AOM_loew_freq} so maybe I should put the two together, or see this one 
-as a more advandced version of the previous
-\begin{align}
-	M = M_0 - \sum_i{x_i^2}
-	\label{eq:structured_metric}
-\end{align}
-In practice, these measurements would be taken with three different trial 
-aberrations introduced by the correction element. However, M only takes the 
-form shown in Eq.~\eqref{eq:structured_metric} if the aberration 
-representation is appropriately chosen. 
-
-for each aberration mode, the metric M was measured when adding a given 
-amount of the considered mode, then again when substracting the same amount. 
-Along with the measured value of M when no aberration was added, this allowed 
-us to estimate the initial aberration present in each of the assessed modes 
-and hence to correct these aberrations
-
-Here we want to emphasise that the use of the appropriate metric and 
-aberration modes means that the correction of N modes was performed using 
-only 2N+1 measurements, thereby minimizing the increase in illumination time 
-of the sample required for the correction.
-
-The acquisition time per sectioned image was 300-500ms and the total time 
-required for correction of 11 modes was 7-12s, depending on the sample.
-
-
-However, M only takes the form shown in Eq. ( 10) if the aberration 
-representation is appropriately chosen.
-
-
-We are therefore led to the conclusion that the SI microscope, in comparison 
-to other sectioning microscopes, is more susceptible to certain aberrations (
-grid modes) and more resilient to others (non-grid modes).
-
-Whilst the SI microscope relies upon a relatively simple optical principle, 
-the image formation process has a complex mathematical description. 
-Similarly, the derivation of a modelbased, sensorless, adaptive optical 
-scheme is a complex process. However, our results show that the scheme is 
-effective in correcting specimen-induced and system aberrations and restoring 
-image quality. For the samples presented here, we found that the aberration 
-mainly consisted of astigmatism, coma and spherical aberration modes.
-
-The adaptive scheme described here has significant advantages over model-free 
-algorithms in that the aberration correction can be estimated using a small 
-number of measurements (2N+1 for N aberration modes). Moreover, as the scheme 
-is mostly independent of the object structure, the appropriate modes have 
-only to be determined once and the same scheme can be used for any 
-specimen.We have also shown that aberration correction can be effectively 
-combined with background subtraction to further improve SI microscope images. 
-In the results presented here, aberration correction was performed as an 
-average over an image frame and therefore would not correct for any local 
-variations in aberrations. If these variations were found to be significant, 
-the image could be formed from several sub-images for which independent 
-aberration correction would be performed.
-
-We have presented a general method that provides an optimal aberration 
-expansion for a chosen optimisation metric. This relied upon the derivation 
-of an inner product from a mathematical model of the imaging process, 
-followed by an orthogonalisation process applied to a set of basis functions, 
-such as the Zernike functions. This process reveals a wealth of information 
-about the effects of different aberration modes on an imaging system – for 
-the SI microscope, it enabled us to derive the sets of grid modes and non-
-grid modes. \textbf{This method could equally be applied to any sectioning 
-microscope to derive aberration expansions that are best suited to that 
-application.
-}
 \begin{figure}
 	\centering
 		\includegraphics[width=0.75\textwidth]{images/wide_structured_illumination.pdf}
@@ -214,19 +96,24 @@ detection path is shown in yellow. Image after~\cite{wide_AOM_structured_illu}
 	\label{fig:wide_structured_illumination}
 \end{figure}
 
+They again present a sensorless wavefront detection scheme, which is shown in Fig.~\ref{fig:wide_structured_illumination}. The method to obtain the aberration correction is similar to the one presented and explained in the previous section. 
+The authors derive an inner product from a mathematical model of the imaging process, followed by an orthogonalization process applied to a set of Zernike polynomials. Based on that, a general method providing an optimal aberration expansion for the chosen optimization metric is presented. This process yields  information about the effects of different aberration modes in of the SI microscope. \emph{Debarre et al.} show that the image quality mainly depends on the imaging efficiency spatial frequency of the illumination pattern. This imaging efficiency is affected much more by some aberration modes~(called grid modes) than by others~(called non-grid modes) . Grid modes have a significant influence on the intensity of the sectioned image, whereas non-grid modes have comparatively little effect. The non-grid modes do however affect the resolution. 
+
+The results of the implemented AO scheme is shown in Fig.~\ref{fig:structured_light_correction} for aberration correction on a fluorescent mouse intestine. The image contrast and sharpness improvement is clearly visible in image~\ref{fig:SI_corrected} compared to the uncorrected image in \ref{fig:SI_uncorrected}. As a result of the aberration correction, and as shown in Fig.~\ref{fig:SI_scan}, the contrast of small sample features (blue arrows) is better defined after (red solid line) rather than before (black dotted line) correction. 
+
 \begin{figure}[tbh]
         \centering
-        \begin{subfigure}[b]{0.3\textwidth}
+        \begin{subfigure}[b]{0.25\textwidth}
                 \includegraphics[width=\textwidth]{images/structured_illumination_uncorrected}
                 \caption{Uncorrected.}
                 \label{fig:SI_uncorrected}
         \end{subfigure}
-        \begin{subfigure}[b]{0.3\textwidth}
+        \begin{subfigure}[b]{0.25\textwidth}
                 \includegraphics[width=\textwidth]{images/structured_illumination_corrected}
                 \caption{Corrected.}
                 \label{fig:SI_corrected}
         \end{subfigure}
-        \begin{subfigure}[b]{0.3\textwidth}
+        \begin{subfigure}[b]{0.25\textwidth}
                 \includegraphics[width=\textwidth]{images/structured_illumination_scan}
                 \caption{Line Scan.}
                 \label{fig:SI_scan}
@@ -238,12 +125,21 @@ aberration correction with inserts showing the phase induced by the
 deformable mirror. (c) Profile along the lines drawn on the images, both 
 profiles normalized so that their mean value is identical. As a result of the 
 resolution improvement, the contrast of small sample features (blue arrows) 
-are better defined after (red solid line) rather than before (black dotted 
+is better defined after (red solid line) rather than before (black dotted 
 line) correction. The imaging depth was approximately $\unit[10]{\upmu}$, 
 sacle bar size $\unit[10]{\upmu}$. Image after~\cite{wide_AOM_structured_illu}
 .}
 \label{fig:structured_light_correction}
 \end{figure} 
+
+The authors also explain an additional benefit of aberration correction for structured illumination microscopy. That the adaptive element can also be used to improve the rejection of the out-of-focus fluorescence. When imaging thick specimen, noise fluctuations in the fluorescence signal between the three successive widefield images obtained for the maximization process result in a large out-of-focus background in the calculated sectioned images. Since this background arises from fluorescence generated outside the focal plane, it is not  sensitive to the presence of aberrations. By applying large aberrations in a number of grid modes, the grid pattern is suppressed and only the out-of-focus noise can be measured. By subtracting this aberrated image from the original sectioned image, the fluorescent background can be efficiently removed, leading to greatly improved contrast of the in-focus structures.
+
+The aberrations can also change significantly with depth and hence using the same correction for different depths can result in a degradation of the image quality.  The correction can however be adapted for different imaging depths in the sample. This permits improvement of the image quality throughout an axially extended sample.
+It is furthermore possible to determined the appropriate modes once and use the same scheme for any specimen, as the scheme is mostly independent of the object structure. Alternatively, if one wants to correct for local variations in aberrations the image could be formed from several sub-images for which independent aberration correction would be performed.
+
+%TODO is this technique applied in Point Scanning Techniques? 
+In conclusion, the authors present a sophisticated, easy to implement and highly versatile AOM scheme which allows for aberration correction induced by the optical system, the specimen or the focus depth. While the presented scheme uses a widefield microscope, \emph{Debarre et al.} are also optimistic that similar AO methods based on indirect, image based aberration detection can be applied to point-scanning methods. 
+
 
 %------------------------------------------------------------------------------
 \subsubsection{Fluorescence Microscopy}
@@ -262,8 +158,8 @@ to increase by 2-folds. \cite{wide_AOM_FM_spehrical_correction}
 
 Because wide-field microscopy captures as efficiently as possible every 
 emitted photon ultimately minimizing the sample excitation dose, it is well 
-suited to in vivo imaging in sampleswhere scattering is not too large. 
-Although the out-of-focus photons are in thewrong place, they can be 
+suited to in vivo imaging in samples where scattering is not too large. 
+Although the out-of-focus photons are in the wrong place, they can be 
 effectively re-assigned to the location of emission by constrained 
 deconvolution algorithms \cite{wide_deconvolution}
 
@@ -331,7 +227,7 @@ variations of the sample itself.
 \label{sec:MultifocalMultiphotonMicroscopy}
 
 \cite{wide_MPFM}
-
+%Do I really want this???
 
 %------------------------------------------------------------------------------
 \subsection{Point Scanning Microscopes}
