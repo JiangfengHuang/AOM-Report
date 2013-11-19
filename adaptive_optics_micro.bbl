@@ -20,6 +20,11 @@ Oscar Azucena, Justin Crest, Shaila Kotadia, William Sullivan, Xiaodong Tao,
 \newblock Adaptive optics wide-field microscopy using direct wavefront sensing.
 \newblock {\em Opt. Lett.}, 36(6):825--827, Mar 2011.
 
+\bibitem{Babcock1953}
+H.~W. Babcock.
+\newblock The possibility of compensating astronomical seeing.
+\newblock {\em Pub. Astron. Soc. Pacific}, 65:229+, Oct 1953.
+
 \bibitem{wide_MPFM}
 J\"{o}rg Bewersdorf, Rainer Pick, and Stefan~W. Hell.
 \newblock Multifocal multiphoton microscopy.
@@ -36,6 +41,11 @@ Martin~J Booth.
 \newblock Adaptive optics in microscopy.
 \newblock {\em Philosophical Transactions of the Royal Society A: Mathematical,
   Physical and Engineering Sciences}, 365(1861):2829--2843, 2007.
+
+\bibitem{WF_sensorless}
+Martin~J. Booth.
+\newblock Wavefront sensorless adaptive optics for large aberrations.
+\newblock {\em Opt. Lett.}, 32(1):5--7, Jan 2007.
 
 \bibitem{AOM_biomedical}
 Martin~J. Booth, Delphine D\'{e}barre, and Alexander Jesacher.
@@ -135,6 +145,11 @@ Virendra~N. Mahajan.
   Optics (SPIE Press Monograph Vol. PM209)}.
 \newblock SPIE Press, 2 edition, 8 2011.
 
+\bibitem{optical_shop_testing}
+Daniel Malacara, editor.
+\newblock {\em Optical Shop Testing (Wiley Series in Pure and Applied Optics)}.
+\newblock Wiley-Interscience, 3 edition, 7 2007.
+
 \bibitem{scan_TPFM_pratical}
 P.~Marsh, D.~Burns, and J.~Girkin.
 \newblock Practical implementation of adaptive optics in multiphoton
@@ -157,11 +172,27 @@ James Pawley, editor.
 \newblock {\em Handbook of Biological Confocal Microscopy}.
 \newblock Springer, 3rd edition, 8 2006.
 
+\bibitem{History_HS}
+B.~C. Platt and R.~Shack.
+\newblock History and principles of shack-hartmann wavefront sensing.
+\newblock {\em Journal of refractive surgery}, 17(5), October 2001.
+
+\bibitem{AO_vision_science}
+Jason Porter, Hope Queener, Julianna Lin, Karen Thorn, and Abdul A.~S. Awwal.
+\newblock {\em Adaptive Optics for Vision Science: Principles, Practices,
+  Design and Applications (Wiley Series in Microwave and Optical Engineering)}.
+\newblock Wiley-Interscience, 1 edition, 7 2006.
+
 \bibitem{wide_parabolic_optimization}
 William~H. Press, Saul~A. Teukolsky, William~T. Vetterling, and Brian~P.
   Flannery.
 \newblock {\em Numerical Recipes 3rd Edition: The Art of Scientific Computing}.
 \newblock Cambridge University Press, 3 edition, 9 2007.
+
+\bibitem{Curvature_Sensor_1st_Paper}
+Franc\c{c}ois Roddier.
+\newblock Curvature sensing and compensation: a new concept in adaptive optics.
+\newblock {\em Appl. Opt.}, 27(7):1223--1225, Apr 1988.
 
 \bibitem{scan_TPFM_gated_wavefront}
 Markus Rueckel, Julia~A. Mack-Bucher, and Winfried Denk.
@@ -175,6 +206,23 @@ M.~Schwertner, M.~Booth, and T.~Wilson.
 \newblock Characterizing specimen induced aberrations for high na adaptive
   optical microscopy.
 \newblock {\em Opt. Express}, 12(26):6540--6552, 12 2004.
+
+\bibitem{Principles_HS}
+Larry~N. Thibos.
+\newblock Principles of hartmann-shack aberrometry.
+\newblock In {\em Vision Science and its Applications}. Optical Society of
+  America, 2000.
+
+\bibitem{AO_engineering_handbook}
+Robert Tyson.
+\newblock {\em Adaptive Optics Engineering Handbook (Optical Science and
+  Engineering)}.
+\newblock CRC Press, 1 edition, 11 1999.
+
+\bibitem{Interferometric_methods}
+Ingolf Weingaertner and Michael Schulz.
+\newblock Interferometric methods for the measurement of wavefront aberrations.
+\newblock {\em Proc. SPIE}, 1781:266--279, 1993.
 
 \bibitem{scan_CARS}
 A.~J. Wright, S.~P. Poland, J.~M. Girkin, C.~W. Freudiger, C.~L. Evans, and

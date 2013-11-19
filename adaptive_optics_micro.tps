@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=724
-NormalPos.bottom=889
+NormalPos.right=734
+NormalPos.bottom=804
 Class=LaTeXView
-Document=tex\4_conc.tex
+Document=tex\1_intro.tex
 
 [Frame0_View0,0]
-TopLine=0
-Cursor=2606
+TopLine=10
+Cursor=3505
 
 [Frame1]
 Flags=0
@@ -29,14 +29,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=724
-NormalPos.bottom=889
+NormalPos.right=734
+NormalPos.bottom=804
 Class=LaTeXView
-Document=tex\3_methods.tex
+Document=tex\2_measurements.tex
 
 [Frame1_View0,0]
-TopLine=334
-Cursor=23221
+TopLine=268
+Cursor=17994
 
 [Frame2]
 Flags=0
@@ -47,14 +47,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=724
-NormalPos.bottom=889
-Class=BibTeXView
-Document=tex\bibo.bib
+NormalPos.right=734
+NormalPos.bottom=804
+Class=LaTeXView
+Document=adaptive_optics_micro.tex
 
 [Frame2_View0,0]
-TopLine=171
-Cursor=5829
+TopLine=39
+Cursor=2557
 
 [Frame3]
 Flags=0
@@ -65,14 +65,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=724
-NormalPos.bottom=889
+NormalPos.right=734
+NormalPos.bottom=804
 Class=LaTeXView
-Document=tex\0_abstract.tex
+Document=tex\4_conc.tex
 
 [Frame3_View0,0]
 TopLine=0
-Cursor=0
+Cursor=2606
 
 [Frame4]
 Flags=0
@@ -83,14 +83,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=724
-NormalPos.bottom=889
+NormalPos.right=734
+NormalPos.bottom=804
 Class=LaTeXView
-Document=tex\1_intro.tex
+Document=tex\3_methods.tex
 
 [Frame4_View0,0]
-TopLine=17
-Cursor=2010
+TopLine=285
+Cursor=20457
 
 [Frame5]
 Flags=0
@@ -101,17 +101,35 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=724
-NormalPos.bottom=889
-Class=LaTeXView
-Document=tex\2_measurements.tex
+NormalPos.right=734
+NormalPos.bottom=804
+Class=BibTeXView
+Document=tex\bibo.bib
 
 [Frame5_View0,0]
-TopLine=25
-Cursor=1531
+TopLine=15
+Cursor=1141
+
+[Frame6]
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-1
+MaxPos.y=-1
+NormalPos.left=4
+NormalPos.top=26
+NormalPos.right=734
+NormalPos.bottom=804
+Class=LaTeXView
+Document=tex\0_abstract.tex
+
+[Frame6_View0,0]
+TopLine=0
+Cursor=0
 
 [SessionInfo]
-FrameCount=6
+FrameCount=7
 ActiveFrame=1
 
 [Bookmarks]

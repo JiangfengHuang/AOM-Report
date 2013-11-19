@@ -158,25 +158,33 @@ Several other point scanning microscope modalities have been introduced, includi
 - using a fluorescence microscope, the smaller FWHM, provided by the optimized DMM, will increase the excitation intensity leading to a higher fluorescent signal for the same laser beam input power
 
 3D adaptive optics in a light sheet microscope~\cite{scan_lightSheet}
+% not covered but should be mentioned
+\cite{scan_HG_embryos} -> Both the second- and third-harmonic intensity signals are used as the optimization metric. Aberration correction is performed to compensate both system- and specimen-induced aberrations by using an efficient optimization routine based upon Zernike polynomial modes. Images of live mouse embryos show an improved signal level and resolution.
+
+\cite{scan_HG_dynamic} -> THG, based on indirect wavefront sensing using total image intensity as metric
+
+\cite{scan_CARS} -> 
+
+\cite{scan_STED}
+
 
 %------------------------------------------------------------------------------
 -
 \subsubsection{Confocal Microscopes}
 \label{sec:ConfocalMicroscopes}
 
-The most common example of this type is the confocal microscope, which can be 
-operated in reflection or fluorescence mode. Three-dimensional resolution is 
-achieved by the placement of a pinhole in front of the photodetector. In a 
-reflection mode confocal microscope, the illumination is scattered by objects 
-not only in the focal region, but throughout the focusing cone. In 
-fluorescence mode, emission is generated in the focus but also in out-of-
-focus regions. The pinhole ensures that mainly light from the focal region 
-falls upon the detector and light from out-of-focus planes is obscured. It is 
-critical in the confocal microscope that both the illumination and detection 
-paths are diffraction limited. This ensures that i) the illuminating focal 
-spot is as small as possible, and ii) that the focus is perfectly imaged on 
-to the detector pinhole. Therefore, in an adaptive confocal microscope, 
-aberration correction must be included in both paths. This dual pass adaptive 
+The confocal microscopy can be operated in reflection or fluorescence mode. Both are a dual pass system, which means that either the illumination path and the emission path have to be corrected in an AO confocal microscope. 
+
+The first attempt to apply AO in confocal microscopy was done by \textit{Martin J. Booth et al} \cite{AOM_scan_CFM}. They implement indirect wavefront sensing to a confocal fluorescence microscope in a closed-loop way. Aberration measurement and correction was done sequentially. First a preset positive bias aberration was introduced by the mirror. An image scan was taken and all of its pixel values were summed and averaged to give the value of $W_1$. Then, it was added to the system the equivalent negative bias aberration, obtaining $W_2$. They had shown before that the value of the difference signal, W = $W_1$-$W_2$, is approximately proportional to the amount of the Zernike mode Zi present. They applied this procedure for several different Zernike modes, updating the mirror shape each time. The experimental set-up is shown in 
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.45\textwidth]{images/AOM_scan_CFM.jpg}
+		\caption{A beam from a frequency-doubled Nd:YAG laser (wavelength 532 nm) was passed through a beam expander. The illumination beam was reflected by the membrane mirror such that the angle between the incident and reflected beams was $\unit[16]{^{\circ}}$. The illumination beam then passed via a plane mirror and relay lenses (not shown) into the objective lens focusing the light into the specimen. Fluorescence light from the specimen was collected by the same objective and followed a reciprocal path, through the membrane mirror, and then was transmitted through the filter block. The light was focused through a pinhole onto an avalanche photodiode (APD). In this configuration, the membrane mirror can compensate for aberrations introduced into both the illumination and emission optical paths.}
+	\label{fig:AOM_scan_CFM}
+\end{figure}
+
+This dual pass adaptive 
 system can usually be implemented using a single deformable mirror, if the 
 path length aberrations are the same for both the illumination and the 
 emission light. This is the case if there is no significant dispersion in the 
@@ -191,11 +199,6 @@ path is unimportant so the effects of any aberrations in this path are
 negated. It follows that single pass adaptive optics is appropriate for these 
 microscopes as aberration correction need only be implemented in the 
 illumination path.
-
-Adaptive optics systems have been successfully combined with several point-
-scanning microscope systems including confocal,13 TPEF,6, 14, 15 harmonic 
-generation,16, 17 CARS.18 Example images of aberration correction in an 
-adaptive THG microscope are shown in Fig. 10.
 
 \cite{book_confocal}
 \cite{scan_CFM}
@@ -258,25 +261,6 @@ The resolution has a high dependence on the point-spread function (psf) of the s
 
 \cite{scan_TPFM_guide_start}
 
-%------------------------------------------------------------------------------
-\subsubsection{Harmonic Generation}
-\label{sec:HarmonicGeneration}
-
-\cite{scan_HG_embryos}
-\cite{scan_HG_dynamic}
-
-
-%------------------------------------------------------------------------------
-\subsubsection{CARS}
-\label{sec:CARS}
-
-\cite{scan_CARS}
-
-%------------------------------------------------------------------------------
-\subsubsection{STED}
-\label{sec:STED}
-
-\cite{scan_STED}
 
 
 
