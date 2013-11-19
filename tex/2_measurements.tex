@@ -45,67 +45,40 @@ Direct Wavefront Sensing is based on a direct measure of the phase gradient or t
 
 %------------------------------------------------------------------------------
 
-This last technique has its origin more than 400 years ago in the Scheiner's Disk developed by the astronomer Christopher Scheiner \cite{Principles_HS}. Later on, in the twenty century, Hartmann used the Scheiner's Disk to develop a test which measured the wavefront's slope at the exit of the optical system by using a screen with multiple holes. This technique was progressing until the 1971, when Platt and Shack developed a two-dimensional array of a few lenslets -a matrix of microlens-, all with the same diameter and the same focal length, that could substitute the screen with multiple holes. This is the start point of the technique known as "`Shack-Hartmann"'\cite{History_HS}.
-  
-This technique allows us to reconstruct the wavefront aberration function from the local slope's changes of an aberrated wavefront in relation with a reference wavefront. That is achieved measuring the displacements ($\Delta x, \Delta y$) from each image given by each microlent (Fig. \ref{fig:SH}).
+This last technique is based on a two-dimensional array of a few lenslets -a matrix of microlens-, all with the same diameter and the same focal length, that allows us to measure the wavefront's slope at the exit of the optical system. In other words, it allows us to reconstruct the wavefront aberration function from the local slope's changes of an aberrated wavefront in relation with a reference wavefront. That is achieved measuring the displacements ($\Delta x, \Delta y$) from each image given by each microlent (Fig. \ref{fig:SH}).
 
 \begin{figure}[htbp]
 	\centering
-		\includegraphics[width=0.35\textwidth]{images/SH.png}
-	\caption{Two-dimensional section of Shack-Hartmann matrix of microlens. When an incoming wavefront goes through the matrix is divided in multiple beams. In the focal plane of the matrix we have multiple spots. If the wavefront is not aberrated each spot will be placed in the axis of each microlens. If it is aberrated, it will be displaced with respect this axis \cite{optical_shop_testing}.}
+		\includegraphics[width=0.35\textwidth]{images/SH}
+	\caption{Two-dimensional section of Shack-Hartmann matrix of microlens. When an incoming wavefront goes through the matrix is divided in multiple beams. In the focal plane of the matrix we have multiple spots. If the wavefront is not aberrated, each spot will be placed along the axis of each microlens. If it is aberrated, it will be displaced with respect to this axis. Image after~\cite{optical_shop_testing}.}
 	\label{fig:SH}
 \end{figure}
 
 
 We start from an aberrated beam going through the matrix of microlens before it is detected in a recorder device. The beam is then spatially sampled into many individual beams (one for each microlens) by the lenslet matrix and forms multiple spots in the focal plane of the lenslets. Finally, the recorder device -that is placed at the focal plane of the matrix- registers multiple spots. This device is usually a CCD camera. The typical lenslet diameters range from about 100 to 600 mm and the typical focal lengths range from a few millimeters to about 30 mm \cite{AO_vision_science}.
   
-We must note that direct sensing needs a well defined wavefront in the pupil of the system or in other words, a point-like emitter. An this situation might not happen in biological microscopes where we are studying three-dimensional specimens, because the light emitted by the specimen may come not only from the focal point. This fact brings us to a couple of problematic situations. The first one is the superposition of wavefronts in the pupil which its effects will depend on the coherence of the emitted light. If it is coherent we will have interference in the pupil, thus we will have ambiguous sensor readings and this kind of sensing will not be suitable for aberration correction. In this sense, if in the focal region the specimen behaves as a point-like scatterer (it will emit incoherent light) the sensor will be able to measure the aberrations produced in the emission path, which in principle they should be the same as in the illumination path. But, if our specimen acts as a planar mirror-like in the focal region, the sensor will just be able to measure twice the even components of the aberrations produced in the illumination path (or emission path), that is because the "`mirror behaviour"' will spatially invert the aberrations in the illumination path (Fig. \ref{fig:abe_direct_sensing}). 
-
-\begin{figure}[htbp]
-	\centering
-		\includegraphics[width=0.45\textwidth]{images/abe_direct_sensing.png}
-	\caption{Representation of the two effects due to the specimen structure on wavefront measurements. The left figure shows how the wavefront is aberrated in the illumination path. In the center it is shown a point-like scatterer. Only the emission path is measured. In the right figure it is shown a planar reflector. The illumination wavefront is spatially inverted on reflection before aquiring further aberration in the detection path \cite{AOM_basic_ref}.}
-	\label{fig:abe_direct_sensing}
-\end{figure}
-
-
-Let us analyse it in detail. We denote the illumination ($W(\rho,\phi)_i)$ and emission ($W(\rho,\phi)_e$) path aberrations as the sum of its even and odd components,
-
-\begin{align}
-	\ W(\rho,\phi)_i = {{W(\rho,\phi)_i}^{even}} + {{W(\rho,\phi)_i}^{odd}},
-	\label{eq:aberration_i_even_odd_sum}
-\end{align}   
-
-\begin{align}
-	\ W(\rho,\phi)_e = {{W(\rho,\phi)_e}^{even}} + {{W(\rho,\phi)_e}^{odd}},
-	\label{eq:aberration_e_even_odd_sum}
-\end{align}   
-
-The measured aberration ($W(\rho,\phi)$) is the sum of the illumination and emission path aberrations,
+We must note that direct sensing needs a well defined wavefront in the pupil of the system or in other words, a point-like emitter. An this situation might not happen in biological microscopes where we are studying three-dimensional specimens, because the light emitted by the specimen may come not only from the focal point. This fact brings us to a couple of problematic situations. The first one is the superposition of wavefronts in the pupil which its effects will depend on the coherence of the emitted light. If it is coherent we will have interference in the pupil, thus we will have ambiguous sensor readings and this kind of sensing will not be suitable for aberration correction. In this sense, if in the focal region the specimen behaves as a point-like scatterer (it will emit incoherent light) the sensor will be able to measure the aberrations produced in the emission path, which in principle they should be the same as in the illumination path. But, if our specimen acts as a planar mirror-like in the focal region, the sensor will just be able to measure twice the even components of the aberrations produced in the illumination path (or emission path), that is because the "`mirror behavior"' will spatially invert the aberrations in the illumination path (Fig. \ref{fig:abe_direct_sensing}). Let us analyze it in detail. We know that the measured aberration ($W(\rho,\phi)$) is the sum of the illumination an emission path aberrations. Also we can denote the measured aberration as the sum of its even and odd components. All together become,  
 
 \begin{align}
 	\ W(\rho,\phi) = {{W(\rho,\phi)_i}^{even}} + {{W(\rho,\phi)_i}^{odd}}+{{W(\rho,\phi)_e}^{even}} + {{W(\rho,\phi)_e}^{odd}},
 	\label{eq:aberration_sum_il_em}
 \end{align}  
 
-Due to the spatial inversion we know that,
-
-\begin{align}
-	\ W(\rho,\phi)_i^{even}={{W(\rho,\phi)_e}^{even}}
-	\label{eq:spat_inversion_even}
-\end{align}
-	
-\begin{align}
-	\ W(\rho,\phi)_e^{odd}=-{{W(\rho,\phi)_e}^{odd}}
-	\label{eq:spat_inversion_odd}
-\end{align} 
-
-Then, the aberration measured can be simplified, 
+Due to the spatial inversion we know that $W(\rho,\phi)_i^{even}=W(\rho,\phi)_e^{even}$ and $W(\rho,\phi)_e^{odd}=-W(\rho,\phi)_e^{odd}$, therefore the measured aberration can be simplified as,  
 
 \begin{align}
 	\ W(\rho,\phi)=2 {{W(\rho,\phi)_e}}
 	\label{eq:ab_measured_spat_inver}
 \end{align} 
+ 
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.37\textwidth, height=0.15\textheight]{images/abe_direct_sensing.png}
+	\caption{Representation of the two effects due to the specimen structure on wavefront measurements. The left figure shows how the wavefront is aberrated in the illumination path. In the center it is shown a point-like scatterer. Only the emission path is measured. In the right figure it is shown a planar reflector. The illumination wavefront is spatially inverted on reflection before acquiring further aberration in the detection path \cite{AOM_basic_ref}.}
+	\label{fig:abe_direct_sensing}
+\end{figure}
+
 
 We have shown that in planar mirror-like structures we lose information about aberrations. Thus, in this cases it is not a good option to implement a direct sensing. Regarding microscopy techniques, we must note here that fluorescence emission is an incoherent process, but the non-linear processes generate a coherent signal.
 
@@ -187,5 +160,3 @@ Regarding the liquid crystal-based mirrors, they change the refractive index ele
 In AO microscopes the first choice in most cases is the deformable mirror because of their high detection efficiency. Besides, they are better suited for fluorescence techniques due to their polarisation independent behaviour. However, in particular cases, LC-SLM can be enough if aberration correction is only needed in the illumination path.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Control Strategies}
-\label{sec:ControlStrategies}

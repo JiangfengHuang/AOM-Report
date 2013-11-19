@@ -23,7 +23,7 @@ Oscar Azucena, Justin Crest, Shaila Kotadia, William Sullivan, Xiaodong Tao,
 \bibitem{Babcock1953}
 H.~W. Babcock.
 \newblock The possibility of compensating astronomical seeing.
-\newblock {\em Pub. Astron. Soc. Pacific}, 65:229+, Oct 1953.
+\newblock {\em Pub. Astron. Soc. Pacific}, 65, Oct 1953.
 
 \bibitem{wide_MPFM}
 J\"{o}rg Bewersdorf, Rainer Pick, and Stefan~W. Hell.
@@ -108,6 +108,12 @@ Travis~J. Gould, Daniel Burke, Joerg Bewersdorf, and Martin~J. Booth.
 \newblock Adaptive optics enables 3d sted microscopy in aberrating specimens.
 \newblock {\em Opt. Express}, 20(19):20998--21009, 9 2012.
 
+\bibitem{scan_STED_principle}
+Stefan~W. Hell and Jan Wichmann.
+\newblock Breaking the diffraction resolution limit by stimulated emission:
+  stimulated-emission-depletion fluorescence microscopy.
+\newblock {\em Opt. Lett.}, 19(11):780--782, Jun 1994.
+
 \bibitem{future_AOM_PALM_1}
 Audrius Jasaitis, Grégory Clouvel, and Xavier Levecq.
 \newblock Extreme precision in 3d: Adaptive optics boosts super-resolution
@@ -162,15 +168,17 @@ M.~A.~A. Neil, R.~Juskaitis, and T.~Wilson.
   conventional microscope.
 \newblock {\em Opt. Lett.}, 22(24):1905--1907, Dec 1997.
 
+\bibitem{scan_TPFM_review}
+Martin Oheim, Darren~J. Michael, Matthias Geisbauer, Dorte Madsen, and
+  Robert~H. Chow.
+\newblock Principles of two-photon excitation fluorescence microscopy and other
+  nonlinear imaging approaches.
+\newblock {\em Advanced Drug Delivery Reviews}, 58(7):788 -- 808, 2006.
+
 \bibitem{scan_HG_dynamic}
 Nicolas Olivier, Delphine D\'{e}barre, and Emmanuel Beaurepaire.
 \newblock Dynamic aberration correction for multiharmonic microscopy.
 \newblock {\em Opt. Lett.}, 34(20):3145--3147, 10 2009.
-
-\bibitem{book_confocal}
-James Pawley, editor.
-\newblock {\em Handbook of Biological Confocal Microscopy}.
-\newblock Springer, 3rd edition, 8 2006.
 
 \bibitem{History_HS}
 B.~C. Platt and R.~Shack.
@@ -206,6 +214,12 @@ M.~Schwertner, M.~Booth, and T.~Wilson.
 \newblock Characterizing specimen induced aberrations for high na adaptive
   optical microscopy.
 \newblock {\em Opt. Express}, 12(26):6540--6552, 12 2004.
+
+\bibitem{scan_Confocal_direct_sensing}
+Xiaodong Tao, Bautista Fernandez, Oscar Azucena, Min Fu, Denise Garcia, Yi~Zuo,
+  Diana~C. Chen, and Joel Kubby.
+\newblock Adaptive optics confocal microscopy using direct wavefront sensing.
+\newblock {\em Opt. Lett.}, 36(7):1062--1064, Apr 2011.
 
 \bibitem{Principles_HS}
 Larry~N. Thibos.

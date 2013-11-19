@@ -4,14 +4,12 @@
 \contentsline {subsection}{\numberline {2.1}Direct Wavefront Sensing}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Indirect Wavefront Sensing}{4}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Aberration Correction}{5}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Control Strategies}{6}{subsection.2.4}
-\contentsline {section}{\numberline {3}Adaptive Optics Methods applied in Microscopy}{7}{section.3}
-\contentsline {subsection}{\numberline {3.1}Widefield Microscopy}{7}{subsection.3.1}
+\contentsline {section}{\numberline {3}Adaptive Optics Methods applied in Microscopy}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Widefield Microscopy}{6}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}Transmission Microscope}{7}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}Structured Illumination Microscopy}{9}{subsubsection.3.1.2}
-\contentsline {subsection}{\numberline {3.2}Point Scanning Microscopes}{11}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.1.2}Structured Illumination Microscopy}{8}{subsubsection.3.1.2}
+\contentsline {subsection}{\numberline {3.2}Point Scanning Microscopes}{10}{subsection.3.2}
 \contentsline {subsubsection}{\numberline {3.2.1}Confocal Microscopes}{11}{subsubsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2}Two-Photon Fluorescence Microscopy}{12}{subsubsection.3.2.2}
-\contentsline {section}{\numberline {4}Future Prospects}{14}{section.4}
-\contentsline {section}{\numberline {5}Conclusion}{15}{section.5}
-\contentsline {section}{References}{16}{section*.13}
+\contentsline {section}{\numberline {4}Conclusion \& Future Prospects}{13}{section.4}
+\contentsline {section}{References}{15}{section*.13}
