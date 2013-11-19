@@ -23,9 +23,12 @@ This section will describe, using state of the art examples, how AO is implement
 \subsection{Widefield Microscopy}
 \label{sec:WidefieldMicroscopy}
 
-As mentioned above, AO techniques are being applied in widefield microscopy. In conventional microscopes, widefield illumination is provided using back light illumination or in the case of reflection or fluorescence modes, via the objective lens. The image quality depends only on the aberrations induced in the detection path and is independent of the aberrations of the illumination path. Aberration correction is therefore only necessary in the detection path and a single pass adaptive optics system will suffice~\cite{Aberrations_book}. Hence, the goal of AO for widefield microscopy is to restore the best possible imaging and to correct for aberrations induced both by an imperfect imaging system as well as by the imaged specimen. The latter becomes more important for thick biological samples where the light has to travel a larger distance through 
-a medium with an inhomogeneous refractive index. 
-This section describes how AO can be implemented in a standard transmission microscope~(Section~\ref{sec:TransmissionMicroscope}). Based on these early experiments, the same technique was then applied to structured light illumination~(Section~\ref{sec:StructuredIlluminationMicroscopy}), a specialized wide field technique. Further examples include AO used in both florescence~(Section~\ref{sec:FlourescnecMicroscopy}) and multifocal multiphoton microscopy~(Section~\ref{sec:MultifocalMultiphotonMicroscopy}). 
+As mentioned above, AO techniques are being applied in widefield microscopy. In conventional microscopes, widefield illumination is provided using back light illumination or in the case of reflection or fluorescence modes, via the objective lens. The image quality depends only on the aberrations induced in the detection path and is independent of the aberrations of the illumination path. Aberration correction is therefore only necessary in the detection path and a single pass adaptive optics system will suffice~\cite{book_aberrations}. Hence, the goal of AO for widefield microscopy is to restore the best possible imaging and to correct for aberrations induced both by an imperfect imaging system as well as by the imaged specimen. The latter becomes more important for thick biological samples where the light has to travel a larger distance through a medium with an inhomogeneous refractive index. 
+
+Many other highly specialized widefield microscopy techniques have been developed and for most of those, AO schemes for aberration correction and resolution optimization have been presented. Two widefield microscopye techniques will be presented in this section. First the implementation of AO in a standard transmission microscope~(Section~\ref{sec:TransmissionMicroscope}) using a sensorless wavefront sensing scheme is explained. How the theoretical background of this technique can be applied to more sophisticated microscopy schemes is then shown on the example of structured light illumination~(Section~\ref{sec:StructuredIlluminationMicroscopy}), a specialized wide field technique. 
+
+Not covered by this report is the application of AO using a direct wavefront sensing scheme as presented by \emph{Azucena et al.} in 2011 using a Shack–Hartmann wavefront sensor, a fluorescent reference source, and a deformable mirror\cite{wide_directSensing_microscope}. Adaptive optics can also be used to correct for aberrations in fluorescence microscopy.  There, the aberration caused by an refractive index mismatch between sample, cover plate and immersion medium can by calculated theoretically and is then corrected~\cite{wide_AOM_FM_spehrical_correction} or the aberration is measured using a guide-start technique~\cite{wide_fluorescence_guide_star} as described in section~\ref{Measurement}. AO is also applicable in multifocal multiphoton microscopy~\cite{wide_MPFM,wide_MMM_AO}.
+
 
 %------------------------------------------------------------------------------
 \subsubsection{Transmission Microscope}
@@ -81,7 +84,7 @@ and is then applied to the DM. To correct multiple modes, each modal coefficient
 It is often desired for biological samples to produce clear images of focal planes deep within a thick sample (i.e. optical sectioning) and common techniques include point-scanning techniques such as confocal or multiphoton techniques which are described in Section~\ref{sec:PointScanningMicroscopes}. 
 
 %TODO
-Widefield techniques such as Structured Illumination (SI) microscopy can also provide optical sectioning. However, there the sectioning is realized using a standard microscopes, an incoherent light source and without the need for a scanning mechanism. For SI microscopy, a grid is imaged into the specimen to produce a one-dimensional sinusoidal excitation pattern in the focal plane. The resulting sinusoidal fluorescence image, consisting of both in- focus and out-of-focus fluorescence emission, is then normally recorded. Several images are taken, each corresponding to a different grid position \textbf{(vertical or horizontal grid shift???)}. The grid pattern only appears in the focal plane while it is blurred in the out of focus regions. Hence, it is possible to extract an optical section from the spatially modulated component of the images via a simple calculation.
+Widefield techniques such as Structured Illumination (SI) microscopy can also provide optical sectioning. However, there the sectioning is realized using a standard microscopes, an incoherent light source and without the need for a scanning mechanism. For SI microscopy, a grid is imaged into the specimen to produce a one-dimensional sinusoidal excitation pattern in the focal plane. The resulting sinusoidal fluorescence image, consisting of both in- focus and out-of-focus fluorescence emission, is then normally recorded. Several images are taken, each corresponding to a different grid position equivalent to three different phase shifts of the grating. The grid pattern only appears in the focal plane while it is blurred in the out of focus regions. Hence, it is possible to extract an optical section from the spatially modulated component of the images via a simple calculation.
 
 Based on the SI microscopy technique presented by \emph{Neil et al.} in 2005~\cite{wide_structured_illu_principle} as well as their earlier work on indirect wavefront sensing using a conventional microscope~\cite{wide_AOM_loew_freq} in 2007~(described in the previous section) \emph{Debarre et al.} combined both techniques in 2008 and proposed an AO scheme for use in SI microscopy~\cite{wide_AOM_structured_illu}.  
 
@@ -126,8 +129,8 @@ deformable mirror. (c) Profile along the lines drawn on the images, both
 profiles normalized so that their mean value is identical. As a result of the 
 resolution improvement, the contrast of small sample features (blue arrows) 
 is better defined after (red solid line) rather than before (black dotted 
-line) correction. The imaging depth was approximately $\unit[10]{\upmu}$, 
-sacle bar size $\unit[10]{\upmu}$. Image after~\cite{wide_AOM_structured_illu}
+line) correction. The imaging depth was approximately $\unit[10]{\upmu m}$, 
+sacle bar size $\unit[10]{\upmu m}$. Image after~\cite{wide_AOM_structured_illu}
 .}
 \label{fig:structured_light_correction}
 \end{figure} 
@@ -142,112 +145,19 @@ In conclusion, the authors present a sophisticated, easy to implement and highly
 
 
 %------------------------------------------------------------------------------
-\subsubsection{Fluorescence Microscopy}
-\label{sec:FlourescnecMicroscopy}
-
-next section, all from \cite{wide_AOM_FM_spehrical_correction} uses a 
-standard widefield flourescene microscope but use AOM to correct for 
-spherical aberration due to depth -> no specimen induce correction
-uses deconvolution to get out of foucs photons corrected
-
-In this paper, we concentrate on the depth dependent aberration which can 
-quickly become serious. Imaging 20 mum a live sample (index of refraction 1.36
-) with an oil immersion lens causes the peak intensity of the point spread 
-function (PSF) to drop 3-fold and the width of the PSF in the axial direction 
-to increase by 2-folds. \cite{wide_AOM_FM_spehrical_correction} 
-
-Because wide-field microscopy captures as efficiently as possible every 
-emitted photon ultimately minimizing the sample excitation dose, it is well 
-suited to in vivo imaging in samples where scattering is not too large. 
-Although the out-of-focus photons are in the wrong place, they can be 
-effectively re-assigned to the location of emission by constrained 
-deconvolution algorithms \cite{wide_deconvolution}
-
-The problem of depth aberrations can be solved by matching the sample index 
-and the index of the immersion medium, but this is frequently not feasible or 
-desirable. For example, the index of fixed cells can be matched to that of 
-the immersion oil, but this option is not available for live imaging.
-
-An important drawback to most schemes that have been proposed so far is that 
-they require several images to be taken to optimize the aberration 
-correction. This presents a serious problem for live imaging in biology 
-because the fluorescence intensities can be weak and susceptible to rapid 
-bleaching.
-
-The approach we follow is to correct the depth aberrations withanopen-loop 
-predictive algorithm similar totheapproach taken by Potsaid et al. in 
-correcting off-axis aberrations. This is possible because the depth 
-aberration can be calculated for a given depth into the sample. The depth 
-aberration is the result of depth-dependent path length differences.
-
-Correcting depth aberrations with a DM improves both the peak intensities and 
-the deconvolution of images taken below the cover slip by removing the depth 
-aberration. This allows the use of fast space-invariant deconvolution 
-algorithms instead of depth-dependent algorithms. This is significant because 
-it improves both the signal-to-noise ratio and the resolution in biological 
-imaging where photons are in short supply. Unfortunately, the performance 
-does not yet achieve what is theoretically possible.
-
-\begin{figure}[htb]
-	\centering
-		\includegraphics[width=0.80\textwidth]{images/wide_flour_spher_All.jpg}
-	\caption{Images of a $\unit[200]{nm}$ bead $\unit[67]{\upmu m}$ below the 
-cover slip in a water/glycerol mixture with n = 1.42.  (a) Uncorrected image 
-of in-focus plane. (b) Corrected image of in-focus plane. Images (c) and (d) 
-are the same as (a) and (b), respectively, but on a logarithmic scale for 
-better visualization. (e) and (f) are line profiles of the intensity through 
-the center of the bead along the lateral and the longitudinal axis, 
-respectively. The dashed line is from the uncorrected image and the solid 
-line is from the corrected image. (g) and (h) are simulations of the PSF. 
-Images based on \cite{wide_AOM_FM_spehrical_correction}.}
-	\label{fig:wide_flour_spher_All} 
-\end{figure}
-
-
-The first is the effect of uncorrected aberrations from the sample and the 
-optical path, which decrease the maximum intensity at the cover slip, but in 
-a way that does not add linearly to the depth aberration. Thus only a 
-fraction of the dispersed photons can be restored to the central peak. In 
-closed loop AO systems, system aberrations are automatically compensated at 
-each position (Wright et al., 2007), but in an open-loop system this is not 
-possible. The second factor is the inability of the mirror to precisely 
-conform to the shape given by Eq. (1). The residual error of the mirror shape 
-increases with depth (see Fig. 3c) so that as the imaging plane goes deeper 
-and the possibility for improvement becomes greater, the improvement in peak 
-intensities decreases
-
-Lastly, the ultimate goal of applying adaptive optics in microscopy is to 
-correct all aberrations including those introduced by the refractive index 
-variations of the sample itself.
-\cite{wide_AOM_FM_spehrical_correction}
-
-
-%------------------------------------------------------------------------------
-\subsubsection{Multifocal Multiphoton Microscopy}
-\label{sec:MultifocalMultiphotonMicroscopy}
-
-\cite{wide_MPFM}
-%Do I really want this???
-
-%------------------------------------------------------------------------------
 \subsection{Point Scanning Microscopes}
 \label{sec:PointScanningMicroscopes}
 
-Scanning optical microscopes are widely used for high resolution imaging, 
-mainly because certain implementations provide three-dimensional resolution 
-with optical sectioning and are thus particularly useful for imaging the 
-volume structures of biological specimensz. In these microscopes, 
-illumination is provided by a laser that is focused by an objective lens into 
-the specimen. The light emitted from the specimen is collected, usually 
-through the same objective lens, and its intensity is measured by a single 
-photodetector. The focal spot is scanned through the specimen in a raster 
-pattern and the image is acquired in a point-by-point fashion. The resulting 
-data are stored and rendered as images in a computer.
+Just as with the widefield techniques, adaptive optics quickly found its way into point scanning techniques to improve the image and signal quality. 
 
-Several other point scanning microscope modalities have been introduced, 
-including two-photon excitation uorescence (TPEF) microscopy, second harmonic 
-generation (SHG) and third harmonic generation (THG) microscopy, and coherent 
-anti-Stokes Raman (CARS) microscopy.
+Scanning methods are useful for imaging biological specimens, since they can provide high resolution imaging in three-dimensions. Illumination is  usually provided by a laser that is focused into the sample. The light emitted or reflected from the specimen is collected, usually through the same objective lens, and its intensity is measured by a detector. Since this only provides information about the intensity at a single spot, focal point is then scanned through the specimen and point-by-point the image is acquired. 
+
+%ToDo - check what we will actually describe and write short intro for that here...
+Several other point scanning microscope modalities have been introduced, including Two-Photon Excitation Fuorescence (TPEF) microscopy, second harmonic generation (SHG) and third harmonic generation (THG) microscopy, and coherent anti-Stokes Raman (CARS) microscopy.
+
+- using a fluorescence microscope, the smaller FWHM, provided by the optimized DMM, will increase the excitation intensity leading to a higher fluorescent signal for the same laser beam input power
+
+3D adaptive optics in a light sheet microscope~\cite{scan_lightSheet}
 
 %------------------------------------------------------------------------------
 -
@@ -288,36 +198,85 @@ generation,16, 17 CARS.18 Example images of aberration correction in an
 adaptive THG microscope are shown in Fig. 10.
 
 \cite{book_confocal}
-\cite{AOM_scan_CFM}
-
+\cite{scan_CFM}
 
 %------------------------------------------------------------------------------
 \subsubsection{Two-Photon Fluorescence Microscopy}
 \label{sec:twoPhotonExcitation}
 
-\cite{TPFM_gated_wavefront}
-\cite{TPFM_image_based}
-\cite{TPFM_pratical}
+Its intrinsic optical sectioning, larger penetration depth, reduced photo damage as well as other advantages allowed nonlinear microscopy in general, and Two-Photon Fluorescence Microscopy~(TPFM) in particular, to become a very important tool in biological imaging since its first presentation by \emph{Denk at al.} in 1990~\cite{scan_TPFM_principle}.
+
+As with most AO microscopy techniques, both a direct and indirect wavefront sensing scheme can be deployed for the use with TPFM. Indirect sensing was already explained~(section~\ref{sec:IndirectWavefrontSensing}) and presented~(section~\ref{sec:WidefieldMicroscopy} in detail. \emph{Marsh et al.} present the first and fairly simple indirect sensing approach, correcting only for depth induced aberrations as early as 2003~\cite{scan_TPFM_pratical}. Again, based on their earlier works~(\cite{wide_AOM_loew_freq,wide_AOM_structured_illu}), \emph{D\'{e}barre et al.} present another highly sophisticated application of their image based wavefront sensing scheme in 2009~\cite{scan_TPFM_image_based}. Both \emph{Marsh} and \emph{D\'{e}barre} essentially use the standard TPFM setup and the image optimization is very similar to the one presented earlier, we will not describe these methods here again.
+
+\emph{Rueckel et al.} present a wavefront correction method using coherence-gated wavefront sensing~\cite{scan_TPFM_gated_wavefront} which also beyond the scope of this report. This section will therefor describe direct wavefront sensing based on the work presented by \emph{Aviles-Espinosa et al.} in 2011~\cite{scan_TPFM_guide_start}.
+
+%rewrite for use here, good general intro....
+The resolution has a high dependence on the point-spread function (psf) of the scanned point source. Additionally, the signal levels in two-photon fluorescence have a strong nonlinear dependence upon the incident light intensity. Thus the ideal is to image the sample by use of a diffraction limited spot. However, refractive-index mismatches between the immersion media of high-NA objectives and the sample, in addition to the usually nonuniform samples themselves, impart aberrations to the wavefront and contribute to a deterioration of the psf. Other sources of aberrations include off-axis transmission through optical components, such as the objective and scan lenses while scanning, and imperfections in the optical elements throughout the optical train. The net effect of specimen induced aberrations is that while reducing the achievable resolution, the necessary laser power to achieve imaging increases with depth which can lead to nonreversible effects in biological samples. It also places greater demands in terms of output power on multiphoton imaging laser sources.
+
+%based on \cite{scan_TPFM_guide_start}
+- no need to correct on the collected beam as light is only emitted in focus region
+- correcting the excitation beam is a must as this will ensure a better focusing and therefore, a more efficient nonlinear (NL) process
+- sensor-less schemes, iterative algorithms are generally used to control a deformable mirror (DM) or a Spatial Light Modulator 
+- it has been reported the use of optimized algorithms reduce sample exposure
+- still implies that an area of interest within the sample has to be exposed a considerable number of times
+- may result in unwanted exposure which is prone to produce photo-bleaching and photo-toxic effects on the sample
+- We demonstrate that sample induced aberrations can be measured and corrected, 
+- In sensor-based schemes  correction performed by measuring aberrations through a wavefront sensor 
+- employing a reference point source called guide star
+- Then such information is fed to a DM, in order to restore the image quality.
+- information is then fed into an adaptive element and aberration is corrected 
+- all explained in detail in \ref{sec:WavefrontSensing}
+- guide star has been applied for moderate scattering samples imaged through linear fluorescence microscopy~\cite{wide_fluorescence_guide_star} 
+- artificially inserting a small, fixed secondary light source inside the sample 
+- allows for a direct measurement of the sample aberrations using a Shack-Hartmann (SH) WFS,
+- based on the introduction of beads inside the sample 
+- it is prone to cause sample damage, limiting its potential for in vivo imaging studies
+- beads are randomly distributed inside the fixed sample, suitable bead placed at the right location must be found in the field of view (FOV) and for each depth to be imaged
+- adds complexity to the sample preparation and to the aberration measurement process
+- Two-photon excited fluorescence (TPEF) naturally produces a small confined volume which can be used as an incoherent secondary light source
+- this point source, authors refer to as "`nonlinear guide-star"' (NL-GS), can be used for single pass measurements of sample and objective aberrations
+- uses the fact that two-photon excited fluorescence naturally produces a localized point source inside the sample: the nonlinear guide-star (NL-GS).
+- The wavefront emitted from the NL-GS can then be recorded using a Shack-Hartmann sensor.
+- Compensation of the recorded sample aberrations is performed by the deformable mirror in a single-step. 
+- applied to fixed and in vivo biological samples, showing, in some cases, more than one order of magnitude improvement in the total collected signal intensity.
+- measured using a WFS placed at the output port of the NLM microscope
+- as the WF is directly expressed in the form of Zernike coefficients, it is possible to shape the adaptive element (DM) in a single step (i.e. without the need of any search algorithm) for correcting the measured aberrations
+- so, image quality and contrast can be significantly improved without having to expose the sample for large periods of time
+- Consequently photo-bleaching and photo-toxicity are greatly reduced
+- it can be applied in vivo, it is simple, noninvasive and requires no additional sample processing (such as the incorporation of fluorescent beads)
+- Moreover, the NL-GS can be created at any desired position inside a sample
+- has been demonstrated with both, moderate and increased scattering samples.
+- For moderate scattering samples, when comparing coupling vs. focusing aberrations, we found that the total signal improvement can be up to 11.66 times 
+- For samples with increased scattering correction is moderate but in agreement with other adaptive optics correction schemes
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.75\textwidth]{images/TPFM_guide-star.jpg}
+	\caption{check if we really want this...\cite{scan_TPFM_guide_start} Use it...do it yourself and make it nice!!!}
+	\label{fig:TPFM_guide-star}
+\end{figure}
+
+\cite{scan_TPFM_guide_start}
 
 %------------------------------------------------------------------------------
 \subsubsection{Harmonic Generation}
 \label{sec:HarmonicGeneration}
 
-\cite{HG_embryos}
-\cite{HG_dynamic}
+\cite{scan_HG_embryos}
+\cite{scan_HG_dynamic}
 
 
 %------------------------------------------------------------------------------
 \subsubsection{CARS}
 \label{sec:CARS}
 
-\cite{CARS}
+\cite{scan_CARS}
 
 %------------------------------------------------------------------------------
 \subsubsection{STED}
 \label{sec:STED}
 
-\cite{AOM_scan_STED}
+\cite{scan_STED}
 
 
 

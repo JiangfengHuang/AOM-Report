@@ -1,5 +1,25 @@
 \begin{thebibliography}{10}
 
+\bibitem{scan_TPFM_guide_start}
+Rodrigo Aviles-Espinosa, Jordi Andilla, Rafael Porcar-Guezenec, Omar~E. Olarte,
+  Marta Nieto, Xavier Levecq, David Artigas, and Pablo Loza-Alvarez.
+\newblock Measurement and correction of in vivo sample aberrations employing a
+  nonlinear guide-star in two-photon excited fluorescence microscopy.
+\newblock {\em Biomed. Opt. Express}, 2(11):3135--3149, Nov 2011.
+
+\bibitem{wide_fluorescence_guide_star}
+Oscar Azucena, Justin Crest, Jian Cao, William Sullivan, Peter Kner, Donald
+  Gavel, Daren Dillon, Scot Olivier, and Joel Kubby.
+\newblock Wavefront aberration measurements and corrections through thick
+  tissue using fluorescent microsphere reference beacons.
+\newblock {\em Opt. Express}, 18(16):17521--17532, Aug 2010.
+
+\bibitem{wide_directSensing_microscope}
+Oscar Azucena, Justin Crest, Shaila Kotadia, William Sullivan, Xiaodong Tao,
+  Marc Reinig, Donald Gavel, Scot Olivier, and Joel Kubby.
+\newblock Adaptive optics wide-field microscopy using direct wavefront sensing.
+\newblock {\em Opt. Lett.}, 36(6):825--827, Mar 2011.
+
 \bibitem{wide_MPFM}
 J\"{o}rg Bewersdorf, Rainer Pick, and Stefan~W. Hell.
 \newblock Multifocal multiphoton microscopy.
@@ -22,11 +42,23 @@ Martin~J. Booth, Delphine D\'{e}barre, and Alexander Jesacher.
 \newblock Adaptive optics for biomedical microscopy.
 \newblock {\em Opt. Photon. News}, 23(1):22--29, 1 2012.
 
-\bibitem{AOM_scan_CFM}
+\bibitem{scan_CFM}
 Martin~J. Booth, Mark A.~A. Neil, Rimas Ju\v{s}kaitis, and Tony Wilson.
 \newblock {Adaptive aberration correction in a confocal microscope}.
 \newblock {\em Proceedings of the National Academy of Sciences},
   99(9):5788--5792, 4 2002.
+
+\bibitem{scan_lightSheet}
+Cyril Bourgenot, Christopher~D. Saunter, Jonathan~M. Taylor, John~M. Girkin,
+  and Gordon~D. Love.
+\newblock 3d adaptive optics in a light sheet microscope.
+\newblock {\em Opt. Express}, 20(12):13252--13261, Jun 2012.
+
+\bibitem{wide_MMM_AO}
+Simao Coelho, Simon Poland, Nikola Krstajic, David Li, James Monypenny, Richard
+  Walker, David Tyndall, Tony Ng, Robert Henderson, and Simon Ameer-Beg.
+\newblock Multifocal multiphoton microscopy with adaptive optical correction.
+\newblock {\em Proc. SPIE}, 8588:858817--858817--12, 2013.
 
 \bibitem{wide_AOM_loew_freq}
 Delphine Debarre, Martin~J. Booth, and Tony Wilson.
@@ -39,7 +71,7 @@ Delphine D\'{e}barre, Edward~J. Botcherby, Martin~J. Booth, and Tony Wilson.
 \newblock Adaptive optics for structured illumination microscopy.
 \newblock {\em Opt. Express}, 16(13):9290--9305, 6 2008.
 
-\bibitem{TPFM_image_based}
+\bibitem{scan_TPFM_image_based}
 Delphine D\'{e}barre, Edward~J. Botcherby, Tomoko Watanabe, Shankar Srinivas,
   Martin~J. Booth, and Tony Wilson.
 \newblock Image-based adaptive optics for two-photon microscopy.
@@ -51,12 +83,17 @@ Ross~W. Deming.
   minimization.
 \newblock {\em J. Opt. Soc. Am. A}, 24(11):3666--3679, Nov 2007.
 
+\bibitem{scan_TPFM_principle}
+W~Denk, JH~Strickler, and WW~Webb.
+\newblock Two-photon laser scanning fluorescence microscopy.
+\newblock {\em Science}, 248(4951):73--76, 1990.
+
 \bibitem{indirect_metric_intensity}
 J.~R. Fienup and J.~J. Miller.
 \newblock Aberration correction by maximizing generalized sharpness metrics.
 \newblock {\em J. Opt. Soc. Am. A}, 20(4):609--620, Apr 2003.
 
-\bibitem{AOM_scan_STED}
+\bibitem{scan_STED}
 Travis~J. Gould, Daniel Burke, Joerg Bewersdorf, and Martin~J. Booth.
 \newblock Adaptive optics enables 3d sted microscopy in aberrating specimens.
 \newblock {\em Opt. Express}, 20(19):20998--21009, 9 2012.
@@ -67,7 +104,7 @@ Audrius Jasaitis, Grégory Clouvel, and Xavier Levecq.
   microscopy.
 \newblock Visited on 12/11/13.
 
-\bibitem{HG_embryos}
+\bibitem{scan_HG_embryos}
 Alexander Jesacher, Anisha Thayil, Kate Grieve, Delphine D\'{e}barre, Tomoko
   Watanabe, Tony Wilson, Shankar Srinivas, and Martin Booth.
 \newblock Adaptive harmonic generation microscopy of mammalian embryos.
@@ -92,13 +129,13 @@ W.~Lukosz.
 \newblock {\em Optica Acta: International Journal of Optics}, 10(1):1--19,
   1963.
 
-\bibitem{Aberrations_book}
+\bibitem{book_aberrations}
 Virendra~N. Mahajan.
 \newblock {\em Optical Imaging and Aberrations, Part II. Wave Diffraction
   Optics (SPIE Press Monograph Vol. PM209)}.
 \newblock SPIE Press, 2 edition, 8 2011.
 
-\bibitem{TPFM_pratical}
+\bibitem{scan_TPFM_pratical}
 P.~Marsh, D.~Burns, and J.~Girkin.
 \newblock Practical implementation of adaptive optics in multiphoton
   microscopy.
@@ -110,7 +147,7 @@ M.~A.~A. Neil, R.~Juskaitis, and T.~Wilson.
   conventional microscope.
 \newblock {\em Opt. Lett.}, 22(24):1905--1907, Dec 1997.
 
-\bibitem{HG_dynamic}
+\bibitem{scan_HG_dynamic}
 Nicolas Olivier, Delphine D\'{e}barre, and Emmanuel Beaurepaire.
 \newblock Dynamic aberration correction for multiharmonic microscopy.
 \newblock {\em Opt. Lett.}, 34(20):3145--3147, 10 2009.
@@ -126,7 +163,7 @@ William~H. Press, Saul~A. Teukolsky, William~T. Vetterling, and Brian~P.
 \newblock {\em Numerical Recipes 3rd Edition: The Art of Scientific Computing}.
 \newblock Cambridge University Press, 3 edition, 9 2007.
 
-\bibitem{TPFM_gated_wavefront}
+\bibitem{scan_TPFM_gated_wavefront}
 Markus Rueckel, Julia~A. Mack-Bucher, and Winfried Denk.
 \newblock Adaptive wavefront correction in two-photon microscopy using
   coherence-gated wavefront sensing.
@@ -139,12 +176,7 @@ M.~Schwertner, M.~Booth, and T.~Wilson.
   optical microscopy.
 \newblock {\em Opt. Express}, 12(26):6540--6552, 12 2004.
 
-\bibitem{wide_deconvolution}
-Jason~R Swedlow, John~W Sedat, and David~A Agard.
-\newblock Deconvolution in optical microscopy.
-\newblock {\em Deconvolution of images and spectra}, pages 284--309, 1997.
-
-\bibitem{CARS}
+\bibitem{scan_CARS}
 A.~J. Wright, S.~P. Poland, J.~M. Girkin, C.~W. Freudiger, C.~L. Evans, and
   X.~S. Xie.
 \newblock Adaptive optics for enhanced signal in cars microscopy.

@@ -1,0 +1,80 @@
+
+%------------------------------------------------------------------------------
+\subsubsection{Fluorescence Microscopy}
+\label{sec:FlourescnecMicroscopy}
+
+next section, all from \cite{wide_AOM_FM_spehrical_correction} uses a 
+standard widefield flourescene microscope but use AOM to correct for 
+spherical aberration due to depth -> no specimen induce correction
+uses deconvolution to get out of foucs photons corrected
+
+In this paper, we concentrate on the depth dependent aberration which can 
+quickly become serious. Imaging 20 mum a live sample (index of refraction 1.36
+) with an oil immersion lens causes the peak intensity of the point spread 
+function (PSF) to drop 3-fold and the width of the PSF in the axial direction 
+to increase by 2-folds. \cite{wide_AOM_FM_spehrical_correction} 
+
+Because wide-field microscopy captures as efficiently as possible every 
+emitted photon ultimately minimizing the sample excitation dose, it is well 
+suited to in vivo imaging in samples where scattering is not too large. 
+Although the out-of-focus photons are in the wrong place, they can be 
+effectively re-assigned to the location of emission by constrained 
+deconvolution algorithms \cite{wide_deconvolution}
+
+The problem of depth aberrations can be solved by matching the sample index 
+and the index of the immersion medium, but this is frequently not feasible or 
+desirable. For example, the index of fixed cells can be matched to that of 
+the immersion oil, but this option is not available for live imaging.
+
+An important drawback to most schemes that have been proposed so far is that 
+they require several images to be taken to optimize the aberration 
+correction. This presents a serious problem for live imaging in biology 
+because the fluorescence intensities can be weak and susceptible to rapid 
+bleaching.
+
+The approach we follow is to correct the depth aberrations withanopen-loop 
+predictive algorithm similar totheapproach taken by Potsaid et al. in 
+correcting off-axis aberrations. This is possible because the depth 
+aberration can be calculated for a given depth into the sample. The depth 
+aberration is the result of depth-dependent path length differences.
+
+Correcting depth aberrations with a DM improves both the peak intensities and 
+the deconvolution of images taken below the cover slip by removing the depth 
+aberration. This allows the use of fast space-invariant deconvolution 
+algorithms instead of depth-dependent algorithms. This is significant because 
+it improves both the signal-to-noise ratio and the resolution in biological 
+imaging where photons are in short supply. Unfortunately, the performance 
+does not yet achieve what is theoretically possible.
+
+\begin{figure}[htb]
+	\centering
+		\includegraphics[width=0.80\textwidth]{images/wide_flour_spher_All.jpg}
+	\caption{Images of a $\unit[200]{nm}$ bead $\unit[67]{\upmu m}$ below the 
+cover slip in a water/glycerol mixture with n = 1.42.  (a) Uncorrected image 
+of in-focus plane. (b) Corrected image of in-focus plane. Images (c) and (d) 
+are the same as (a) and (b), respectively, but on a logarithmic scale for 
+better visualization. (e) and (f) are line profiles of the intensity through 
+the center of the bead along the lateral and the longitudinal axis, 
+respectively. The dashed line is from the uncorrected image and the solid 
+line is from the corrected image. (g) and (h) are simulations of the PSF. 
+Images based on \cite{wide_AOM_FM_spehrical_correction}.}
+	\label{fig:wide_flour_spher_All} 
+\end{figure}
+
+
+The first is the effect of uncorrected aberrations from the sample and the 
+optical path, which decrease the maximum intensity at the cover slip, but in 
+a way that does not add linearly to the depth aberration. Thus only a 
+fraction of the dispersed photons can be restored to the central peak. In 
+closed loop AO systems, system aberrations are automatically compensated at 
+each position (Wright et al., 2007), but in an open-loop system this is not 
+possible. The second factor is the inability of the mirror to precisely 
+conform to the shape given by Eq. (1). The residual error of the mirror shape 
+increases with depth (see Fig. 3c) so that as the imaging plane goes deeper 
+and the possibility for improvement becomes greater, the improvement in peak 
+intensities decreases
+
+Lastly, the ultimate goal of applying adaptive optics in microscopy is to 
+correct all aberrations including those introduced by the refractive index 
+variations of the sample itself.
+\cite{wide_AOM_FM_spehrical_correction}
