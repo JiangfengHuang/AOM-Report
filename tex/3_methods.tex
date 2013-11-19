@@ -157,15 +157,21 @@ Several other point scanning microscope modalities have been introduced, includi
 
 - using a fluorescence microscope, the smaller FWHM, provided by the optimized DMM, will increase the excitation intensity leading to a higher fluorescent signal for the same laser beam input power
 
-3D adaptive optics in a light sheet microscope~\cite{scan_lightSheet}
-% not covered but should be mentioned
-\cite{scan_HG_embryos} -> Both the second- and third-harmonic intensity signals are used as the optimization metric. Aberration correction is performed to compensate both system- and specimen-induced aberrations by using an efficient optimization routine based upon Zernike polynomial modes. Images of live mouse embryos show an improved signal level and resolution.
+\cite{scan_HG_embryos,scan_HG_dynamic} -> Both the second- and third-harmonic intensity signals are used as the optimization metric
+- Aberration correction is performed to compensate both system- and specimen-induced aberrations by using an efficient optimization routine based upon Zernike polynomial modes
+- images of live mouse embryos show an improved signal level and resolution.
+- The peak intensity increased by almost $\unit[50]{\%}$ and the FWHM decreased by $\unit[14]{\%}$ to  $\unit[1.22]{\upmu m}$ compared with a value of $\unit[1.15]{\upmu m}$ for an unaberrated system
 
-\cite{scan_HG_dynamic} -> THG, based on indirect wavefront sensing using total image intensity as metric
+\cite{scan_CARS} - signal improvement 3x for samples at a depth of $\unit[700]{\upmu m}$ and ~6x for muscle tissue at a depth of $\unit[260]{\upmu m}$
+- completely random optimization, approach is well suited to CARS microscopy, since photobleaching does not occur 
+- optimization algorithm typically converged after 3000 mirror shapes, mirror speed up to 1kHz this can be pretty fast
 
-\cite{scan_CARS} -> 
+\cite{scan_STED} (2012) - STED principle \cite{scan_STED_principle} (1994) 
+- STED phase mask as well as aberration correction realized using the SLM
+- aberration correction in both depletion beam (better resolution) and in the excitation beam path (better signal and less noise)
+- due to depletion image brightness as metric not good, introduced a new metric that seeks to optimize both image brightness and image sharpness in a combined approach,
+- imaging through a #1.5 coverglass and ~55 µm glycerol, Comparing the axial profiles of the STED and AO STED reveals a ~5-fold increase in the peak signal as well as a ~3.2-fold improvement in resolution 
 
-\cite{scan_STED}
 
 
 %------------------------------------------------------------------------------

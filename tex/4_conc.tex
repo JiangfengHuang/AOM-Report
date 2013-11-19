@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Future Prospects}
+\section{Conclusion \& Future Prospects}
 \label{sec:Future}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -40,13 +40,8 @@ microscopy into a new regime in which biological studies that were previously
 confined to cell cultures can be performed in thick tissue and even in live 
 specimens.
 
-\textbf{Add short part about STORM/PALM which are not using adaptive optics yet...
-} \cite{future_AOM_PALM_1}, 
-%The Conclusion section presents the outcome of the work by interpreting the findings at a higher level of abstraction than the Discussion and by relating these findings to the motivation stated in the Introduction.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conclusion}
-\label{sec:Conclusion}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+- AO mainly used to image thick samples, both because of sample aberrations and index mismatch problems
+
 
 abberations that are important for imaging system differ a lot, some need 
 correction of both illu and imaging, some use direct, other indirect methods, 
@@ -54,10 +49,24 @@ some only need correction of some abberation modes, others need as much as
 possible...important to choose correct system for given problem and figure it 
 our in detail before ordering something
 
-AO is applicable to almost all microscopy techniques...
 
-%TODO
-Is image based aberration detection and correction as performed in \cite{wide_AOM_loew_freq} and \cite{wide_AOM_structured_illu} done in point scan techniques?
+%Future Prospects%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Add short part about STORM/PALM which are not using adaptive optics yet...
+} \cite{future_AOM_PALM_1}, 
+%The Conclusion section presents the outcome of the work by interpreting the findings at a higher level of abstraction than the Discussion and by relating these findings to the motivation stated in the Introduction.
+
+\cite{scan_lightSheet} 
+- wavefront sensorless approach was taken to imaging a green fluorescent protein (GFP) labelled transgenic zebrafish
+- first to correct large aberrations, contrast of the image was used as the metric then after several correction iterations, the high spatial frequency content was used
+- aberrations come from varying depths
+- AO on the imaging path can be used to correct for focus and higher order aberrations on the imaging path as well as beam displacement on both the illumination and imaging paths
+- not giving real results yet
 
 
-\clearpage
+AO is applicable to almost all microscopy techniques...especially indirect sensing, as it only requires a deformable mirror which is easily implemented by replacing a already existing mirror
+indirect sensing seems to be dominant for these reasons
+
+- use better algorithms for CARS, make it a LOT faster
+
+
