@@ -58,12 +58,6 @@ Martin~J. Booth, Mark A.~A. Neil, Rimas Ju\v{s}kaitis, and Tony Wilson.
 \newblock {\em Proceedings of the National Academy of Sciences},
   99(9):5788--5792, 4 2002.
 
-\bibitem{scan_lightSheet}
-Cyril Bourgenot, Christopher~D. Saunter, Jonathan~M. Taylor, John~M. Girkin,
-  and Gordon~D. Love.
-\newblock 3d adaptive optics in a light sheet microscope.
-\newblock {\em Opt. Express}, 20(12):13252--13261, Jun 2012.
-
 \bibitem{wide_MMM_AO}
 Simao Coelho, Simon Poland, Nikola Krstajic, David Li, James Monypenny, Richard
   Walker, David Tyndall, Tony Ng, Robert Henderson, and Simon Ameer-Beg.
@@ -113,12 +107,6 @@ Stefan~W. Hell and Jan Wichmann.
 \newblock Breaking the diffraction resolution limit by stimulated emission:
   stimulated-emission-depletion fluorescence microscopy.
 \newblock {\em Opt. Lett.}, 19(11):780--782, Jun 1994.
-
-\bibitem{future_AOM_PALM_1}
-Audrius Jasaitis, Grégory Clouvel, and Xavier Levecq.
-\newblock Extreme precision in 3d: Adaptive optics boosts super-resolution
-  microscopy.
-\newblock Visited on 12/11/13.
 
 \bibitem{scan_HG_embryos}
 Alexander Jesacher, Anisha Thayil, Kate Grieve, Delphine D\'{e}barre, Tomoko

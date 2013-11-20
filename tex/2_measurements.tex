@@ -3,17 +3,17 @@
 \label{Measurement}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In practice, no optical system can be totally free from aberrations. That means that all the rays coming from the same object point and going through an optical system will not converge into the same point at the image plane. In other words, the wavefront is distorted with respect an ideal one when passing through a real system. Thus, we can define the Wavefront Aberration Function as the optical path difference between the aberrated (real) wavefront and the reference (perfect) wavefront.      
-There are some ways to characterize mathematically the aberrations. In systems with circular symmetry (circular apertures) it is very common to use the Zernike polynomials \eqref{eq:aberration_zernike}  because they form a complete, orthogonal set of functions defined over a unit circle. This property gives independence between these functions. That implies that it is possible to associate to each polynomial a specific an independent weight that will contribute to the description of the Wavefront Aberration Function.  
+In practice, no optical system can be totally free from aberrations. That means that all the rays coming from the same object point and going through an optical system will not converge into the same point at the image plane. In other words, the wavefront is distorted with respect an ideal one when passing through a real system. Thus, we can define the Wavefront Aberration Function as the optical path difference between the aberrated~(real) wavefront and the reference~(perfect) wavefront.      
+There are some ways to characterize mathematically the aberrations. In systems with circular symmetry~(circular apertures) it is very common to use the Zernike polynomials~(Eq.~\eqref{eq:aberration_zernike}) because they form a complete, orthogonal set of functions defined over a unit circle. This property gives independence between these functions. That implies that it is possible to associate to each polynomial a specific an independent weight that will contribute to the description of the Wavefront Aberration Function.  
 
 \begin{align}
 	\ W(\rho,\phi) = {\sum_{n}^{k}}{\sum_{m=-n}^{m=n}}{{c_n}^m {Z_n}^m}{(\rho,\phi)},
 	\label{eq:aberration_zernike}
 \end{align}
 
-Where $W(\rho,\phi)$ is the Wavefront Aberration Function in polar coordinates at the exit pupil, $c_n^m$ are the Zernike coefficients and $Z_n^m (\rho,\phi)$ are the Zernike modes (or polynomials). As we can see in the equation, the Wavefront Aberration Function is a linear combination of polynomials. Therefore, the more polynomials (i.e. modes, $Z_n^m (\rho,\phi)$) we get the better characterization of the $W(\rho,\phi)$ function we have.
+Where $W(\rho,\phi)$ is the Wavefront Aberration Function in polar coordinates at the exit pupil, $c_n^m$ are the Zernike coefficients and $Z_n^m (\rho,\phi)$ are the Zernike modes~(or polynomials). As we can see in the equation, the Wavefront Aberration Function is a linear combination of polynomials. Therefore, the more polynomials~(i.e. modes, $Z_n^m (\rho,\phi)$) we get the better characterization of the $W(\rho,\phi)$ function we have.
 Representing aberrations in this way can simplify the design, control and characterization of the Adaptive Optics system. 
-In general, we can obtain an aberrated wavefront when it is reflected to a non-planar surface or when it is going through an inhomogeneous media (Fig. \ref{fig:abberations}). 
+In general, we can obtain an aberrated wavefront when it is reflected to a non-planar surface or when it is going through an inhomogeneous media~(Fig.~\ref{fig:abberations}). 
 
 \begin{figure}[tbh]
        \centering
@@ -30,12 +30,12 @@ In general, we can obtain an aberrated wavefront when it is reflected to a non-p
         \end{subfigure}
         \caption{Wavefront aberrations due to (a) reflection from a non 
 planar surface and (b)  caused by propagation through a non-uniform 
-refractive index distribution \cite{AOM_basic_ref}.}
+refractive index distribution~\cite{AOM_basic_ref}.}
 \label{fig:abberations}
 \end{figure} 
 
-In biological microscopy, the two potential sources of aberrations are the optics and the specimen under study. Regarding the optics, one important parameter that has to be taken into account is the Numerical Aperture (NA), aberrations become more significant for those microscopes employing higher NA. Regarding the specimen, aberrations comes basically from the variations in refractive index due to the three-dimensional nature of cells and tissue structures. In general, they become greater in magnitude as long as we focus deeper. Also aberrations can be produced by the difference of refractive index between the microscope coverslip and the specimen mounting medium \cite{AOM_basic_ref}. 
-Although it is known where the aberrations come from, it is not always easy to measure them and implement the measure inside the optical system. There are different classifications of Wavefront Sensing in the bibliography \cite{AO_engineering_handbook}. Here we will use the one of Martin J. Booth \cite{AOM_basic_ref} and we will explain the most common methods of wavefront sensing applied to microscopy.      
+In biological microscopy, the two potential sources of aberrations are the optics and the specimen under study. Regarding the optics, one important parameter that has to be taken into account is the Numerical Aperture~(NA), aberrations become more significant for those microscopes employing higher NA. Regarding the specimen, aberrations comes basically from the variations in refractive index due to the three-dimensional nature of cells and tissue structures. In general, they become greater in magnitude as long as we focus deeper. Also aberrations can be produced by the difference of refractive index between the microscope coverslip and the specimen mounting medium~\cite{AOM_basic_ref}. 
+Although it is known where the aberrations come from, it is not always easy to measure them and implement the measure inside the optical system. There are different classifications of Wavefront Sensing in the bibliography~\cite{AO_engineering_handbook}. Here we will use the one of Martin J. Booth~\cite{AOM_basic_ref} and we will explain the most common methods of wavefront sensing applied to microscopy.      
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -45,7 +45,7 @@ Direct Wavefront Sensing is based on a direct measure of the phase gradient or t
 
 %------------------------------------------------------------------------------
 
-This last technique is based on a two-dimensional array of a few lenslets -a matrix of microlens-, all with the same diameter and the same focal length, that allows us to measure the wavefront's slope at the exit of the optical system. In other words, it allows us to reconstruct the wavefront aberration function from the local slope's changes of an aberrated wavefront in relation with a reference wavefront. That is achieved measuring the displacements ($\Delta x, \Delta y$) from each image given by each microlent (Fig. \ref{fig:SH}).
+This last technique is based on a two-dimensional array of a few lenslets -a matrix of microlens-, all with the same diameter and the same focal length, that allows us to measure the wavefront's slope at the exit of the optical system. In other words, it allows us to reconstruct the wavefront aberration function from the local slope's changes of an aberrated wavefront in relation with a reference wavefront. That is achieved measuring the displacements~($\Delta x, \Delta y$) from each image given by each microlent~(Fig.~\ref{fig:SH}).
 
 \begin{figure}[htbp]
 	\centering
@@ -55,9 +55,9 @@ This last technique is based on a two-dimensional array of a few lenslets -a mat
 \end{figure}
 
 
-We start from an aberrated beam going through the matrix of microlens before it is detected in a recorder device. The beam is then spatially sampled into many individual beams (one for each microlens) by the lenslet matrix and forms multiple spots in the focal plane of the lenslets. Finally, the recorder device -that is placed at the focal plane of the matrix- registers multiple spots. This device is usually a CCD camera. The typical lenslet diameters range from about 100 to 600 mm and the typical focal lengths range from a few millimeters to about 30 mm \cite{AO_vision_science}.
+We start from an aberrated beam going through the matrix of microlens before it is detected in a recorder device. The beam is then spatially sampled into many individual beams~(one for each microlens) by the lenslet matrix and forms multiple spots in the focal plane of the lenslets. Finally, the recorder device -that is placed at the focal plane of the matrix- registers multiple spots. This device is usually a CCD camera. The typical lenslet diameters range from about 100 to $\unit[600]{mm}$ and the typical focal lengths range from a few millimeters to about $\unit[30]{mm}$~\cite{AO_vision_science}.
   
-We must note that direct sensing needs a well defined wavefront in the pupil of the system or in other words, a point-like emitter. An this situation might not happen in biological microscopes where we are studying three-dimensional specimens, because the light emitted by the specimen may come not only from the focal point. This fact brings us to a couple of problematic situations. The first one is the superposition of wavefronts in the pupil which its effects will depend on the coherence of the emitted light. If it is coherent we will have interference in the pupil, thus we will have ambiguous sensor readings and this kind of sensing will not be suitable for aberration correction. In this sense, if in the focal region the specimen behaves as a point-like scatterer (it will emit incoherent light) the sensor will be able to measure the aberrations produced in the emission path, which in principle they should be the same as in the illumination path. But, if our specimen acts as a planar mirror-like in the focal region, the sensor will just be able to measure twice the even components of the aberrations produced in the illumination path (or emission path), that is because the "`mirror behavior"' will spatially invert the aberrations in the illumination path (Fig. \ref{fig:abe_direct_sensing}). Let us analyze it in detail. We know that the measured aberration ($W(\rho,\phi)$) is the sum of the illumination an emission path aberrations. Also we can denote the measured aberration as the sum of its even and odd components. All together become,  
+We must note that direct sensing needs a well defined wavefront in the pupil of the system or in other words, a point-like emitter. An this situation might not happen in biological microscopes where we are studying three-dimensional specimens, because the light emitted by the specimen may come not only from the focal point. This fact brings us to a couple of problematic situations. The first one is the superposition of wavefronts in the pupil which its effects will depend on the coherence of the emitted light. If it is coherent we will have interference in the pupil, thus we will have ambiguous sensor readings and this kind of sensing will not be suitable for aberration correction. In this sense, if in the focal region the specimen behaves as a point-like scatterer~(it will emit incoherent light) the sensor will be able to measure the aberrations produced in the emission path, which in principle they should be the same as in the illumination path. But, if our specimen acts as a planar mirror-like in the focal region, the sensor will just be able to measure twice the even components of the aberrations produced in the illumination path~(or emission path), that is because the "`mirror behavior"' will spatially invert the aberrations in the illumination path~(Fig.~\ref{fig:abe_direct_sensing}). Let us analyze it in detail. We know that the measured aberration~($W(\rho,\phi)$) is the sum of the illumination an emission path aberrations. Also we can denote the measured aberration as the sum of its even and odd components. All together become,  
 
 \begin{align}
 	\ W(\rho,\phi) = {{W(\rho,\phi)_i}^{even}} + {{W(\rho,\phi)_i}^{odd}}+{{W(\rho,\phi)_e}^{even}} + {{W(\rho,\phi)_e}^{odd}},
@@ -75,7 +75,7 @@ Due to the spatial inversion we know that $W(\rho,\phi)_i^{even}=W(\rho,\phi)_e^
 \begin{figure}[htbp]
 	\centering
 		\includegraphics[width=0.37\textwidth, height=0.15\textheight]{images/abe_direct_sensing.png}
-	\caption{Representation of the two effects due to the specimen structure on wavefront measurements. The left figure shows how the wavefront is aberrated in the illumination path. In the center it is shown a point-like scatterer. Only the emission path is measured. In the right figure it is shown a planar reflector. The illumination wavefront is spatially inverted on reflection before acquiring further aberration in the detection path \cite{AOM_basic_ref}.}
+	\caption{Representation of the two effects due to the specimen structure on wavefront measurements. The left figure shows how the wavefront is aberrated in the illumination path. In the center it is shown a point-like scatterer. Only the emission path is measured. In the right figure it is shown a planar reflector. The illumination wavefront is spatially inverted on reflection before acquiring further aberration in the detection path~\cite{AOM_basic_ref}.}
 	\label{fig:abe_direct_sensing}
 \end{figure}
 
@@ -134,9 +134,9 @@ described in Section~\ref{sec:ExperimentDiscussion}.
 %------------------------------------------------------------------------------
 %Optimization of an Image Quality Metric
 
-The optimization of an image quality metric is mainly a mathematical rahter then a techniquel problem. We will describe the basic principle but the derivation of the specifc metrics is beyond the scope of this paper. The interested reader will find more information on the mathematical background in reference~\cite{wide_parabolic_optimization,wide_sphere_packing,wide_Lukosz_Modes,wide_AOM_loew_freq}. 
+The optimization of an image quality metric is mainly a mathematical rather than a technical problem. We will describe the basic principle but the derivation of the specific metrics is beyond the scope of this paper. The interested reader will find more information on the mathematical background in reference~\cite{wide_parabolic_optimization,wide_sphere_packing,wide_Lukosz_Modes,wide_AOM_loew_freq}. 
 
-For these techniques, the aberration correction is performed through an iterative optimization of an image quality metric based. The metric is usually based on spatial frequencies~\cite{wide_AOM_loew_freq} or image intensity~\cite{indirect_metric_intensity}. Such optimization is either implemented empirically or by using an appropriate mathematical model. In many practical systems aberrations can be accurately represented by a small number of modes of an orthogonal basis, such as Zernikepolynomials. A sequence of images is acquired, each with a different aberration applied and the correction aberration is estimated from the information in this images. This process is repeated until the image quality is considered acceptable. The number of measurements needed to obtain an acceptable image depends strongly upon the optimization algorithm and parameters used, the mathematical representation of the aberration, and the object structure. For the earliest and most generic algorithms the number of measurements per aberration mode increases quadratically or exponentially with $N$, the number of corrected aberration modes~\cite{wide_sphere_packing}. The so called direct maximization method~(as described in Section~\ref{sec:TransmissionMicroscope}) is significantly more efficient, requiring only $N+1$ measurements for $N$ mode. With this technique, Lukosz polynomials~\cite{wide_Lukosz_Modes} are used to clasify the aberrations. The effects of different modes can then be separated and the optimization of each mode becomes independent and hence more efficient.
+For these techniques, the aberration correction is performed through an iterative optimization of an image quality metric based. The metric is usually based on spatial frequencies~\cite{wide_AOM_loew_freq} or image intensity~\cite{indirect_metric_intensity}. Such optimization is either implemented empirically or by using an appropriate mathematical model. In many practical systems aberrations can be accurately represented by a small number of modes of an orthogonal basis, such as Zernike polynomials. A sequence of images is acquired, each with a different aberration applied and the correction aberration is estimated from the information in this images. This process is repeated until the image quality is considered acceptable. The number of measurements needed to obtain an acceptable image depends strongly upon the optimization algorithm and parameters used, the mathematical representation of the aberration, and the object structure. For the earliest and most generic algorithms the number of measurements per aberration mode increases quadratically or exponentially with $N$, the number of corrected aberration modes~\cite{wide_sphere_packing}. The so called direct maximization method~(as described in Section~\ref{sec:TransmissionMicroscope}) is significantly more efficient, requiring only $N+1$ measurements for $N$ mode. With this technique, Lukosz polynomials~\cite{wide_Lukosz_Modes} are used to classify the aberrations. The effects of different modes can then be separated and the optimization of each mode becomes independent and hence more efficient.
 
 An effective model-based adaptive optics scheme should also be independent of the imaged object and should permit the separation of aberration and object influences on the measurements. This separation is also possible through the appropriate choice of optimization metric and aberration representation~\cite{wide_AOM_loew_freq}.
 
@@ -145,18 +145,42 @@ An effective model-based adaptive optics scheme should also be independent of th
 \subsection{Aberration Correction}
 \label{sec:AberrationCorrection}
 
-The wavefront correctors are the essential device of an adaptive optics system. Their aim is to provide a certain phase profile of the incident wavefront by changing the physical length ove2r which the wavefront propagates or the refractive index of the medium through which the wavefront passes. They are based on mirror technology (Fig. \ref{fig:Correctors}) or on liquid crystal technology. The first ones change the phase by adjusting their surface shape (i.e., change their physical length while keeping the refractive index constant) and the second ones keep the physical length constant and rely on localized changes in refractive index. The mirror-based correctors are wavelength and polarisation independent and can be reconfigured at rates of a few kilohertz \cite{AOM_basic_ref}. They can have a continuous surface (i.e., discrete actuator, bimorph or membrane mirrors) or segmented surface (i.e. piston-only or piston/tilt mirrors). Unlike continuous mirrors, the segmented mirrors have gaps between the segments that reduce the efficiency and quality of the correction, although they can achieve much better wavefront fitting. 
+The wavefront correctors are the essential device of an adaptive optics system. Their aim is to provide a certain phase profile of the incident wavefront by changing the physical length over which the wavefront propagates or the refractive index of the medium through which the wavefront passes. They are based on mirror technology~(Fig.~\ref{fig:Correctors}) or on liquid crystal technology. The first ones change the phase by adjusting their surface shape~(i.e., change their physical length while keeping the refractive index constant) and the second ones keep the physical length constant and rely on localized changes in refractive index. The mirror-based correctors are wavelength and polarization independent and can be reconfigured at rates of a few kilohertz~\cite{AOM_basic_ref}. They can have a continuous surface~(i.e., discrete actuator, bimorph or membrane mirrors) or segmented surface~(i.e. piston-only or piston/tilt mirrors). Unlike continuous mirrors, the segmented mirrors have gaps between the segments that reduce the efficiency and quality of the correction, although they can achieve much better wavefront fitting. 
 
-\begin{figure}[htbp]
-	\centering
-		\includegraphics[width=0.45\textwidth]{images/Correctors.png}
-	\caption{The four main mirror correctors \cite{AO_vision_science}. (a) Discrete actuator deformable mirrors consist of a continuous, reflective surface and an array of actuators, each capable of producing a local deformation in the surface. (b) Piston-only segmented correctors consist of an array of small planar mirrors whose axial motion (piston) is independently controlled. Piston/tip/tilt-segmented correctors add independent tip and tilt motion to the piston-only correctors. (c) Membrane mirrors and (d) Bimorph mirrors.}
+\begin{figure}[tbh]
+			\centering
+			\begin{subfigure}[b]{0.25\textwidth}
+							\includegraphics[width=\textwidth]{images/deformable_discrete}
+							\caption{Discrete}
+							\label{fig:Correctors_discrete}
+			\end{subfigure}
+			\quad
+			\begin{subfigure}[b]{0.25\textwidth}
+							\includegraphics[width=\textwidth]{images/deformable_piston}
+							\caption{Piston-Only}
+							\label{fig:Correctors_piston}
+			\end{subfigure}
+			
+			\vspace{5mm}
+			
+			\begin{subfigure}[b]{0.25\textwidth}
+							\includegraphics[width=\textwidth]{images/deformable_membrane}
+							\caption{Membrane}
+							\label{fig:Correctors_membrane}
+			\end{subfigure}
+			\quad
+			\begin{subfigure}[b]{0.25\textwidth}
+							\includegraphics[width=\textwidth]{images/deformable_bimorph}
+							\caption{Bimorph}
+							\label{fig:Correctors_bimorph}
+			\end{subfigure}							
+			\caption{The four main mirror correctors. (a) Discrete actuator deformable mirrors consist of a continuous, reflective surface and an array of actuators, each capable of producing a local deformation in the surface. (b) Piston-only segmented correctors consist of an array of small planar mirrors whose axial motion~(piston) is independently controlled. Piston/tip/tilt-segmented correctors add independent tip and tilt motion to the piston-only correctors. (c) Membrane mirrors and (d) Bimorph mirrors. Image after~~\cite{AO_vision_science}.}
 	\label{fig:Correctors}
-\end{figure}
+\end{figure} 
 
 
-Regarding the liquid crystal-based mirrors, they change the refractive index electronically or optically, are wavelength and polarisation dependent and can reach velocities of just a few tens of hertz. The nematic liquid crystal is the most common for AO applications. In general, they are much cheaper than the mirror-based correctors, are capable of producing more complex phase patterns but they have lower light efficiency.   
+Regarding the liquid crystal-based mirrors, they change the refractive index electronically or optically, are wavelength and polarization dependent and can reach velocities of just a few tens of hertz. The nematic liquid crystal is the most common for AO applications. In general, they are much cheaper than the mirror-based correctors, are capable of producing more complex phase patterns but they have lower light efficiency.   
 
-In AO microscopes the first choice in most cases is the deformable mirror because of their high detection efficiency. Besides, they are better suited for fluorescence techniques due to their polarisation independent behaviour. However, in particular cases, LC-SLM can be enough if aberration correction is only needed in the illumination path.
+In AO microscopes the first choice in most cases is the deformable mirror because of their high detection efficiency. Besides, they are better suited for fluorescence techniques due to their polarization independent behavior. However, in particular cases, LC-SLM can be enough if aberration correction is only needed in the illumination path.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
