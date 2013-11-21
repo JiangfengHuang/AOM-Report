@@ -197,47 +197,50 @@ Another different way to apply AO in confocal microscopy was done by \textit{Xia
 \subsubsection{Two-Photon Fluorescence Microscopy}
 \label{sec:twoPhotonExcitation}
 
-Its intrinsic optical sectioning, larger penetration depth, reduced photo damage as well as other advantages allowed nonlinear microscopy in general, and Two-Photon Fluorescence Microscopy~(TPFM) in particular, to become a very important tool in biological imaging since its first presentation by \emph{Denk at al.} in 1990~\cite{scan_TPFM_principle}.
-
-As with most AO microscopy techniques, both a direct and indirect wavefront sensing scheme can be deployed for the use with TPFM. Indirect sensing was already explained~(section~\ref{sec:IndirectWavefrontSensing}) and presented~(section~\ref{sec:WidefieldMicroscopy} in detail. \emph{Marsh et al.} present the first and fairly simple indirect sensing approach, correcting only for depth induced aberrations as early as 2003~\cite{scan_TPFM_pratical}. Again, based on their earlier works~(\cite{wide_AOM_loew_freq,wide_AOM_structured_illu}), \emph{D\'{e}barre et al.} present another highly sophisticated application of their image based wavefront sensing scheme in 2009~\cite{scan_TPFM_image_based}. Both \emph{Marsh} and \emph{D\'{e}barre} essentially use the standard TPFM setup and the image optimization is very similar to the one presented earlier, we will not describe these methods here again.
-
-\emph{Rueckel et al.} present a wavefront correction method using coherence-gated wavefront sensing~\cite{scan_TPFM_gated_wavefront} which also beyond the scope of this report. This section will therefor describe direct wavefront sensing based on the work presented by \emph{Aviles-Espinosa et al.} in 2011~\cite{scan_TPFM_guide_start}.\newline
+Its intrinsic optical sectioning, larger penetration depth, reduced photo damage as well as other advantages allowed nonlinear microscopy in general, and Two-Photon Fluorescence Microscopy~(TPFM) in particular, to become a very important tool in biological imaging since its first presentation by \emph{Denk et al.} in 1990~\cite{scan_TPFM_principle}. As with most AO microscopy techniques, both a direct and indirect wavefront sensing scheme can be deployed for the use with TPFM. Indirect sensing was already explained~(section~\ref{sec:IndirectWavefrontSensing}) and presented~(section~\ref{sec:WidefieldMicroscopy} in detail. \emph{Marsh et al.} present the first and fairly simple indirect sensing approach, correcting only for depth induced aberrations as early as 2003~\cite{scan_TPFM_pratical}. Again, based on their earlier works~(\cite{wide_AOM_loew_freq,wide_AOM_structured_illu}), \emph{D\'{e}barre et al.} present another highly sophisticated application of their image based wavefront sensing scheme in 2009~\cite{scan_TPFM_image_based}. Since both \emph{Marsh} and \emph{D\'{e}barre} essentially use the standard TPFM setup and the image optimization is very similar to the one presented earlier, we will not describe these methods here again. \emph{Rueckel et al.} present a wavefront correction method using coherence-gated wavefront sensing~\cite{scan_TPFM_gated_wavefront} which also beyond the scope of this report. This section will therefor describe direct wavefront sensing based on the work presented by \emph{Aviles-Espinosa et al.} in 2011~\cite{scan_TPFM_guide_start}.\newline
 
 For two-photon fluorescence microscopy, it is not essential to correct for sample or system induced aberrations on the collected beam. Since it is a point scanning technique, all the light emitted in the focus region is collected and only the relative intensity difference is important for the generation of the image~(see \cite{scan_TPFM_review} for a detailed review on TPFM). To achieve the highest possible resolution, especially when imaging deep in a tissue, it is however very important to correct aberrations of the excitation beam. This will not only result in a better, i.e. smaller focus spot, but will also highly increase the efficiency of the nonlinear process. As described in earlier sections, a indirect wavefront sensing is usually applied for microscopic applications. While indirect sensing has several advantages over direct sensing~(see sec. \ref{sec:IndirectWavefrontSensing}), they have one important drawback that can ultimately not be overcome. They all depend on an iterative optimization procedure to estimate and correct for the aberrations. While random optimization requires many iterations~(in some cases up to 3000 iterations per mirror actuator~\cite{scan_CARS}) other methods base the iterations on complicated models and are able to achieve indirect sensing with as little as $2N+1$ iterations~(where N is the number of corrected aberration modes)~\cite{wide_AOM_loew_freq,wide_AOM_structured_illu,scan_TPFM_image_based}. However, even these methods require the sample to be exposed and imaged multiple times. To correct 11 aberrations modes (as done in~\cite{scan_TPFM_image_based}), one needs 23 exposure to acquire an aberration corrected image. While this is suitable for some systems such as CARS where photobleaching is not an issue, it often limits the feasibility of AO in florescence imaging. Being aware of these limitations, \emph{Aviles-Espinosa et al.} therefore developed a direct sensing scheme. 
 
-As described in section~\ref{sec:WavefrontSensing}, to be able to use a wavefront sensor, one needs a point like reference source which is then used to detect the aberration. This point like source, called "`guide start"' by the authors\footnote{The term "`guide start"' is used in reference to astronomy. There a star or an laser spot projected in the sky is used as the reference and called guide star.} can be artificially created and imbeded in the sample, as done for linear fluorescence microscopy~\cite{wide_fluorescence_guide_star}. This however can cause damage to the sample or might influence the behavior of living samples, limiting its potential for in vivo imaging. \emph{Aviles-Espinosa et al.} realized that two-photon excited fluorescence naturally produces a small confined volume which can be as "`guide-star"'. The setup presented by the authors is shown in Fig.~\ref{fig:TPFM_guide-star}. 
-
- The (initially spherical) wavefront emitted from the guide star passed through the 
-
- is then recorded using a Shack-Hartmann sensor
-- Compensation of the recorded sample aberrations is performed by the deformable mirror in a single-step. 
-
- Hence it is possible to create aberration corrected images using only a single exposure and without further sample preparation. 
+As described in section~\ref{sec:WavefrontSensing}, to be able to use a wavefront sensor, one needs a point like reference source which is then used to detect the aberration. This point like source, called ``nonlinear guide star'' ``(NL-GS) by the authors\footnote{The term ``guide start'' is used in reference to astronomy. There a star or an laser spot projected in the sky is used as the reference and called guide star.}, can be artificially created and imbedded in the sample, as done for standard fluorescence microscopy~\cite{wide_fluorescence_guide_star}. This however can cause damage to the sample or might influence the behavior of living samples, limiting its potential for in vivo imaging. \emph{Aviles-Espinosa et al.} realized that two-photon excited fluorescence naturally produces a small confined volume which can be used as the guide-star. The setup presented by the authors is shown in Fig.~\ref{fig:TPFM_guide-star}. The setup shown is basically an inverted microscope, modified to be used as laser scanning TPFM (see paper for detailed component description and working principle. A mode locked Ti:sapphire laser~($\lambda = \unit[810]{nm}$ \& $\unit[860]{nm}$, pulse duration = $\unit[100]{fs}$, repetition rate = $\unit[80]{MHz}$, average powers in sample plane = $\unit[1.5]{mW}$ to $\unit[5.6]{mW}$) is used as the excitation beam. The wavefront sensing is performed using a Shack-Hartmann WaveFront Sensor (SH WFS), located at one of the output ports of the microscope. The aberration correction is realized with an electromagnetic Deformable Mirror (DM). 
 
 \begin{figure}
 	\centering
 		\includegraphics[width=0.75\textwidth]{images/TPFM_guide-star}
-	\caption{check if we really want this...\cite{scan_TPFM_guide_start} Use it...do it yourself and make it nice!!!}
+	\caption{Experimental setup for aberration corrected two-photon fluorescence microscopy as proposed by \emph{Aviles-Espinosa et al.}. GM - galvanometric mirrors, L1-L5 - lenses, DM - deformable mirror, M1 - mirror, HM - filter and beamsplitter, MO - microscope objective, TL - microscope tube lens, F - band pass filters, PMT - photo multiplier tube, WFS - Shack-Hartmann wavefront sensor. The microscope output port is manually selected either for the PMT or for the WF sensor using PS. See~\cite{scan_TPFM_guide_start} for the original image as well as a detailed description of the working principle.}
 	\label{fig:TPFM_guide-star}
 \end{figure}
 
+Before the authors started their experiments on biological samples, they first showed that the guide star is reproducible, reliable and independent from the excitation beam aberrations. They continued to verify that the NL-GS behaves as point source as well as proving that aberrations are similar in the complete Field Of View (FOV). Since all these requirements were met, it was show that aberrations in the imaged area can be effectively corrected using only one NL-GS. The authors then continued to calibrate their system, eliminating the passive aberrations of the microscope system coming from the optics for excitation beam as well as the beam path from the objective pupil to the output ports of the microscope. These so called coupling aberrations only need to be corrected once for a given microscopic setup. They were measured and taken into account as a reference for all the subsequent wavefront measurements. The second correction step was to measure the so called focusing aberrations caused by the focusing part of the system. This step was performed every time prior to the actual image acquisition to account for the specific measurement~(i.e. the objective, the refractive index matching oil, the cover slip and the sample).\newline
 
+The authors then investigated the performance of their AOM system using both Caenorhabditis elegans and mouse brain samples. -For small aberrations and weak scattering only a modest improvement in signal intensity was shown. At an imaging depth of $\unit[25]{\upmu m}$, the  measured signal enhancement was 1.75x by correcting the coupling aberrations, and 3.61x when focusing aberrations were corrected as well. Similar values were obtained imaging deeper into the tissue. 
+Caenorhabditis elegans tissue scatterers only weakly and hence spherical aberration is the main aberration for imaging deep into the tissue. Since these should be easily corrected using the presented scheme, the authors were surprised by these relatively small improvements if the signal quality. By using an additional agar pad to simulate moderate scattering as well as imaging deeper into the tissue, the authors investigated the correction efficiency further. Deep in the sample~($\unit[127]{\upmu m}$) where large sample induced aberrations are prominent, improvements of the signal intensity by a factor of 22.59 were possible, as shown in Fig.~\ref{fig:elegance}. It is noteworthy, that the aberration correction increases the signals local maxima while the local minima remain unaltered. 
 
-- applied to fixed and in vivo biological samples, showing, in some cases, more than one order of magnitude improvement in the total collected signal intensity.
-- measured using a WFS placed at the output port of the NLM microscope
-- as the WF is directly expressed in the form of Zernike coefficients, it is possible to shape the adaptive element (DM) in a single step (i.e. without the need of any search algorithm) for correcting the measured aberrations
-- so, image quality and contrast can be significantly improved without having to expose the sample for large periods of time
-- Consequently photo-bleaching and photo-toxicity are greatly reduced
-- it can be applied in vivo, it is simple, noninvasive and requires no additional sample processing (such as the incorporation of fluorescent beads)
-- Moreover, the NL-GS can be created at any desired position inside a sample
-- has been demonstrated with both, moderate and increased scattering samples.
-- For moderate scattering samples, when comparing coupling vs. focusing aberrations, we found that the total signal improvement can be up to 11.66 times 
-- For samples with increased scattering correction is moderate but in agreement with other adaptive optics correction schemes
+\begin{figure}[tbh]
+			\centering
+			\begin{subfigure}[b]{0.20\textwidth}
+							\includegraphics[width=\textwidth]{images/elegance_uncorrected}
+							\caption{Uncorrected.}
+							\label{fig:elegance_uncorrected}
+			\end{subfigure}
+			\begin{subfigure}[b]{0.20\textwidth}
+							\includegraphics[width=\textwidth]{images/elegance_coupling_cor}
+							\caption{Coupling cor.}
+							\label{fig:elegance_coupling}
+			\end{subfigure}		
+			\begin{subfigure}[b]{0.20\textwidth}
+							\includegraphics[width=\textwidth]{images/elegance_all_corr}
+							\caption{Focusing cor.}
+							\label{fig:elegance_all_corr}
+			\end{subfigure}
+			\begin{subfigure}[b]{0.37\textwidth}
+							\includegraphics[width=\textwidth]{images/elegance_result}
+							\caption{Line Scan.}
+							\label{fig:elegance_result}
+			\end{subfigure}							
+			\caption{In vivo C. elegans sample imaged at $\unit[127]{\upmu m}$ depth. (a) shows the uncorrected image of a worm section, (b) displays the same section with coupling correction applied and (c) shows the section when both coupling and focusing aberrations are corrected. (d) shows the intensity profile along the green line in the images for all three correction cases. The correction of coupling aberrations improves the signal intensity by a factor of only 1.94 whereas the correction of both coupling and focusing aberrations results in a very good improvement of 22.59. Image after~\cite{scan_TPFM_guide_start}.}
+	\label{fig:elegance}
+\end{figure} 
 
-
-
-\cite{scan_TPFM_guide_start}
-
-
-
+Finally, the authors investigate the AO system performance using strongly scattering mouse brain tissue. They show that a correction is still possible, but it is less efficient than for moderately scattering samples. It is furthermore possible to record aberration corrected images with a single exposure, no need for complex optimization algorithms and without further sample preparation~(i.e. no fluorescent beads need to be inserted). This minimize photobleaching effects, photo-toxicity and limits negative effects to the living sample. Since no model is needed to correct the aberrations, the method is robust and can be applied to fixed and in vivo biological samples. An overall intensity improvement of more than one order of magnitude was shown is some cases. 
+In conclusion, the authors present and flexible and versatile appication of adaptive optics in microscopy which can be used in wide range biological imaging applications where a high resolution is required. 
 
