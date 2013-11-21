@@ -7,9 +7,9 @@
 \contentsline {section}{\numberline {3}Adaptive Optics Methods applied in Microscopy}{6}{section.3}
 \contentsline {subsection}{\numberline {3.1}Widefield Microscopy}{6}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}Transmission Microscope}{7}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}Structured Illumination Microscopy}{8}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2}Structured Illumination Microscopy}{9}{subsubsection.3.1.2}
 \contentsline {subsection}{\numberline {3.2}Point Scanning Microscopes}{10}{subsection.3.2}
 \contentsline {subsubsection}{\numberline {3.2.1}Confocal Microscopes}{11}{subsubsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2}Two-Photon Fluorescence Microscopy}{12}{subsubsection.3.2.2}
-\contentsline {section}{\numberline {4}Conclusion \& Future Prospects}{14}{section.4}
+\contentsline {section}{\numberline {4}Conclusion \& Future Prospects}{15}{section.4}
 \contentsline {section}{References}{16}{section*.14}
