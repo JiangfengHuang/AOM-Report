@@ -11,7 +11,8 @@
 \section{Adaptive Optics Methods applied in Microscopy}
 \label{sec:ExperimentDiscussion}
 
-Adaptive optics techniques have found their way into almost all kinds of modern, high resolution microscopy techniques. These microscopes have been combined with direct wavefront sensing and sensorless AO, using deformable mirrors or spatial light modulators for aberration compensation~(all of which has been described in Section~\ref{Measurement}. This includes standard widefield microscopes as well as highly sophisticated and specialized point scanning methods such as Coherent Antistokes Raman Spectroscopy~(CARS) and Stimulated Emission Depletion~(STED) techniques. It has to be noted however, that some of these methods are themselves only a few years old. Therefor, they are still being optimized and so are the AOM techniques. It is therefore an interesting field of research with new ideas being implemented every year.\newline
+Adaptive optics techniques have found their way into almost all kinds of modern, high resolution microscopy techniques. These microscopes have been combined with direct wavefront sensing and sensorless AO, using deformable mirrors or spatial light modulators for aberration compensation~(all of which has been described in Section~\ref{Measurement}. This includes standard widefield microscopes as well as highly sophisticated and specialized point scanning methods such as CARS and Stimulated Emission Depletion~(STED) techniques. It has to be noted however, that some of these methods are themselves only a few years old. Therefor, they are still being optimized and so are the AOM techniques. It is therefore an interesting field of research with new ideas being implemented every year.
+
 AO was first used in confocal and two-photon fluorescence microscopy, both of which are commonly used in biomedical applications. These microscopes suffer from a significant drop in signal and resolution as the focus is moved deeper into the specimen, which is caused by aberrations~\cite{characterizing_abberations}.
 
 AOM is also used for imaging of live specimens. Due to an increased excitation signal and improved light collection from the specimen, acquisition times can be reduced and contrast can be enhanced. Techniques that without AO are to slow for live imaging might now be usable, opening up completely new fields of research. Another advantage of AO lies in the microscopy design. Using AO methods, can help the designer to relax the aberration tolerance. This permits a significant reduction in the complexity of the optical system while maintaining diffraction limited operation.
@@ -91,7 +92,7 @@ Widefield techniques such as Structured Illumination (SI) microscopy can also pr
 
 Based on the SI microscopy technique presented by \emph{Neil et al.} in 2005~\cite{wide_structured_illu_principle} as well as their earlier work on indirect wavefront sensing using a conventional microscope~\cite{wide_AOM_loew_freq} in 2007~(described in the previous section) \emph{Debarre et al.} combined both techniques in 2008 and proposed an AO scheme for use in SI microscopy~\cite{wide_AOM_structured_illu}.  
 
-\begin{figure}
+\begin{figure}[hbt]
 	\centering
 		\includegraphics[width=0.75\textwidth]{images/wide_structured_illumination.pdf}
 	\caption{Experimental setup for structured illumination microscopy with 
@@ -107,7 +108,7 @@ The authors derive an inner product from a mathematical model of the imaging pro
 
 The results of the implemented AO scheme is shown in Fig.~\ref{fig:structured_light_correction} for aberration correction on a fluorescent mouse intestine. The image contrast and sharpness improvement is clearly visible in image~\ref{fig:SI_corrected} compared to the uncorrected image in \ref{fig:SI_uncorrected}. As a result of the aberration correction, and as shown in Fig.~\ref{fig:SI_scan}, the contrast of small sample features (blue arrows) is better defined after (red solid line) rather than before (black dotted line) correction. 
 
-\begin{figure}[tbh]
+\begin{figure}[htb]
         \centering
         \begin{subfigure}[b]{0.25\textwidth}
                 \includegraphics[width=\textwidth]{images/structured_illumination_uncorrected}
@@ -125,16 +126,7 @@ The results of the implemented AO scheme is shown in Fig.~\ref{fig:structured_li
                 \label{fig:SI_scan}
         \end{subfigure}
 								
-        \caption{Aberration correction in structured illumination microscopy. 
-A fluorescent mouse intestine sample was imaged (a) without (b) with 
-aberration correction with inserts showing the phase induced by the 
-deformable mirror. (c) Profile along the lines drawn on the images, both 
-profiles normalized so that their mean value is identical. As a result of the 
-resolution improvement, the contrast of small sample features (blue arrows) 
-is better defined after (red solid line) rather than before (black dotted 
-line) correction. The imaging depth was approximately $\unit[10]{\upmu m}$, 
-sacle bar size $\unit[10]{\upmu m}$. Image after~\cite{wide_AOM_structured_illu}
-.}
+        \caption{Aberration correction in structured illumination microscopy. A fluorescent mouse intestine sample was imaged (a) without (b) with aberration correction with inserts showing the phase induced by the deformable mirror. (c) Profile along the lines drawn on the images, both profiles normalized so that their mean value is identical. As a result of the resolution improvement, the contrast of small sample features (blue arrows) is better defined after (red solid line) rather than before (black dotted line) correction. The imaging depth was approximately $\unit[10]{\upmu m}$, sacle bar size $\unit[10]{\upmu m}$. Image after~\cite{wide_AOM_structured_illu}.}
 \label{fig:structured_light_correction}
 \end{figure} 
 
@@ -150,40 +142,24 @@ In conclusion, the authors present a sophisticated, easy to implement and highly
 \subsection{Point Scanning Microscopes}
 \label{sec:PointScanningMicroscopes}
 
-Just as with the widefield techniques, adaptive optics quickly found its way into point scanning techniques to improve the image and signal quality. 
+Just as with the widefield techniques, adaptive optics quickly found its way into point scanning techniques to improve the image and signal quality. Scanning methods are useful for imaging biological specimens, since they can provide high resolution imaging in three-dimensions. Illumination is usually provided by a laser that is focused into the sample. The light emitted or reflected from the specimen is collected, usually through the same objective lens, and its intensity is measured by a detector. Since this only provides information about the intensity at a single spot, the focal point is then scanned through the specimen and point-by-point the image is acquired. 
 
-Scanning methods are useful for imaging biological specimens, since they can provide high resolution imaging in three-dimensions. Illumination is  usually provided by a laser that is focused into the sample. The light emitted or reflected from the specimen is collected, usually through the same objective lens, and its intensity is measured by a detector. Since this only provides information about the intensity at a single spot, focal point is then scanned through the specimen and point-by-point the image is acquired. 
+This section will give a brief description how AO is applied to HG, CARS and STED microscopy. Following this will be a more detailed analysis of how adaptive optics is implemented into confocal~(section~\ref{sec:ConfocalMicroscopes}) and two-photon florescence microscopes~~(section~\ref{sec:twoPhotonExcitation}). 
 
-%ToDo - check what we will actually describe and write short intro for that here...
-Several other point scanning microscope modalities have been introduced, including Two-Photon Excitation Fuorescence (TPEF) microscopy, second harmonic generation (SHG) and third harmonic generation (THG) microscopy, and coherent anti-Stokes Raman (CARS) microscopy.
 
-- using a fluorescence microscope, the smaller FWHM, provided by the optimized DMM, will increase the excitation intensity leading to a higher fluorescent signal for the same laser beam input power
+Adaptive optics techniques have been developed for all common point scanning microscopes. 
+Using both the second- and third-harmonic intensity signals as the optimization metric for an indirect wavefront sensing scheme, \emph{Jesacher et al.}~\cite{scan_HG_dynamic} as well as \emph{Olivier et al}~\cite{scan_HG_embryos} have shown AO applied to higher harmonic generation microscopy. The aberration correction is compensating both system- and specimen-induced aberrations when imaging live mouse embryos.The authors demonstrate an improved signal level and resolution, with peak intensity increased by almost $\ unit[50]{\%}$ and the FWHM decreased by $\unit[14]{\%}$ to  $\unit[1.22]{\upmu m}$ compared with a value of $\unit[1.15]{\upmu m}$ for an unaberrated system.
 
-\cite{scan_HG_embryos,scan_HG_dynamic} -> Both the second- and third-harmonic intensity signals are used as the optimization metric
-- Aberration correction is performed to compensate both system- and specimen-induced aberrations by using an efficient optimization routine based upon Zernike polynomial modes
-- images of live mouse embryos show an improved signal level and resolution.
-- The peak intensity increased by almost $\unit[50]{\%}$ and the FWHM decreased by $\unit[14]{\%}$ to  $\unit[1.22]{\upmu m}$ compared with a value of $\unit[1.15]{\upmu m}$ for an unaberrated system
+Even better results were reported by \emph{Wright et al.}~\cite{scan_CARS} when appliying AO to CARS. The authors achieved a signal improvement by a factor of 3 for samples at a depth of $\unit[700]{\upmu m}$ and a factor of 6 for muscle tissue at a depth of $\unit[260]{\upmu m}$. Their completely random optimization typically converged after 3000 changes mirror shapes. With a mirror speed of up to 1kHz this is sufficiently fast.  The approach is well suited to CARS microscopy where photobleaching does not occur but is less applicable for other microscopy techniques. 
 
-\cite{scan_CARS} - signal improvement 3x for samples at a depth of $\unit[700]{\upmu m}$ and ~6x for muscle tissue at a depth of $\unit[260]{\upmu m}$
-- completely random optimization, approach is well suited to CARS microscopy, since photobleaching does not occur 
-- optimization algorithm typically converged after 3000 mirror shapes, mirror speed up to 1kHz this can be pretty fast
-
-\cite{scan_STED} (2012) - STED principle \cite{scan_STED_principle} (1994) 
-- STED phase mask as well as aberration correction realized using the SLM
-- aberration correction in both depletion beam (better resolution) and in the excitation beam path (better signal and less noise)
-- due to depletion image brightness as metric not good, introduced a new metric that seeks to optimize both image brightness and image sharpness in a combined approach,
-- imaging through a \#1.5 coverglass ($\unit[0.15]{mm}$ thicknes) and ~$\unit[55]{\upmu m}$ glycerol, Comparing the axial profiles of the STED and AO STED reveals a \~5-fold increase in the peak signal as well as a \~3.2-fold improvement in resolution 
-
+It is also possible to apply AO to STimulated Emission Depletion~(STED) microscopy~(see~\cite{scan_STED_principle} for basic working principle of STED) as recently presented by \emph{Gould et al.}~\cite{scan_STED}, again employing an indirect sensing scheme. Using a phase mask, the authors both created the doughnut shape depletion beam and simultaneously realize an aberration correction. Using an additional spatial light modulator, aberration correction is also implemented in the  excitation beam. The correction in the depletion beam leads to a better resolution while the correction of the excitation beam path results in a stronger signal and less noise. Unlike in many other indirect sensing methods, here the image brightness proved to be a poor quality metric due to the depletion. Hence the authors  introduced a new metric that seeks to optimize both image brightness and image sharpness in a combined approach. The new approach worked successfully resulting in a \~5-fold increase in the peak signal as well as a \~3.2-fold improvement in resolution.
 
 
 %------------------------------------------------------------------------------
--
 \subsubsection{Confocal Microscopes}
 \label{sec:ConfocalMicroscopes}
 
-The confocal microscopy can be operated in reflection or fluorescence mode. Both are a dual pass system, which means that either the illumination path and the emission path have to be corrected in an AO confocal microscope. 
-
-The first attempt to apply AO in confocal microscopy was done by \textit{Martin J. Booth et al.} \cite{scan_CFM}. They implemented indirect wavefront sensing to a confocal fluorescence microscope in a closed-loop way. Aberration measurement and correction was done sequentially. First a preset positive bias aberration was introduced by a deformable membrane mirror. An image scan was taken and all of its pixel values were summed and averaged to give the value of $W_1$. Then, it was added to the system the equivalent negative bias aberration, obtaining $W_2$. They had shown before that the value of the difference signal, W = $W_1$-$W_2$, is approximately proportional to the amount of the Zernike mode Zi present in the sample. They applied this procedure for several different Zernike modes, updating the mirror shape each time. A simple representation of the experimental set-up is shown in Fig.~\ref{fig:AOM_scan_CFM}.
+The first attempt to apply AO in confocal microscopy was done by \textit{Martin J. Booth et al.}~\cite{scan_CFM}. They implemented indirect wavefront sensing to a confocal fluorescence microscope in a closed-loop way. Aberration measurement and correction was done sequentially. First a preset positive bias aberration was introduced by a deformable membrane mirror. An image was taken and all of its pixel values were summed and averaged to give the value of $W_1$. Then, it was added to the system the equivalent negative bias aberration, obtaining $W_2$. They had shown before that the value of the difference signal, W = $W_1$-$W_2$, is approximately proportional to the amount of the Zernike mode Zi present in the sample. They applied this procedure for several different Zernike modes, updating the mirror shape each time. A simple representation of the experimental set-up is shown in Fig.~\ref{fig:AOM_scan_CFM}.
 
 \begin{figure}[htbp]
 	\centering
@@ -192,9 +168,11 @@ The first attempt to apply AO in confocal microscopy was done by \textit{Martin 
 	\label{fig:AOM_scan_CFM}
 \end{figure}
   
-With this sequential method for correcting aberrations they achieve an axial PSF shorter by a factor of 1.8, using two cycles of this modal wavefront sensor applied to low order aberration modes. Obviously, the degree of correction required and the profit of this method depend upon the nature of each individual specimen. 
+With this sequential method for correcting aberrations they achieve a 1.8 times smaller axial PSF, using two cycles of this modal wavefront sensor applied to low order aberration modes.
 
-Another different way to apply AO in confocal microscopy was done by \textit{Xiaodong Tao et al} \cite{scan_Confocal_direct_sensing}. They used a direct wavefront sensor in a fluorescence confocal microscope. Particularly, they implemented a Shack-Hartmann sensor with fluorescent micro-spheres (1 $\mu$m diameter) embedded in the sample as a point source reference beacons. Their set-up was designed to operate in a close-loop. The corrector device was a deformable mirror. A separate laser channel was added to excite the microsphere, which shared the same light path with the imaging channel. The results showed a 4.3x improvement in the Strehl ratio and a 240 $\%$ improvement in the signal intensity for fixed mouse tissues at depths of up to 100 $\mu$m. Although the effects of these microspheres in the live tissue have to be further investigated, this direct method enabled a shorter exposure time during sensing and a higher speed of imaging, which showed its potential ability for live in vivo imaging.
+A different way to apply AO in confocal microscopy was done by \textit{Xiaodong Tao et al} \cite{scan_Confocal_direct_sensing}. They used a direct wavefront sensor in a fluorescence confocal microscope. Particularly, they implemented a Shack-Hartmann sensor with fluorescent micro-spheres ($\unit[1]{\upmu m}$ diameter) embedded in the sample as a point source reference beacons. Their set-up was designed to operate in a close-loop. The corrector device was a deformable mirror. A separate laser channel was added to excite the microsphere, which shared the same light path with the imaging channel. The results showed a $\unit[4.3]{\text{x}}$ improvement in the Strehl ratio and a $\unit[240]{\%}$ improvement in the signal intensity for fixed mouse tissues at depths of up to 100 $\mu$m. Although the effects of these microspheres in the live tissue have to be further investigated, this direct method enabled a shorter exposure time during sensing and a higher speed of imaging, which showed its potential ability for live in vivo imaging.
+
+The confocal microscopy can be operated in reflection or fluorescence mode. Both are a dual pass system, which means that either the illumination path and the emission path have to be corrected in an AO confocal microscope. 
 
 %------------------------------------------------------------------------------
 \subsubsection{Two-Photon Fluorescence Microscopy}
@@ -216,6 +194,7 @@ As described in section~\ref{sec:WavefrontSensing}, to be able to use a wavefron
 Before the authors started their experiments on biological samples, they first showed that the guide star is reproducible, reliable and independent from the excitation beam aberrations. They continued to verify that the NL-GS behaves as point source as well as proving that aberrations are similar in the complete Field Of View (FOV). Since all these requirements were met, it was show that aberrations in the imaged area can be effectively corrected using only one NL-GS. The authors then continued to calibrate their system, eliminating the passive aberrations of the microscope system coming from the optics for excitation beam as well as the beam path from the objective pupil to the output ports of the microscope. These so called coupling aberrations only need to be corrected once for a given microscopic setup. They were measured and taken into account as a reference for all the subsequent wavefront measurements. The second correction step was to measure the so called focusing aberrations caused by the focusing part of the system. This step was performed every time prior to the actual image acquisition to account for the specific measurement~(i.e. the objective, the refractive index matching oil, the cover slip and the sample).\newline
 
 The authors then investigated the performance of their AOM system using both Caenorhabditis elegans and mouse brain samples. -For small aberrations and weak scattering only a modest improvement in signal intensity was shown. At an imaging depth of $\unit[25]{\upmu m}$, the  measured signal enhancement was 1.75x by correcting the coupling aberrations, and 3.61x when focusing aberrations were corrected as well. Similar values were obtained imaging deeper into the tissue. 
+
 Caenorhabditis elegans tissue scatterers only weakly and hence spherical aberration is the main aberration for imaging deep into the tissue. Since these should be easily corrected using the presented scheme, the authors were surprised by these relatively small improvements if the signal quality. By using an additional agar pad to simulate moderate scattering as well as imaging deeper into the tissue, the authors investigated the correction efficiency further. Deep in the sample~($\unit[127]{\upmu m}$) where large sample induced aberrations are prominent, improvements of the signal intensity by a factor of 22.59 were possible, as shown in Fig.~\ref{fig:elegance}. It is noteworthy, that the aberration correction increases the signals local maxima while the local minima remain unaltered. 
 
 \begin{figure}[tbh]
