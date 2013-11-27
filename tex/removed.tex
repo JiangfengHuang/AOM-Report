@@ -1,3 +1,33 @@
+%from
+\subsection{Direct Wavefront Sensing}
+
+In this sense, if in the focal region the specimen behaves as a point-like scatterer~(it will emit incoherent light) the sensor will be able to measure the aberrations produced in the emission path, which in principle they should be the same as in the illumination path.
+
+But, if our specimen acts as a planar mirror-like in the focal region, the sensor will just be able to measure twice the even components of the aberrations produced in the illumination path~(or emission path), that is because the "`mirror behavior"' will spatially invert the aberrations in the illumination path~(Fig.~\ref{fig:abe_direct_sensing}). Let us analyze it in detail. We know that the measured aberration~($W(\rho,\phi)$) is the sum of the illumination an emission path aberrations. Also we can denote the measured aberration as the sum of its even and odd components. All together become,  
+
+\begin{align}
+	\ W(\rho,\phi) = {{W(\rho,\phi)_i}^{even}} + {{W(\rho,\phi)_i}^{odd}}+{{W(\rho,\phi)_e}^{even}} + {{W(\rho,\phi)_e}^{odd}},
+	\label{eq:aberration_sum_il_em}
+\end{align}  
+
+Due to the spatial inversion we know that $W(\rho,\phi)_i^{even}=W(\rho,\phi)_e^{even}$ and $W(\rho,\phi)_e^{odd}=-W(\rho,\phi)_e^{odd}$, therefore the measured aberration can be simplified as,  
+
+\begin{align}
+	\ W(\rho,\phi)=2 {{W(\rho,\phi)_e}}
+	\label{eq:ab_measured_spat_inver}
+\end{align} 
+ 
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.50\textwidth]{images/abe_direct_sensing}
+	\caption{Representation of the two effects due to the specimen structure on wavefront measurements. The left figure shows how the wavefront is aberrated in the illumination path. In the center it is shown a point-like scatterer. Only the emission path is measured. In the right figure it is shown a planar reflector. The illumination wavefront is spatially inverted on reflection before acquiring further aberration in the detection path. Image after~\cite{AOM_basic_ref}.}
+	\label{fig:abe_direct_sensing}
+\end{figure}
+
+
+We have shown that in planar mirror-like structures we lose information about aberrations. Thus, in this cases it is not a good option to implement a direct sensing. Regarding microscopy techniques, we must note here that fluorescence emission is an incoherent process, but the non-linear processes generate a coherent signal.
+
 
 %------------------------------------------------------------------------------
 \subsubsection{Fluorescence Microscopy}

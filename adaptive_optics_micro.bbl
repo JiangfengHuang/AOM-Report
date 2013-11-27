@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{Genetic_Algor2}
+O.~Albert, L.~Sherman, G.~Mourou, T.~B. Norris, and G.~Vdovin.
+\newblock Smart microscope: an adaptive optics learning system for aberration
+  correction in multiphoton confocal microscopy.
+\newblock {\em Opt. Lett.}, 25(1):52--54, Jan 2000.
+
 \bibitem{scan_TPFM_guide_start}
 Rodrigo Aviles-Espinosa, Jordi Andilla, Rafael Porcar-Guezenec, Omar~E. Olarte,
   Marta Nieto, Xavier Levecq, David Artigas, and Pablo Loza-Alvarez.
@@ -36,16 +42,15 @@ Martin Booth.
   sphere packings.
 \newblock {\em Opt. Express}, 14(4):1339--1352, Feb 2006.
 
-\bibitem{AOM_basic_ref}
-Martin~J Booth.
-\newblock Adaptive optics in microscopy.
-\newblock {\em Philosophical Transactions of the Royal Society A: Mathematical,
-  Physical and Engineering Sciences}, 365(1861):2829--2843, 2007.
-
 \bibitem{WF_sensorless}
 Martin~J. Booth.
 \newblock Wavefront sensorless adaptive optics for large aberrations.
 \newblock {\em Opt. Lett.}, 32(1):5--7, Jan 2007.
+
+\bibitem{AOM_basic_ref}
+Martin~J. Booth.
+\newblock {\em Adaptive Optics in Microscopy}, pages 295--322.
+\newblock Wiley-VCH Verlag GmbH \& Co. KGaA, 2011.
 
 \bibitem{AOM_biomedical}
 Martin~J. Booth, Delphine D\'{e}barre, and Alexander Jesacher.
@@ -81,12 +86,6 @@ Delphine D\'{e}barre, Edward~J. Botcherby, Tomoko Watanabe, Shankar Srinivas,
 \newblock Image-based adaptive optics for two-photon microscopy.
 \newblock {\em Opt. Lett.}, 34(16):2495--2497, 8 2009.
 
-\bibitem{indirect_phase_retrieval_algorithm}
-Ross~W. Deming.
-\newblock Phase retrieval from intensity-only data by relative entropy
-  minimization.
-\newblock {\em J. Opt. Soc. Am. A}, 24(11):3666--3679, Nov 2007.
-
 \bibitem{scan_TPFM_principle}
 W~Denk, JH~Strickler, and WW~Webb.
 \newblock Two-photon laser scanning fluorescence microscopy.
@@ -96,6 +95,12 @@ W~Denk, JH~Strickler, and WW~Webb.
 J.~R. Fienup and J.~J. Miller.
 \newblock Aberration correction by maximizing generalized sharpness metrics.
 \newblock {\em J. Opt. Soc. Am. A}, 20(4):609--620, Apr 2003.
+
+\bibitem{Genetic_Algor3}
+Fr\'{e}d\'{e}ric Gont\'{e}, Alain Courteville, and Ren\'{e} D\"{a}ndliker.
+\newblock Optimization of single-mode fiber coupling efficiency with an
+  adaptive membrane mirror.
+\newblock {\em Optical Engineering}, 41(5):1073--1076, 2002.
 
 \bibitem{scan_STED}
 Travis~J. Gould, Daniel Burke, Joerg Bewersdorf, and Martin~J. Booth.
@@ -119,12 +124,6 @@ P.~KNER, J.W. SEDAT, D.A. AGARD, and Z.~KAM.
 \newblock High-resolution wide-field microscopy with adaptive optics for
   spherical aberration correction and motionless focusing.
 \newblock {\em Journal of Microscopy}, 237(2):136--147, 2010.
-
-\bibitem{indirect_AOM_phase_retrieval}
-Peter Kner, Lukman Winoto, David~A. Agard, and John~W. Sedat.
-\newblock Closed loop adaptive optics for microscopy without a wavefront
-  sensor.
-\newblock {\em Proc. SPIE}, 7570:757006--757006--9, 2010.
 
 \bibitem{wide_Lukosz_Modes}
 W.~Lukosz.
@@ -221,6 +220,14 @@ Robert Tyson.
   Engineering)}.
 \newblock CRC Press, 1 edition, 11 1999.
 
+\bibitem{Genetic_Algor1}
+Paolo Villoresi, Stefano Bonora, Michele Pascolini, Luca Poletto, Giuseppe
+  Tondello, Caterina Vozzi, Mauro Nisoli, Giuseppe Sansone, Salvatore Stagira,
+  and Sandro~De Silvestri.
+\newblock Optimization of high-order harmonic generation by adaptive control of
+  a sub-10-fs pulse wave front.
+\newblock {\em Opt. Lett.}, 29(2):207--209, Jan 2004.
+
 \bibitem{Interferometric_methods}
 Ingolf Weingaertner and Michael Schulz.
 \newblock Interferometric methods for the measurement of wavefront aberrations.
@@ -231,5 +238,11 @@ A.~J. Wright, S.~P. Poland, J.~M. Girkin, C.~W. Freudiger, C.~L. Evans, and
   X.~S. Xie.
 \newblock Adaptive optics for enhanced signal in cars microscopy.
 \newblock {\em Opt. Express}, 15(26):18209--18219, 12 2007.
+
+\bibitem{Zernike_original}
+F.~Zernike.
+\newblock Beugungstheorie des schneidenver-fahrens und seiner verbesserten
+  form, der phasenkontrastmethode.
+\newblock {\em Physica}, 1(7–12):689 -- 704, 1934.
 
 \end{thebibliography}
