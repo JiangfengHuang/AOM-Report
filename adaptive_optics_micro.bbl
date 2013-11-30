@@ -122,29 +122,37 @@ D.~Whitley.
 \newblock vol.~4(2):pp. 65--85.
 \newblock \urlprefix\url{http://dx.doi.org/10.1007/BF00175354}.
 
-\bibitem{Genetic_Algor1}
-P.~Villoresi, S.~Bonora et~al.
-\newblock \enquote{Optimization of high-order harmonic generation by adaptive
-  control of a sub-10-fs pulse wave front.}
-\newblock \emph{Opt. Lett.} (Jan 2004).
-\newblock vol.~29(2):pp. 207--209.
-\newblock \urlprefix\url{http://dx.doi.org/10.1364/OL.29.000207}.
+\bibitem{Genetic_compared_to_others}
+A.~J. Wright, D.~Burns et~al.
+\newblock \enquote{Exploration of the optimisation algorithms used in the
+  implementation of adaptive optics in confocal and multiphoton microscopy.}
+\newblock \emph{Microscopy Research and Technique} (2005).
+\newblock vol.~67(1):pp. 36--44.
+\newblock \urlprefix\url{http://dx.doi.org/10.1002/jemt.20178}.
 
-\bibitem{Genetic_Algor2}
-O.~Albert, L.~Sherman et~al.
-\newblock \enquote{Smart microscope: an adaptive optics learning system for
-  aberration correction in multiphoton confocal microscopy.}
-\newblock \emph{Opt. Lett.} (Jan 2000).
-\newblock vol.~25(1):pp. 52--54.
-\newblock \urlprefix\url{http://dx.doi.org/10.1364/OL.25.000052}.
+\bibitem{Genetic_closed_loop}
+J.~Li \& H.~Chen.
+\newblock \enquote{A closed-loop adaptive optical system based on genetic
+  algorithm.}
+\newblock In \enquote{Electrical and Control Engineering (ICECE), 2010
+  International Conference on,}  (2010) pp. 16--18.
+\newblock \urlprefix\url{http://dx.doi.org/10.1109/iCECE.2010.12}.
 
-\bibitem{Genetic_Algor3}
+\bibitem{Genetic_fiber_coupling}
 F.~Gont\'{e}, A.~Courteville et~al.
 \newblock \enquote{Optimization of single-mode fiber coupling efficiency with
   an adaptive membrane mirror.}
 \newblock \emph{Optical Engineering} (2002).
 \newblock vol.~41(5):pp. 1073--1076.
 \newblock \urlprefix\url{http://dx.doi.org/10.1117/1.1466462}.
+
+\bibitem{Genetic_Harmonic_optimization}
+P.~Villoresi, S.~Bonora et~al.
+\newblock \enquote{Optimization of high-order harmonic generation by adaptive
+  control of a sub-10-fs pulse wave front.}
+\newblock \emph{Opt. Lett.} (Jan 2004).
+\newblock vol.~29(2):pp. 207--209.
+\newblock \urlprefix\url{http://dx.doi.org/10.1364/OL.29.000207}.
 
 \bibitem{wide_sphere_packing}
 M.~Booth.
@@ -194,6 +202,14 @@ O.~Azucena, J.~Crest et~al.
 \newblock vol.~36(6):pp. 825--827.
 \newblock \urlprefix\url{http://dx.doi.org/10.1364/OL.36.000825}.
 
+\bibitem{wide_fluorescence_guide_star}
+---{}---.
+\newblock \enquote{Wavefront aberration measurements and corrections through
+  thick tissue using fluorescent microsphere reference beacons.}
+\newblock \emph{Opt. Express} (Aug 2010).
+\newblock vol.~18(16):pp. 17521--17532.
+\newblock \urlprefix\url{http://dx.doi.org/10.1364/OE.18.017521}.
+
 \bibitem{wide_AOM_FM_spehrical_correction}
 P.~KNER, J.~SEDAT et~al.
 \newblock \enquote{High-resolution wide-field microscopy with adaptive optics
@@ -201,14 +217,6 @@ P.~KNER, J.~SEDAT et~al.
 \newblock \emph{Journal of Microscopy} (2010).
 \newblock vol. 237(2):pp. 136--147.
 \newblock \urlprefix\url{http://dx.doi.org/10.1111/j.1365-2818.2009.03315.x}.
-
-\bibitem{wide_fluorescence_guide_star}
-O.~Azucena, J.~Crest et~al.
-\newblock \enquote{Wavefront aberration measurements and corrections through
-  thick tissue using fluorescent microsphere reference beacons.}
-\newblock \emph{Opt. Express} (Aug 2010).
-\newblock vol.~18(16):pp. 17521--17532.
-\newblock \urlprefix\url{http://dx.doi.org/10.1364/OE.18.017521}.
 
 \bibitem{wide_MPFM}
 J.~Bewersdorf, R.~Pick et~al.
@@ -331,6 +339,22 @@ M.~Oheim, D.~J. Michael et~al.
 \newblock \emph{Advanced Drug Delivery Reviews} (2006).
 \newblock vol.~58(7):pp. 788 -- 808.
 \newblock \urlprefix\url{http://dx.doi.org/10.1016/j.addr.2006.07.005}.
+
+\bibitem{Genetic_MPFM}
+L.~Sherman, J.~Y. Ye et~al.
+\newblock \enquote{Adaptive correction of depth-induced aberrations in
+  multiphoton scanning microscopy using a deformable mirror.}
+\newblock \emph{Journal of Microscopy} (2002).
+\newblock vol. 206(1):pp. 65--71.
+\newblock \urlprefix\url{http://dx.doi.org/10.1046/j.1365-2818.2002.01004.x}.
+
+\bibitem{Genetic_smart_algorithm}
+O.~Albert, L.~Sherman et~al.
+\newblock \enquote{Smart microscope: an adaptive optics learning system for
+  aberration correction in multiphoton confocal microscopy.}
+\newblock \emph{Opt. Lett.} (Jan 2000).
+\newblock vol.~25(1):pp. 52--54.
+\newblock \urlprefix\url{http://dx.doi.org/10.1364/OL.25.000052}.
 
 \bibitem{future_AOM_PALM_1}
 A.~Jasaitis, G.~Clouvel et~al.
