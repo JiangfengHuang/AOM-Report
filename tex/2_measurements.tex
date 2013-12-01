@@ -77,85 +77,17 @@ Indirect techniques do not measure the wavefront directly but instead optimize s
 For these techniques, the optimization of an image quality metric is mainly a mathematical rather than a technical problem. The aberration correction is performed through an iterative optimization of an image quality metric. The metric is usually based on spatial frequencies~\cite{wide_AOM_loew_freq} or image intensity~\cite{indirect_metric_intensity} and gives a mathematical measurement of how ``good'' the recorded image is. In many practical systems aberrations can be accurately represented by a small number of modes of an orthogonal basis, such as Zernike polynomials. The optimization is then performed by adapting the polynomial coefficients applied to the deformable mirror either stochastically or by using an appropriate mathematical model.
 
 %----------------------------------------------------------------------------
-\subsubsection{Genetic and Random Optimization}
+\subsubsection{Stochastic Optimization}
 \label{sec:GeneticAndRandomOptimizationMethods}
 
-%TODO make it coherent
-
-
-For the stochastic methods there are several algorithms, one of the most popular being genetic algorithms~\cite{Genetic_tutorial}. These algorithms try to find an optimal solution by simulating an evolution process. The implementation of a genetic algorithm in AO begins with a population of typically random sets of Zernike polynomials, called initial population. The separate members of the population are called chromosome~(also called genotype). After creating this initial population, each chromosome is evaluated and assigned a fitness value using the image quality metric. Then, a selection is applied to the population to create an intermediate population in a way that those chromosomes which represent a better solution are given more chances to ``reproduce'' than those chromosomes which are poorer solutions. Then recombination and mutation are applied to the intermediate population to create the next population. The process of going from the current population to the next population constitutes one generation. This process is repeated until a sufficiently good solution is found. These genetic algorithms do not require any preliminary information about the system but they are more time consuming than model-based approaches. Genetic algorithms are highly complex and a detailed description of the underlying principles and the separate steps is well beyond the scope of this report. 
-
-%TODO make it all nice and pretty
-
-%comparison of methods, with time and Axial enhancement factor (Initial FWHM/corrected FWHM)
-%main message, hill climb fastest (48 s) but not most accurate (3.3–2.2)
-%genetic possibly best enhancement (3.8–3.5), especially if it has enough time, but slow method (up to 12 minutes) 
-%random search, best all round, good compromise between speed (6 m 17) and accuracy (3.9–3.5)
-from \cite{Genetic_compared_to_others}\newline
-this report is primarily concerned with the optimization of an image as a whole by selecting a particular point of interest and improving the brightness. The algorithms used are hill climbing (HC), genetic (GA), random search (RS), and adaptive random search (ARS). To the best of our knowledge, only the HC and GA have previously been used for this technique. These algorithms are compared in terms of the repeatability and reliability of the solutions, the final axial resolution of the system, and the time taken to complete an optimization.
-
-The system used to test these algorithms was based on a reflection confocal microscope, shown schematically in Figure 1, although this method could also be applied to multiphoton microscopy. 
-
-The light reflected off the DMM was then focused using a 0.5-N.A. 20x (coverslip corrected) air microscope objective (Nikon) into a test sample. This lens has a working distance of 2.1 mm, making it a popular choice of objective lens by the life scientist and biologist for in-depth microscopy. Even at this relatively low N.A., aberrations are induced which when imaging at depth significantly degrade the image quality. 
-
-In the work presented here, the analogue signal was taken from the PMT and the intensity of a point was optimised and used as the fitness value or figure of merit.
-
-The genetic algorithm (Man, 1999) works on an evolutionary basis, starting here with a population of 40 DMM shapes, which are assessed according to the fitness value and combined to produce an improved population of DMM shapes. The computer software allows the level of mutation and crossover to be set, which controls the generation of the new population.
-
-For the four types of algorithms investigated here, two should (based upon statistical principles) determine the globally best solution to the DMM shape, whereas the HC and the ARS, although always reaching a maximum, may only reach a local maximum.
-
-It can be seen that each algorithm significantly improves the peak intensity of the signal, and that as a consequence the FWHM of the system is reduced.
-
-Although the solution for the hill climbing normally results in a higher FWHM, the advantage of using this algorithm is that it is much quicker than the other algorithms, always taking 48 seconds to complete compared to the maximum time taken by the genetic algorithm which was 12 minutes 30 seconds.
-
-The exact choice of algorithm will largely depend on the application, and whether speed or ultimate resolution correction is paramount. The hill climbing proved to be the quickest routine and would probably be more suited to an initial investigation, or when the user was required to analyse a large quantity of samples, whereas if the aim was to gain the best possible image of one particular sample, the random search or genetic algorithm would be more appropriate. It is also possible to combine two different algorithms, for example starting with the RS to locate a region of DMM solution space and then speeding up the process by ending with the HC.
-
+For the stochastic methods there are several algorithms, such as hill climbing (HC), genetic (GA) and random search (RS). \emph{Wright et al.}~\cite{Genetic_compared_to_others} compared these algorithms in terms of repeatability and reliability of the solutions, the final axial resolution of the system, and the time taken to complete an optimization. They explain how the different algorithms can be useful, concluding that GAs have the best potential to achieve an optimal solution of the optimization process. In the context of adaptive-optical control, the genetic algorithm is well-suited to the task because of its ability to independently optimize many variables at once~\cite{Genetic_closed_loop}. It is for that reason, that genetic algorithms are one of the most popular stochastic optimization algorithms. They try to find an optimal solution by simulating an evolution process, and the important steps are shown in Fig.~\ref{fig:genetic_algorithm_overview}. 
 \begin{figure}[htbp]
 	\centering
-		\includegraphics[width=0.80\textwidth]{images/genetic_algor}
-	\caption{Genetica algortihm overview \cite{Genetic_compared_to_others}}
-	\label{fig:genetic_algor}
+		\includegraphics[width=0.60\textwidth]{images/genetic_algorithm_overview.pdf}
+	\caption{Overview of a genetic algorithm. }
+	\label{fig:genetic_algorithm_overview}
 \end{figure}
-
-%more gnereal stuff from 
-\cite{Genetic_closed_loop}:\newline
-The genetic algorithm is one of a group of stochastic optimization algorithms which is well-suited to finding a global minimum (or maximum) of some objective error function. In the context of adaptive-optical control, the genetic algorithm is well-suited to the task because of its ability to independently optimize many variables at once. In the case of a deformable mirror, each actuator voltage represents one independently adjustable variable. All stochastic algorithms work by assessing the quality of any proposed solution by defining an error function - normally a single number - whose value indicates how close any solution is to the target. In this way, deformable mirrors can be used together with evolutionary algorithms to optimize the laser beam shape.
-The genetic algorithm uses the concept of ‘survival of the fittest’ in evolution to locate the best solution to multidimensional problems . In the GA, first the control variables that are converted to binary codes are treated as genes. Second, selection from among the individuals and reproduction are performed in groups consisting of several individuals with different genes. Third, the individuals evolve because of mutations and crossovers. Mutation avoids converging to the local optima, and convergence to the global optimum is performed by crossover and selection. The basic GA’s are referred to as simple GA’s, and they repeat the following process from (b) to (d), so that a group becomes an optimum group as the number of generations increases:
-\begin{enumerate}
-	\item Random generation of the initial group consisting of several individuals.
-	\item Calculation of the fitness value for each individual. 
-	\item Selection and reproduction. 
-	\item Crossover. 
-	\item Mutation. 
-	\item Evaluation of the group.
-\end{enumerate}
-
-The algorithm that we used in this study is shown in Fig.~\ref{fig:genetic_algor2}
-\begin{figure}
-	\centering
-		\includegraphics[width=0.50\textwidth]{images/genetic_algor2.jpg}
-	\caption{gnetic alog 2 \cite{Genetic_closed_loop}}
-	\label{fig:genetic_algor2}
-\end{figure}
-
-It was found that 40 generations of 40 individuals with a crossover rate of 0.85 and a mutation rate of 0.2 would ensure a final solution close to the global maximum. The whole process would take about 15 minutes.
-
-
-%all from 
-\cite{Genetic_fiber_coupling}:\newline
-The second algorithm uses an evolutionary algorithm,2 which follows the Darwinian principle. Each membrane deformation is considered as an individual that is determined by a set of electrode voltages or by a set of Zernike polynomials. 
-
-A random population is designed and tested. The best individuals of this population are selected for reproduction. The reproduction is made by mixing the genetic code of the selection to create a progeny. During the mixing, a small part of the genetic codes undergoes a mutation, which is a random change of some codes. The obtained progeny is tested and compared to its parents. The best individuals from the comparison are selected to become the new parents. After several iterations, the best optimization is obtained.
-
-There are many parameters to be specified for this algorithm. We chose to start with a random population of 500 individuals. The ten best are selected to create the progeny in the following manner: the three best individuals create 20 children and the ten best create 70 children, then these 90 children undergo a mutation and are compared to the ten parents. The 10 best individuals from these 100 individuals become the new parents. Only 1\% of mutations are made on the first group of children and 10\% are made on the second group.
-
-For all four curves, the maximum is obtained after less than 8000 deformations, which has to be compared with the total number of possible deformations ($4.53x10^133$). The optimizations of the Zernike polynomials with both algorithms lead to an increase of the efficiency by a factor of at least 1.9. With the two algorithms working on the electrodes, the increase of efficiency goes up to a factor of 2.2. We notice also that the evolutionary algorithm applied to the electrodes improves the coupling faster than the others.
-
-%from (not much use actually)
-\cite{Genetic_Harmonic_optimization}:\newline
-The optimization procedure is based on a genetic algorithm that maximizes the merit function that expresses the harmonic spectral intensity; 80 random actuator configurations are initially chosen and used as the starting point for the algorithm.
-
-In conclusion, we have performed harmonicgeneration experiments using a deformable mirror in the beam path; the mirror, driven by a genetic algorithm, was exploited for optimization of the harmonicconversion efficiency; we observed a marked increase in XUV emission after the optimization procedure was completed. From the analysis of the laser wave front, we infer that, in an optimal configuration, the DM reshapes the phase front
+The basic idea of GAs is to create a population of individuals, also called chromosomes. In the case of AO, each chromosome corresponds to a specific shape of the deformable mirror. The chromosomes either represent the set of voltage applied to each actuator of the DM or, more commonly~(due to its preferable optimization performance~\cite{Genetic_smart_algorithm}), representing the set of the Zernike polynomial coefficients. After creating this initial population, each individual is evaluated and assigned a fitness value using the image quality metric. Mirror shapes, i.e. individuals, with a better fitness are closer to the optimal shape. The GA tests the entire population of individuals and selects a percentage of the most fit individuals to become parents for the next generation, called intermediate population. Then recombination and mutation are applied to the intermediate population to create the next population. This new generation is then again tested, repeating the above steps. The evolution process stops when the population includes a sufficient (or better optimal) solution. By going through this procedure, the GA gradually finds the optimal mirror shape that will yield the best solution of the quality metric. GAs do not require any preliminary information about the system but they are more time consuming than model-based approaches. Genetic algorithms are highly complex and have a large set of parameters  that influence the optimization process. Those parameters are the size and randomness of initially population, the mutation and crossover rates, the size and selection of intermediate population as well as many more. A detailed description of the underlying principles and the separate steps is can be found in~\cite{Genetic_tutorial}.
 
 
 %----------------------------------------------------------------------------

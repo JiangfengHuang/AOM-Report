@@ -115,13 +115,6 @@ J.~R. Fienup \& J.~J. Miller.
 \newblock vol.~20(4):pp. 609--620.
 \newblock \urlprefix\url{http://dx.doi.org/10.1364/JOSAA.20.000609}.
 
-\bibitem{Genetic_tutorial}
-D.~Whitley.
-\newblock \enquote{A genetic algorithm tutorial.}
-\newblock \emph{Statistics and Computing} (1994).
-\newblock vol.~4(2):pp. 65--85.
-\newblock \urlprefix\url{http://dx.doi.org/10.1007/BF00175354}.
-
 \bibitem{Genetic_compared_to_others}
 A.~J. Wright, D.~Burns et~al.
 \newblock \enquote{Exploration of the optimisation algorithms used in the
@@ -138,21 +131,20 @@ J.~Li \& H.~Chen.
   International Conference on,}  (2010) pp. 16--18.
 \newblock \urlprefix\url{http://dx.doi.org/10.1109/iCECE.2010.12}.
 
-\bibitem{Genetic_fiber_coupling}
-F.~Gont\'{e}, A.~Courteville et~al.
-\newblock \enquote{Optimization of single-mode fiber coupling efficiency with
-  an adaptive membrane mirror.}
-\newblock \emph{Optical Engineering} (2002).
-\newblock vol.~41(5):pp. 1073--1076.
-\newblock \urlprefix\url{http://dx.doi.org/10.1117/1.1466462}.
+\bibitem{Genetic_smart_algorithm}
+O.~Albert, L.~Sherman et~al.
+\newblock \enquote{Smart microscope: an adaptive optics learning system for
+  aberration correction in multiphoton confocal microscopy.}
+\newblock \emph{Opt. Lett.} (Jan 2000).
+\newblock vol.~25(1):pp. 52--54.
+\newblock \urlprefix\url{http://dx.doi.org/10.1364/OL.25.000052}.
 
-\bibitem{Genetic_Harmonic_optimization}
-P.~Villoresi, S.~Bonora et~al.
-\newblock \enquote{Optimization of high-order harmonic generation by adaptive
-  control of a sub-10-fs pulse wave front.}
-\newblock \emph{Opt. Lett.} (Jan 2004).
-\newblock vol.~29(2):pp. 207--209.
-\newblock \urlprefix\url{http://dx.doi.org/10.1364/OL.29.000207}.
+\bibitem{Genetic_tutorial}
+D.~Whitley.
+\newblock \enquote{A genetic algorithm tutorial.}
+\newblock \emph{Statistics and Computing} (1994).
+\newblock vol.~4(2):pp. 65--85.
+\newblock \urlprefix\url{http://dx.doi.org/10.1007/BF00175354}.
 
 \bibitem{wide_sphere_packing}
 M.~Booth.
@@ -348,13 +340,21 @@ L.~Sherman, J.~Y. Ye et~al.
 \newblock vol. 206(1):pp. 65--71.
 \newblock \urlprefix\url{http://dx.doi.org/10.1046/j.1365-2818.2002.01004.x}.
 
-\bibitem{Genetic_smart_algorithm}
-O.~Albert, L.~Sherman et~al.
-\newblock \enquote{Smart microscope: an adaptive optics learning system for
-  aberration correction in multiphoton confocal microscopy.}
-\newblock \emph{Opt. Lett.} (Jan 2000).
-\newblock vol.~25(1):pp. 52--54.
-\newblock \urlprefix\url{http://dx.doi.org/10.1364/OL.25.000052}.
+\bibitem{Genetic_fiber_coupling}
+F.~Gont\'{e}, A.~Courteville et~al.
+\newblock \enquote{Optimization of single-mode fiber coupling efficiency with
+  an adaptive membrane mirror.}
+\newblock \emph{Optical Engineering} (2002).
+\newblock vol.~41(5):pp. 1073--1076.
+\newblock \urlprefix\url{http://dx.doi.org/10.1117/1.1466462}.
+
+\bibitem{Genetic_Harmonic_optimization}
+P.~Villoresi, S.~Bonora et~al.
+\newblock \enquote{Optimization of high-order harmonic generation by adaptive
+  control of a sub-10-fs pulse wave front.}
+\newblock \emph{Opt. Lett.} (Jan 2004).
+\newblock vol.~29(2):pp. 207--209.
+\newblock \urlprefix\url{http://dx.doi.org/10.1364/OL.29.000207}.
 
 \bibitem{future_AOM_PALM_1}
 A.~Jasaitis, G.~Clouvel et~al.
