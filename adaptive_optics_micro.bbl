@@ -287,21 +287,6 @@ T.~J. Gould, D.~Burke et~al.
 \newblock vol.~20(19):pp. 20998--21009.
 \newblock \urlprefix\url{http://dx.doi.org/10.1364/OE.20.020998}.
 
-\bibitem{scan_CFM}
-M.~J. Booth, M.~A.~A. Neil et~al.
-\newblock \enquote{{Adaptive aberration correction in a confocal microscope}.}
-\newblock \emph{Proceedings of the National Academy of Sciences} (4 2002).
-\newblock vol.~99(9):pp. 5788--5792.
-\newblock \urlprefix\url{http://dx.doi.org/10.1073/pnas.082544799}.
-
-\bibitem{scan_Confocal_direct_sensing}
-X.~Tao, B.~Fernandez et~al.
-\newblock \enquote{Adaptive optics confocal microscopy using direct wavefront
-  sensing.}
-\newblock \emph{Opt. Lett.} (Apr 2011).
-\newblock vol.~36(7):pp. 1062--1064.
-\newblock \urlprefix\url{http://dx.doi.org/10.1364/OL.36.001062}.
-
 \bibitem{scan_TPFM_principle}
 W.~Denk, J.~Strickler et~al.
 \newblock \enquote{Two-photon laser scanning fluorescence microscopy.}
@@ -339,6 +324,21 @@ L.~Sherman, J.~Y. Ye et~al.
 \newblock \emph{Journal of Microscopy} (2002).
 \newblock vol. 206(1):pp. 65--71.
 \newblock \urlprefix\url{http://dx.doi.org/10.1046/j.1365-2818.2002.01004.x}.
+
+\bibitem{scan_CFM}
+M.~J. Booth, M.~A.~A. Neil et~al.
+\newblock \enquote{{Adaptive aberration correction in a confocal microscope}.}
+\newblock \emph{Proceedings of the National Academy of Sciences} (4 2002).
+\newblock vol.~99(9):pp. 5788--5792.
+\newblock \urlprefix\url{http://dx.doi.org/10.1073/pnas.082544799}.
+
+\bibitem{scan_Confocal_direct_sensing}
+X.~Tao, B.~Fernandez et~al.
+\newblock \enquote{Adaptive optics confocal microscopy using direct wavefront
+  sensing.}
+\newblock \emph{Opt. Lett.} (Apr 2011).
+\newblock vol.~36(7):pp. 1062--1064.
+\newblock \urlprefix\url{http://dx.doi.org/10.1364/OL.36.001062}.
 
 \bibitem{Genetic_fiber_coupling}
 F.~Gont\'{e}, A.~Courteville et~al.

@@ -11,10 +11,10 @@
 \contentsline {subsubsection}{\numberline {3.1.1}Direct Wavfront Sensing in a Transmission Microscope}{7}{subsubsection.3.1.1}
 \contentsline {subsubsection}{\numberline {3.1.2}Indirect Wavfront Sensing in a Transmission Microscope}{8}{subsubsection.3.1.2}
 \contentsline {subsubsection}{\numberline {3.1.3}Structured Illumination Microscopy}{9}{subsubsection.3.1.3}
-\contentsline {subsection}{\numberline {3.2}Point Scanning Microscopes}{11}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Confocal Microscopes}{12}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Two-Photon Fluorescence Microscopy}{13}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Multiphoton Scanning Microscopy using Indirekt sensing.}{13}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}TPFM Direct}{16}{subsubsection.3.2.4}
-\contentsline {section}{\numberline {4}Conclusion \& Future Prospects}{18}{section.4}
-\contentsline {section}{References}{20}{section*.19}
+\contentsline {subsection}{\numberline {3.2}Point Scanning Microscopes}{10}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Two-Photon Fluorescence Microscopy}{11}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Confocal Microscopes}{12}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Multiphoton Scanning Microscopy Using a Genetic Optimization Algorithm}{13}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}TPFM Direct}{15}{subsubsection.3.2.4}
+\contentsline {section}{\numberline {4}Conclusion \& Future Prospects}{17}{section.4}
+\contentsline {section}{References}{18}{section*.18}
