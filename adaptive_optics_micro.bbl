@@ -360,7 +360,19 @@ P.~Villoresi, S.~Bonora et~al.
 A.~Jasaitis, G.~Clouvel et~al.
 \newblock \enquote{Extreme precision in 3d: Adaptive optics boosts
   super-resolution microscopy.}
+\newblock \urlprefix\url{http://bit.ly/IAx50m}.
+\newblock Visited on 2/12/13.
+
+\bibitem{future_thorlabs}
+Thorlabs.
+\newblock \enquote{Two-photon microscope with adaptive optics demonstration.}
 \newblock \urlprefix\url{http://bit.ly/1cQri59}.
 \newblock Visited on 12/11/13.
+
+\bibitem{future_zeiss_patent}
+R.~Wolleschensky, R.~Grub et~al.
+\newblock \enquote{Applications of adaptive optics in microscopy.} (August
+  2004).
+\newblock \urlprefix\url{http://www.freepatentsonline.com/6771417.html}.
 
 \end{thebibliography}
