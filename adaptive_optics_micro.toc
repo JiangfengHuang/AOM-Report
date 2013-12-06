@@ -1,0 +1,19 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
+\contentsline {section}{\numberline {2}Aberration Measurement and Correction}{1}{section.2}
+\contentsline {subsection}{\numberline {2.1}Direct Wavefront Sensing}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Indirect Wavefront Sensing}{4}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Stochastic Optimization}{5}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Model Based Optimization}{5}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {2.3}Aberration Correction}{6}{subsection.2.3}
+\contentsline {section}{\numberline {3}Adaptive Optics Methods applied in Microscopy}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Widefield Microscopy}{7}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Direct Wavefront Sensing in a Fluorescence Microscope}{8}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Indirect Wavefront Sensing in a Transmission Microscope}{9}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Structured Illumination Microscopy}{10}{subsubsection.3.1.3}
+\contentsline {subsection}{\numberline {3.2}Point Scanning Microscopes}{11}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Confocal Microscopes}{12}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Indirect Wavefront Sensing in Multiphoton Scanning Microscopy}{13}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Direct Wavefront Sensing in Two Photon Florescence Microscopy}{14}{subsubsection.3.2.3}
+\contentsline {section}{\numberline {4}Conclusion \& Future Prospects}{17}{section.4}
+\contentsline {section}{References}{17}{section*.18}
