@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=671
-NormalPos.bottom=415
+NormalPos.right=736
+NormalPos.bottom=719
 Class=LaTeXView
 Document=tex\3_methods.tex
 
 [Frame0_View0,0]
-TopLine=137
-Cursor=11388
+TopLine=359
+Cursor=26513
 
 [Frame1]
 Flags=0
@@ -29,13 +29,13 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=671
-NormalPos.bottom=415
+NormalPos.right=736
+NormalPos.bottom=719
 Class=LaTeXView
 Document=adaptive_optics_micro.tex
 
 [Frame1_View0,0]
-TopLine=66
+TopLine=45
 Cursor=2394
 
 [Frame2]
@@ -47,13 +47,13 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=671
-NormalPos.bottom=415
+NormalPos.right=736
+NormalPos.bottom=719
 Class=BibTeXView
 Document=tex\bibo.bib
 
 [Frame2_View0,0]
-TopLine=180
+TopLine=182
 Cursor=5994
 
 [Frame3]
@@ -65,18 +65,18 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=671
-NormalPos.bottom=415
+NormalPos.right=736
+NormalPos.bottom=719
 Class=LaTeXView
 Document=tex\2_measurements.tex
 
 [Frame3_View0,0]
-TopLine=93
-Cursor=4187
+TopLine=309
+Cursor=22873
 
 [SessionInfo]
 FrameCount=4
-ActiveFrame=1
+ActiveFrame=0
 
 [Bookmarks]
 tex\0_abstract.tex=7 
