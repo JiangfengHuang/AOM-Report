@@ -6,7 +6,7 @@ Version=4
 MainFile=adaptive_optics_micro.tex
 UseBibTeX=1
 UseMakeIndex=1
-ActiveProfile=LaTeX => PDF
+ActiveProfile=LaTeX ⇨ PDF (64bit)
 ProjectLanguage=en
 ProjectDialect=US
 
