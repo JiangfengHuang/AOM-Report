@@ -4,7 +4,7 @@
 \contentsline {subsection}{\numberline {2.1}Direct Wavefront Sensing}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Indirect Wavefront Sensing}{4}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}Stochastic Optimization}{5}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Model Based Optimization}{5}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2}Model Based Optimization}{6}{subsubsection.2.2.2}
 \contentsline {subsection}{\numberline {2.3}Aberration Correction}{6}{subsection.2.3}
 \contentsline {section}{\numberline {3}Adaptive Optics Methods applied in Microscopy}{7}{section.3}
 \contentsline {subsection}{\numberline {3.1}Widefield Microscopy}{7}{subsection.3.1}
@@ -15,5 +15,5 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Confocal Microscopes}{12}{subsubsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2}Indirect Wavefront Sensing in Multiphoton Scanning Microscopy}{13}{subsubsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.3}Direct Wavefront Sensing in Two Photon Florescence Microscopy}{14}{subsubsection.3.2.3}
-\contentsline {section}{\numberline {4}Conclusion \& Future Prospects}{17}{section.4}
+\contentsline {section}{\numberline {4}Conclusion \& Future Prospects}{16}{section.4}
 \contentsline {section}{References}{17}{section*.18}
